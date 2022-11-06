@@ -1,0 +1,6 @@
+#don't upload data because they're too large
+assays/*
+tox21_dense_train.csv
+selection/smiles.txt
+cids_full.txt
+external_ids_strict.txt
