@@ -89,9 +89,13 @@ def baseline_model():
     model.compile(loss='mean_squared_error', optimizer='RMSprop')
     return model
 
-print("Starting to train")
-estimator = KerasRegressor(model=baseline_model, epochs=100, batch_size = 64, verbose=0)
+print("standardizing data")
+estimators = []
+estimators.append(('standardize', StandardScaler()))
+estimators.append(('mlp', KerasRegressor(model=baseline_model, epochs=50, batch_size = 5, verbose=0)))
+pipeline = Pipeline(estimators)
+print("Starting training & assessment")
 #use kfold for now, in the futre want to use whole data with just this test data as test
 kfold = KFold(n_splits=10)
-results = cross_val_score(estimator, input, output, cv=kfold, scoring='neg_mean_squared_error')
-print('Baseline:', results.mean(), "(", results.std(), ") MSE")
+results = cross_val_score(pipeline, input, output, cv=kfold, scoring='neg_mean_squared_error')
+print('Results:', results.mean(), "(", results.std(), ") MSE")
