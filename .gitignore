@@ -1,6 +1,14 @@
 #don't upload data because they're too large
 assays/*
-tox21_dense_train.csv
+output/*
+output_npy/*
+saved-testing/all_important_cids.txt
+saved-testing/cids_full.txt
+saved-testing/cids_strict.txt
+saved-testing/external_ids_strict.txt
 selection/smiles.txt
-cids_full.txt
-external_ids_strict.txt
+test/test_ids.txt
+all_id_pairs.txt
+tox21_dense_train.csv
+
+

@@ -32,7 +32,7 @@ for i in range(len(id_pairs)):
 print("Getting output")
 output = []
 cid_to_output = {}
-output_file = open("assays/AID_743036_ar-bla-agonist-p1.csv")
+output_file = open("../assays/AID_743036_ar-bla-agonist-p1.csv")
 read = pd.read_csv(output_file, usecols=['Efficacy-Replicate_1', 'PUBCHEM_CID'], dtype={'Efficacy-Replicate_1':str, 'PUBCHEM_CID':str})
 cids = read['PUBCHEM_CID']
 potency = read['Efficacy-Replicate_1']
@@ -48,7 +48,7 @@ for i in range(len(cids)):
 print("Getting input")
 input = []
 id_to_input = {}
-input_file = open("tox21_dense_train.csv")
+input_file = open("../tox21_dense_train.csv")
 input_csv = csv.reader(input_file)
 ids_in_input = {}
 for row in input_csv:
@@ -82,20 +82,22 @@ for i in range(len(output)):
 
 
 print("defining model")
-def baseline_model():
+def get_model():
     model = Sequential()
     model.add(Dense(801, input_shape=(801,), kernel_initializer='normal', activation='relu'))
     model.add(Dense(1, kernel_initializer='normal'))
-    model.compile(loss='mean_squared_error', optimizer='RMSprop')
+    model.compile(loss='mean_squared_error', optimizer='adam')
     return model
+
 
 print("standardizing data")
 estimators = []
 estimators.append(('standardize', StandardScaler()))
-estimators.append(('mlp', KerasRegressor(model=baseline_model, epochs=50, batch_size = 5, verbose=0)))
+estimators.append(('mlp', KerasRegressor(model=get_model, epochs=50, batch_size = 5, verbose=0)))
 pipeline = Pipeline(estimators)
 print("Starting training & assessment")
 #use kfold for now, in the futre want to use whole data with just this test data as test
 kfold = KFold(n_splits=10)
 results = cross_val_score(pipeline, input, output, cv=kfold, scoring='neg_mean_squared_error')
 print('Results:', results.mean(), "(", results.std(), ") MSE")
+#TODO WILL NEED TO RE-SCALE OUTPUT FOR ACTUALLY CORRECT GUESSES
