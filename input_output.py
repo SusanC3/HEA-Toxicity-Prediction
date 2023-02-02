@@ -10,9 +10,8 @@ import copy
 
 @jit
 def reshape_output(output):
-    #transform input (shape # molecules, # assays, # data) into (# molecules, # assays x # data)
+    #transform output (shape # molecules, # assays, # data) into (# molecules, # assays x # data)
     processed_output = np.zeros((507, 229432)) 
-    #pdb.set_trace()
     for i in range(507): # for each uneven 2d array in output
         counter = 0
         for j in range(len(output[i])): #convert into 1d array
@@ -35,25 +34,22 @@ def get_input_output():
         cid_to_toxid[cid] = toxid
     id_pairs_file.close()
 
-    #all important cids guaranteed to be in toxids
-    #just have to make sure we get rid of all toxids that aren't in output cids
+    #all important output cids guaranteed to be in input toxids
+    #just have to make sure we get rid of all input toxids that aren't in output cids
 
     #PROCESS EACH PART OF OUTPUT AS IT GOES
 
     print("Assembling output")
     print("part", 1)
     load_file = open("output_npy/output_part"+str(1)+".npy", "rb")
-    #print("Reshaping output")
     output = reshape_output(np.load(load_file, allow_pickle=True))
     load_file.close()
     for i in range(2, 11):
         print("part", i)
         load_file = open("output_npy/output_part"+str(i)+".npy", "rb")
-       # print("Reshaping output")
         output = np.concatenate((output, reshape_output(np.load(load_file, allow_pickle=True))))
         load_file.close()
-    
-    # pdb.set_trace()
+
 
     #MAKE SURE INPUT ASSEMBLED IN SAME CID ORDER AS OUTPUT 
 
@@ -80,7 +76,7 @@ def get_input_output():
         else:
             print("uh oh...")
 
-    input = input[:5070] #cause i'm dumb and somehow the last 6 cids got cut off from output
+    input = input[:5070] #somehow the last 6 cids got cut off from output, TODO fix this issue (prob to do with splitting into files)
 
     print("len input:", len(input))
     print("len output:", len(output))
@@ -170,7 +166,7 @@ def get_input_output():
 # np.save("cid_in_order.npy", cid_in_order)
 # print("saved cid in order")
 
-# #wsl is a pussy so i'll save output in 5 separate files
+# save output in separate files so they can be loaded within memory limits
 # step = int(len(output)/10)
 # a = 0
 # b = step
