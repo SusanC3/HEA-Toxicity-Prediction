@@ -11,7 +11,7 @@ import copy
 @jit
 def reshape_output(output):
     #transform output (shape # molecules, # assays, # data) into (# molecules, # assays x # data)
-    processed_output = np.zeros((507, 229432)) 
+    processed_output = np.zeros((507, 229432), dtype=np.float32) 
     for i in range(507): # for each uneven 2d array in output
         counter = 0
         for j in range(len(output[i])): #convert into 1d array
@@ -62,7 +62,7 @@ def get_input_output():
             toxid_to_input[row[0]] = np.array(row[1:], dtype=np.float32)
     tox21_input.close()
 
-    input = np.zeros((5076, 801))
+    input = np.zeros((5076, 801), dtype=np.float32)
     load_file = open("output_npy/cid_in_order.npy", "rb")
     cids = np.load(load_file, allow_pickle=True)
     load_file.close()
@@ -80,8 +80,6 @@ def get_input_output():
 
     print("len input:", len(input))
     print("len output:", len(output))
-
-    pdb.set_trace()
 
     return input, output
 

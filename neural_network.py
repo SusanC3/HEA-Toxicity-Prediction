@@ -1,33 +1,47 @@
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
-from scikeras.wrappers import KerasRegressor
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import KFold
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
+import torch.nn as nn
+import torch.nn.functional as F
 
-import input_output
+class ToxicityRegressor(nn.Module):
+    def __init__(self, num_features):
+        super(ToxicityRegressor, self).__init__()
+        
+        #from pytorch website, for classification
+        # self.conv1 = nn.Conv2d(1, 6, 5)
+        # self.pool = nn.MaxPool2d(2, 2)
+        # self.conv2 = nn.Conv2d(6, 16, 5)
+        # self.fc1 = nn.Linear(16 * 4 * 4, 120)
+        # self.fc2 = nn.Linear(120, 84)
+        # self.fc3 = nn.Linear(84, 10)
 
-X, Y = input_output.get_input_output()
+        self.layer_1 = nn.Linear(num_features, 16)
+        self.layer_2 = nn.Linear(16, 32)
+        self.layer_3 = nn.Linear(32, 16)
+        self.layer_out = nn.Linear(16, 1)
 
-print("defining model")
-def get_model():
-    model = Sequential()
-    model.add(Dense(5070, input_shape=(5070,), kernel_initializer='normal', activation='relu'))
-    model.add(Dense(1, kernel_initializer='normal'))
-    model.compile(loss='mean_squared_error', optimizer='adam')
-    return model
+        self.relu = nn.ReLU()
 
+    def forward(self, input):
 
-print("standardizing data")
-estimators = []
-estimators.append(('standardize', StandardScaler()))
-estimators.append(('mlp', KerasRegressor(model=get_model, epochs=50, batch_size = 5, verbose=0)))
-pipeline = Pipeline(estimators)
-print("Starting training & assessment")
-#use kfold for now, in the futre want to use whole data with just this test data as test
-kfold = KFold(n_splits=10)
-print("After kfold thing")
-results = cross_val_score(pipeline, X, Y, cv=kfold, scoring='neg_mean_squared_error')
-print('Results:', results.mean(), "(", results.std(), ") MSE")
-#TODO WILL NEED TO RE-SCALE OUTPUT FOR ACTUALLY CORRECT GUESSES
+        #from pytorch website, for classification
+        # x = self.pool(F.relu(self.conv1(input)))
+        # x = self.pool(F.relu(self.conv2(x)))
+        # x = input.view(-1, 16 * 4 * 4)
+        # x = F.relu(self.fc1(x))
+        # x = F.relu(self.fc2(x))
+        # x = self.fc3(x)
+
+        x = self.relu(self.layer_1(input))
+        x = self.relu(self.layer_2(x))
+        x = self.relu(self.layer_3(x))
+        x = self.layer_out(x)
+
+        return x
+
+    def predict(self, test_inputs):
+        x = self.relu(self.layer_1(test_inputs))
+        x = self.relu(self.layer_2(x))
+        x = self.relu(self.layer_3(x))
+        x = self.layer_out(x)
+
+        return x
+    
