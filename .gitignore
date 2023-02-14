@@ -10,5 +10,5 @@ selection/smiles.txt
 test/test_ids.txt
 all_id_pairs.txt
 tox21_dense_train.csv
-
+*.npy
 

@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class ToxicityRegressor(nn.Module):
-    def __init__(self, num_features):
+    def __init__(self, dim_input, dim_output):
         super(ToxicityRegressor, self).__init__()
         
         #from pytorch website, for classification
@@ -13,10 +13,10 @@ class ToxicityRegressor(nn.Module):
         # self.fc2 = nn.Linear(120, 84)
         # self.fc3 = nn.Linear(84, 10)
 
-        self.layer_1 = nn.Linear(num_features, 16)
+        self.layer_1 = nn.Linear(dim_input, 16)
         self.layer_2 = nn.Linear(16, 32)
         self.layer_3 = nn.Linear(32, 16)
-        self.layer_out = nn.Linear(16, 1)
+        self.layer_out = nn.Linear(16, dim_output)
 
         self.relu = nn.ReLU()
 
@@ -30,6 +30,7 @@ class ToxicityRegressor(nn.Module):
         # x = F.relu(self.fc2(x))
         # x = self.fc3(x)
 
+       # print("here")
         x = self.relu(self.layer_1(input))
         x = self.relu(self.layer_2(x))
         x = self.relu(self.layer_3(x))
@@ -38,6 +39,7 @@ class ToxicityRegressor(nn.Module):
         return x
 
     def predict(self, test_inputs):
+
         x = self.relu(self.layer_1(test_inputs))
         x = self.relu(self.layer_2(x))
         x = self.relu(self.layer_3(x))

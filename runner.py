@@ -36,14 +36,15 @@ params = {'batch_size': 32,
             'num_workers': 6}
 max_epochs = 150
 LEARNING_RATE = 0.002
-NUM_FEATURES = 801
+dim_input = 801
+dim_output = 229432
+len_data = 20
 
+print("loading data")
 dataset = IOWrapper.Dataset() #__init__ not called for some reason
 #training_generator = DataLoader(training_data, **params)
 
-#i'll worry about validation later
-
-model = neural_network.ToxicityRegressor(NUM_FEATURES)
+model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
 model.to(device)
 
 print(model)
@@ -72,8 +73,9 @@ def train_epoch(model, device, dataloader, loss_fn, optimizer):
         loss.backward()
         optimizer.step()
         train_loss += loss.item() * input.size(0)
-        scores, predictions = torch.max(pred_result.data, 1)
-        train_correct += (predictions == output).sum().item()
+        #scores, predictions = torch.max(pred_result.data, 1)
+       # pdb.set_trace()
+        train_correct += (pred_result == output).sum().item()
 
     return train_loss, train_correct
 
@@ -86,18 +88,22 @@ def valid_epoch(model, device, dataloader, loss_fn):
         pred_result = model(input)
         loss = loss_fn(pred_result, output)
         valid_loss += loss.item() * input.size(0)
-        scores, predictions = torch.max(pred_result.data, 1)
-        val_correct +=(predictions == output).sum().item()
+        #scores, predictions = torch.max(pred_result.data, 1)
+        val_correct += (pred_result == output).sum().item()
 
     return valid_loss, val_correct
 
 
 print("Begin training")
 
+f = open("performance2.txt", "a")
 
-for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
+for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
 
-    print('Fold {}'.format(fold + 1))
+    f.write("\n")
+    f.write('Fold {}'.format(fold + 1), "\n")
+
+    print("fold", fold + 1)
 
     train_sampler = SubsetRandomSampler(train_idx)
     test_sampler = SubsetRandomSampler(val_idx)
@@ -105,6 +111,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
     test_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=test_sampler)
 
     for epoch in range(max_epochs):
+        #print("epoch", epoch + 1)
         train_loss, train_correct = train_epoch(model, device, train_loader, criterion, optimizer)
         test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
 
@@ -113,7 +120,15 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
         test_loss /= len(test_loader.sampler)
         test_acc = train_correct / len(test_loader.sampler) * 100
 
-        print("Epoch:{}/{} AVG Training Loss:{:.3f} AVG Test Loss:{:.3f} AVG Training Acc {:.2f} % AVG Test Acc {:.2f} %".format(epoch + 1,
+        # print(train_acc)
+        # print(test_acc)
+
+        # if (train_acc > 0 or test_acc > 0):
+        #     pdb.set_trace()
+        
+
+
+        f.write("Epoch:{}/{} AVG Training Loss:{:.3f} AVG Test Loss:{:.3f} AVG Training Acc {:.2f} % AVG Test Acc {:.2f} %\n".format(epoch + 1,
                                                                                                              max_epochs,
                                                                                                              train_loss,
                                                                                                              test_loss,

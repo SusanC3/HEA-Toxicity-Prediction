@@ -1,4 +1,5 @@
-import input_output
+# import input_output
+import numpy as np
 
 class Dataset:
 
@@ -6,8 +7,9 @@ class Dataset:
     def __init__(self):
         # self.labels = labels
         # self.list_IDS = list_IDs
-        print("HELLOOOOO")
-        self.X, self.y = input_output.get_input_output()
+        #self.X, self.y = input_output.get_input_output()
+        self.X = np.load(open("input.npy", "rb"), allow_pickle=True)
+        self.y = np.load(open("output.npy", "rb"), allow_pickle=True)
 
     'Returns total numper of samples'
     def __len__(self):

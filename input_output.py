@@ -81,8 +81,17 @@ def get_input_output():
     print("len input:", len(input))
     print("len output:", len(output))
 
+    np.save("input.npy", input)
+    np.save("output.npy", output)
+
+    np.save("short-input.npy", input[:20])
+    np.save("short-output.npy", output[:20])
+
     return input, output
 
+
+
+get_input_output()
 
 
 
