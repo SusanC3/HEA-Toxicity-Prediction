@@ -1,0 +1,44 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+torch.Size([5, 229432])
+5
+torch.Size([5, 229432])
+epoch 2
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+epoch 3
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+epoch 4
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+epoch 5
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+epoch 6
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+epoch 7
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+epoch 8
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+epoch 9
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)valid_epoch()
+-> for input, output in dataloader:
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(158)<module>()
+-> wandb.log({"train_loss": train_loss, "test_loss": test_loss, "train_acc": train_acc, "test_acc": test_acc})
+45

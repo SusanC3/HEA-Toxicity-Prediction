@@ -1,0 +1,12 @@
+
+loading data
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(65)<module>()
+-> model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training

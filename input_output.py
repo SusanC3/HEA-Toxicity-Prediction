@@ -22,7 +22,7 @@ def reshape_output(output):
 
 #@jit
 def get_input_output():
-    #how many of the ids are in every assay
+    # #how many of the ids are in every assay
     print("Assembling toxid to cid hash")
     cid_to_toxid = {}
     id_pairs_file = open("all_id_pairs.txt")
@@ -34,10 +34,10 @@ def get_input_output():
         cid_to_toxid[cid] = toxid
     id_pairs_file.close()
 
-    #all important output cids guaranteed to be in input toxids
-    #just have to make sure we get rid of all input toxids that aren't in output cids
+    # #all important output cids guaranteed to be in input toxids
+    # #just have to make sure we get rid of all input toxids that aren't in output cids
 
-    #PROCESS EACH PART OF OUTPUT AS IT GOES
+    # #PROCESS EACH PART OF OUTPUT AS IT GOES
 
     print("Assembling output")
     print("part", 1)
@@ -70,7 +70,7 @@ def get_input_output():
     for cid in cids:
         cid = str(int(cid))
         if cid_to_toxid[cid] in toxid_to_input:
-            #print(cid)
+           # print(cid)
             input[counter] = toxid_to_input[cid_to_toxid[cid]]
             counter += 1
         else:

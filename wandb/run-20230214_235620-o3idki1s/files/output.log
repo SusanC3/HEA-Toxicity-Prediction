@@ -1,0 +1,21 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(102)train_epoch()
+-> train_correct += (pred_result == output).sum().item()
+torch.Size([45, 229432])
+torch.Size([45, 229432])
+0
+5.9512994438409805
+epoch 2
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(102)train_epoch()
+-> train_correct += (pred_result == output).sum().item()

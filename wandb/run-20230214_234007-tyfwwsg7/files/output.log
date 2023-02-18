@@ -1,0 +1,20 @@
+
+loading data
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 139, in <module>
+    train_loss, train_correct = train_epoch(model, device, train_loader, criterion, optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 90, in train_epoch
+    input, output = input_normalizer.encode(input), output_normalizer.encode(output)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/Data.py", line 36, in encode
+    x = (x - self.mean) / (self.std + self.eps)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1

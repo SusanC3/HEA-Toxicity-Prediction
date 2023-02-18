@@ -1,0 +1,145 @@
+{
+    "os": "Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "python": "3.9.12",
+    "heartbeatAt": "2023-02-15T07:32:01.923184",
+    "startedAt": "2023-02-15T07:32:01.031139",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py",
+    "codePath": "runner.py",
+    "git": {
+        "remote": "git@github.com:SusanC3/HEA-Toxicity-Prediction.git",
+        "commit": "164553223592fdc4150a2686817befed608f5641"
+    },
+    "email": "susanclay333@gmail.com",
+    "root": "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction",
+    "host": "MSI",
+    "username": "susan",
+    "executable": "/home/susan/miniconda3/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2918.3980000000006,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2918.398,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 250.98248672485352,
+        "used": 64.1278076171875
+    },
+    "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 51.97193145751953
+    }
+}

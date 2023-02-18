@@ -1,0 +1,46 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+0.0
+0.0
+epoch 2
+0.0
+0.0
+epoch 3
+0.0
+0.0
+epoch 4
+0.0
+0.0
+epoch 5
+0.0
+0.0
+epoch 6
+0.0
+0.0
+epoch 7
+0.0
+0.0
+epoch 8
+0.0
+0.0
+epoch 9
+2.2222222222222223
+20.0
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(161)<module>()
+-> wandb.log({"train_loss": train_loss, "test_loss": test_loss, "train_acc": train_acc, "test_acc": test_acc})
+45
+1
+*** NameError: name 'dataloader' is not defined
+1
+*** NameError: name 'dataloader' is not defined
+*** TypeError: 'DataLoader' object is not subscriptable

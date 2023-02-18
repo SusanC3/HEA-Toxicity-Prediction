@@ -1,0 +1,17 @@
+
+loading data
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 78, in <module>
+    splits = KFold(n_splits=k, shuffle=True, random_state=42)
+  File "/home/susan/.local/lib/python3.9/site-packages/sklearn/model_selection/_split.py", line 435, in __init__
+    super().__init__(n_splits=n_splits, shuffle=shuffle, random_state=random_state)
+  File "/home/susan/.local/lib/python3.9/site-packages/sklearn/model_selection/_split.py", line 286, in __init__
+    raise ValueError(
+ValueError: k-fold cross-validation requires at least one train/test split by setting n_splits=2 or more, got n_splits=1.
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)

@@ -1,0 +1,3020 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+train loss: 0.7103389626041907 test loss: 149483974872579.03
+epoch 2
+train loss: 0.7016072920677682 test loss: 48319949314108.59
+epoch 3
+train loss: 0.701368666663619 test loss: 31859224402594.586
+epoch 4
+train loss: 0.7012560749624465 test loss: 32057397992615.637
+epoch 5
+train loss: 0.7007693279352518 test loss: 70019647544390.69
+epoch 6
+train loss: 0.700020877732184 test loss: 94184783439488.25
+epoch 7
+train loss: 0.698471728206961 test loss: 103565596531459.53
+epoch 8
+train loss: 0.6982205253271596 test loss: 176178969724075.7
+epoch 9
+train loss: 0.6928646653782843 test loss: 540116115786782.3
+epoch 10
+train loss: 0.6880697894661005 test loss: 1516383930535556.2
+epoch 11
+train loss: 0.6790068948997784 test loss: 2.6004199517141004e+16
+epoch 12
+train loss: 0.6680654047721184 test loss: 1.1392833362373757e+17
+epoch 13
+train loss: 0.6574219891725142 test loss: 1.253311944409627e+17
+epoch 14
+train loss: 0.6585003065319666 test loss: 11438618940401.861
+epoch 15
+train loss: 0.6524633842681862 test loss: 1855108773.112426
+epoch 16
+train loss: 0.6460197600857511 test loss: 95385032.0218902
+epoch 17
+train loss: 0.6392458647443828 test loss: 4561001127.637081
+epoch 18
+train loss: 0.6352512916921916 test loss: 1711723444.765286
+epoch 19
+train loss: 0.636511628940757 test loss: 254443495888956.6
+epoch 20
+train loss: 0.6268604843575796 test loss: 1985040265592088.8
+epoch 21
+train loss: 0.6220935452868254 test loss: 349508648441658.06
+epoch 22
+train loss: 0.613264337825378 test loss: 2132297989657198.0
+epoch 23
+train loss: 0.6114477870768291 test loss: 268769246091647.75
+epoch 24
+train loss: 0.6092096548339704 test loss: 467917889401954.94
+epoch 25
+train loss: 0.6031316123297019 test loss: 2125236942573673.0
+epoch 26
+train loss: 0.5992697648154607 test loss: 165931351862.02762
+epoch 27
+train loss: 0.5928246143469744 test loss: 950510936629.5227
+epoch 28
+train loss: 0.590946693681205 test loss: 5909345082697.215
+epoch 29
+train loss: 0.5827742040960668 test loss: 1230780211216.1577
+epoch 30
+train loss: 0.5815607816456063 test loss: 177139730069322.22
+epoch 31
+train loss: 0.5891556864383515 test loss: 4296132368379.9604
+epoch 32
+train loss: 0.5759112031841759 test loss: 6708294369764.733
+epoch 33
+train loss: 0.5766762745777505 test loss: 73383966284612.17
+epoch 34
+train loss: 0.5710350654230629 test loss: 163099855809485.5
+epoch 35
+train loss: 0.5694622537845743 test loss: 926567324754324.0
+epoch 36
+train loss: 0.5647019457881084 test loss: 7693383570611.756
+epoch 37
+train loss: 0.5625869589877147 test loss: 239317481905772.06
+epoch 38
+train loss: 0.5716507036370351 test loss: 4906864726670.391
+epoch 39
+train loss: 0.5685867543907646 test loss: 1600365349596949.8
+epoch 40
+train loss: 0.5644621246939502 test loss: 386060921410739.75
+epoch 41
+train loss: 0.5605588632589033 test loss: 4484649421456685.0
+epoch 42
+train loss: 0.5581307775387305 test loss: 1614130577587933.2
+epoch 43
+train loss: 0.5517795728488943 test loss: 1393860626134987.5
+epoch 44
+train loss: 0.546458504499703 test loss: 3595850352364445.0
+epoch 45
+train loss: 0.5435149099954565 test loss: 1737878565181920.8
+epoch 46
+train loss: 0.5443322770093424 test loss: 2016185188145697.2
+epoch 47
+train loss: 0.543390212042954 test loss: 56186570469206.34
+epoch 48
+train loss: 0.5409007345334613 test loss: 1031190340293262.4
+epoch 49
+train loss: 0.5377232034339825 test loss: 659589529138275.0
+epoch 50
+train loss: 0.5347092425695198 test loss: 2740913784038620.0
+epoch 51
+train loss: 0.5419038733148651 test loss: 19439376255610.19
+epoch 52
+train loss: 0.5318392457927485 test loss: 7694216607781971.0
+epoch 53
+train loss: 0.5252144890603673 test loss: 8280680700982145.0
+epoch 54
+train loss: 0.5238815522947621 test loss: 5698360125668180.0
+epoch 55
+train loss: 0.5216253488543994 test loss: 1.1561126467915526e+16
+epoch 56
+train loss: 0.5191397114905667 test loss: 9489868043732916.0
+epoch 57
+train loss: 0.5143417284307369 test loss: 4016444276070040.5
+epoch 58
+train loss: 0.5120637681185807 test loss: 1.2003406595790714e+16
+epoch 59
+train loss: 0.5157758062956445 test loss: 1.5148306029847836e+16
+epoch 60
+train loss: 0.5092775751735567 test loss: 1.7598346298218848e+16
+epoch 61
+train loss: 0.51371493915338 test loss: 147236365697088.62
+epoch 62
+train loss: 0.5146815775134977 test loss: 2.736443817897756e+16
+epoch 63
+train loss: 0.5122639066677475 test loss: 3.2495515572914876e+16
+epoch 64
+train loss: 0.5080554444712686 test loss: 1.0617399727355884e+16
+epoch 65
+train loss: 0.5163589185044584 test loss: 5.866754955911391e+16
+epoch 66
+train loss: 0.5263717256040654 test loss: 2.549723226649395e+16
+epoch 67
+train loss: 0.503176964723911 test loss: 5.208060443026284e+16
+epoch 68
+train loss: 0.49839447131745784 test loss: 6.028180282841627e+16
+epoch 69
+train loss: 0.4941054205086679 test loss: 4.152265526800886e+16
+epoch 70
+train loss: 0.4933211602664114 test loss: 5.484729183441427e+16
+epoch 71
+train loss: 0.4909385516864021 test loss: 7.038321814968083e+16
+epoch 72
+train loss: 0.4894982889595064 test loss: 6.513296868362719e+16
+epoch 73
+train loss: 0.4877897155722805 test loss: 8.014717833206706e+16
+epoch 74
+train loss: 0.48720649609094435 test loss: 1.0245235314425301e+17
+epoch 75
+train loss: 0.4883630407789207 test loss: 1.3169639336322915e+17
+epoch 76
+train loss: 0.490452841577393 test loss: 9.564894416484546e+16
+epoch 77
+train loss: 0.4900784909622321 test loss: 1.1933907522939646e+17
+epoch 78
+train loss: 0.4894118423873908 test loss: 1.074952680918301e+17
+epoch 79
+train loss: 0.4867570794499968 test loss: 1.2315059556160757e+17
+epoch 80
+train loss: 0.4852367489468678 test loss: 1.001297619472069e+17
+epoch 81
+train loss: 0.4862560466390716 test loss: 1.1989534964094894e+17
+epoch 82
+train loss: 0.4845147787701684 test loss: 7.360320875504821e+16
+epoch 83
+train loss: 0.48537325276477855 test loss: 9.246007135148648e+16
+epoch 84
+train loss: 0.4853014185585436 test loss: 4.2271090398374056e+16
+epoch 85
+train loss: 0.4843649396816942 test loss: 7.34326159642256e+16
+epoch 86
+train loss: 0.48521129209682945 test loss: 5.609537024335862e+16
+epoch 87
+train loss: 0.48829712100700934 test loss: 8.384198270669571e+16
+epoch 88
+train loss: 0.4805356185453034 test loss: 5.091200454096772e+16
+epoch 89
+train loss: 0.48066126576920964 test loss: 5.20592498761633e+16
+epoch 90
+train loss: 0.4803101288209013 test loss: 7.516097562044472e+16
+epoch 91
+train loss: 0.4811452361211138 test loss: 3.0741499402212436e+16
+epoch 92
+train loss: 0.4770148246974217 test loss: 4.261854299383269e+16
+epoch 93
+train loss: 0.4753657943215413 test loss: 5.487651139482438e+16
+epoch 94
+train loss: 0.4728101883283603 test loss: 4.843441442936692e+16
+epoch 95
+train loss: 0.4713143188732511 test loss: 5.793199888800942e+16
+epoch 96
+train loss: 0.47000777954082595 test loss: 3.822400046445002e+16
+epoch 97
+train loss: 0.4704178337880506 test loss: 5.293872235413194e+16
+epoch 98
+train loss: 0.47087705453664697 test loss: 9.396875570336307e+16
+epoch 99
+train loss: 0.4766320786323564 test loss: 9.725469308334446e+16
+epoch 100
+train loss: 0.47275058688882043 test loss: 9.552678052940875e+16
+epoch 101
+train loss: 0.47235033754034833 test loss: 1.099700534711879e+17
+epoch 102
+train loss: 0.47234788344270456 test loss: 1.3646325319684789e+17
+epoch 103
+train loss: 0.4676104336683097 test loss: 1.144330424419152e+17
+epoch 104
+train loss: 0.4663348361150119 test loss: 8.675331441994773e+16
+epoch 105
+train loss: 0.4662815464344982 test loss: 1.5959914765934435e+17
+epoch 106
+train loss: 0.46850066320244454 test loss: 1.2931158911115454e+17
+epoch 107
+train loss: 0.4635163034077096 test loss: 1.2753221065452474e+17
+epoch 108
+train loss: 0.461120081564594 test loss: 1.4027789038343717e+17
+epoch 109
+train loss: 0.45883264012166136 test loss: 2.379168944401894e+17
+epoch 110
+train loss: 0.45788018768577754 test loss: 1.6029458137690778e+17
+epoch 111
+train loss: 0.4583393613388017 test loss: 1.4090787724744926e+17
+epoch 112
+train loss: 0.4565498319683291 test loss: 1.170440614428955e+17
+epoch 113
+train loss: 0.45773314333572057 test loss: 1.3175674657352518e+17
+epoch 114
+train loss: 0.45959907173359316 test loss: 1.3050659722527664e+17
+epoch 115
+train loss: 0.46066206640092633 test loss: 1.3821353650727595e+17
+epoch 116
+train loss: 0.4589472255397465 test loss: 1.2239883122165179e+17
+epoch 117
+train loss: 0.4615099385671388 test loss: 9.988387808530646e+16
+epoch 118
+train loss: 0.4570792240974231 test loss: 5.978939640612819e+16
+epoch 119
+train loss: 0.45299470229815253 test loss: 8.707071238452342e+16
+epoch 120
+train loss: 0.4502853351483318 test loss: 8.446795773028208e+16
+epoch 121
+train loss: 0.4493334192620174 test loss: 1.2688340249781456e+17
+epoch 122
+train loss: 0.44805709495422036 test loss: 9.800895229101906e+16
+epoch 123
+train loss: 0.44377790969791786 test loss: 1.4962244925744976e+17
+epoch 124
+train loss: 0.4423937181930531 test loss: 1.6032392228927066e+17
+epoch 125
+train loss: 0.44283217376205397 test loss: 1.9519036924229456e+17
+epoch 126
+train loss: 0.44266526691359226 test loss: 2.2335230893996938e+17
+epoch 127
+train loss: 0.4425996720444704 test loss: 2.1334239400648506e+17
+epoch 128
+train loss: 0.44225917224338146 test loss: 2.220928336949986e+17
+epoch 129
+train loss: 0.44891919238513667 test loss: 2.4399600192648704e+17
+epoch 130
+train loss: 0.44301477643540166 test loss: 2.6950127105946678e+17
+epoch 131
+train loss: 0.44536193273267594 test loss: 3.995875564337728e+17
+epoch 132
+train loss: 0.4428516370898475 test loss: 2.5269682440770198e+17
+epoch 133
+train loss: 0.4426416589705216 test loss: 2.7940735702226416e+17
+epoch 134
+train loss: 0.44169814859925327 test loss: 3.1274228545943194e+17
+epoch 135
+train loss: 0.4479139155883578 test loss: 2.8470254088514938e+17
+epoch 136
+train loss: 0.4426768004882827 test loss: 2.169679461579474e+17
+epoch 137
+train loss: 0.44682897697565144 test loss: 2.2197932894235667e+17
+epoch 138
+train loss: 0.43704524830084945 test loss: 2.2632870393950845e+17
+epoch 139
+train loss: 0.4369408947766911 test loss: 3.086273813719671e+17
+epoch 140
+train loss: 0.43250539987534775 test loss: 2.5686911798371734e+17
+epoch 141
+train loss: 0.43327880133316493 test loss: 3.444177192652564e+17
+epoch 142
+train loss: 0.43183937762034663 test loss: 3.0140065875124826e+17
+epoch 143
+train loss: 0.43148657692457115 test loss: 3.89722809319416e+17
+epoch 144
+train loss: 0.4319816472120265 test loss: 3.268466527525505e+17
+epoch 145
+train loss: 0.4317706203397993 test loss: 4.396507705816095e+17
+epoch 146
+train loss: 0.4329370358893936 test loss: 4.314896792064736e+17
+epoch 147
+train loss: 0.43400061130278755 test loss: 4.9385944965818714e+17
+epoch 148
+train loss: 0.4314182436315344 test loss: 4.505038140131595e+17
+epoch 149
+train loss: 0.4310792805571881 test loss: 5.5599782438409075e+17
+epoch 150
+train loss: 0.4297288729752688 test loss: 4.785825164440966e+17
+fold 2
+epoch 1
+train loss: 0.4451807434089954 test loss: inf
+epoch 2
+train loss: 0.4476862208521369 test loss: inf
+epoch 3
+train loss: 0.4492154271994378 test loss: inf
+epoch 4
+train loss: 0.43252428701225404 test loss: inf
+epoch 5
+train loss: 0.42210167383849817 test loss: inf
+epoch 6
+train loss: 0.41759769970956484 test loss: inf
+epoch 7
+train loss: 0.4161702789237252 test loss: inf
+epoch 8
+train loss: 0.4118997123718601 test loss: inf
+epoch 9
+train loss: 0.4097299893724861 test loss: inf
+epoch 10
+train loss: 0.4082346791387218 test loss: inf
+epoch 11
+train loss: 0.40585874533760374 test loss: inf
+epoch 12
+train loss: 0.40169623139335375 test loss: inf
+epoch 13
+train loss: 0.4013202229537986 test loss: inf
+epoch 14
+train loss: 0.3979709863584344 test loss: inf
+epoch 15
+train loss: 0.3971163235513325 test loss: inf
+epoch 16
+train loss: 0.39950719413698804 test loss: inf
+epoch 17
+train loss: 0.4055511310856619 test loss: inf
+epoch 18
+train loss: 0.401351036543507 test loss: inf
+epoch 19
+train loss: 0.3975359766609165 test loss: inf
+epoch 20
+train loss: 0.3987792782059318 test loss: inf
+epoch 21
+train loss: 0.3957523044011793 test loss: inf
+epoch 22
+train loss: 0.3933158214354029 test loss: inf
+epoch 23
+train loss: 0.3915643380032724 test loss: inf
+epoch 24
+train loss: 0.3891840793572835 test loss: inf
+epoch 25
+train loss: 0.38899032749136025 test loss: inf
+epoch 26
+train loss: 0.38742541166811484 test loss: inf
+epoch 27
+train loss: 0.38657201878659536 test loss: inf
+epoch 28
+train loss: 0.3863182760907348 test loss: inf
+epoch 29
+train loss: 0.38445429922247465 test loss: inf
+epoch 30
+train loss: 0.38498533172922755 test loss: inf
+epoch 31
+train loss: 0.3845728895627574 test loss: inf
+epoch 32
+train loss: 0.3934701479973042 test loss: inf
+epoch 33
+train loss: 0.39831098332860715 test loss: inf
+epoch 34
+train loss: 0.4136391162542484 test loss: inf
+epoch 35
+train loss: 0.39541396942155393 test loss: inf
+epoch 36
+train loss: 0.4001285965294593 test loss: inf
+epoch 37
+train loss: 0.38675779475373917 test loss: inf
+epoch 38
+train loss: 0.3824717428150693 test loss: inf
+epoch 39
+train loss: 0.37967676751980156 test loss: inf
+epoch 40
+train loss: 0.37814367676177046 test loss: inf
+epoch 41
+train loss: 0.3784887657572035 test loss: inf
+epoch 42
+train loss: 0.3794825911642741 test loss: inf
+epoch 43
+train loss: 0.38203496009735144 test loss: inf
+epoch 44
+train loss: 0.37988416071709324 test loss: inf
+epoch 45
+train loss: 0.37904997464206536 test loss: inf
+epoch 46
+train loss: 0.37571586140925595 test loss: inf
+epoch 47
+train loss: 0.3762142207312683 test loss: inf
+epoch 48
+train loss: 0.37463738971110006 test loss: inf
+epoch 49
+train loss: 0.3742981915475048 test loss: inf
+epoch 50
+train loss: 0.3739575652996294 test loss: inf
+epoch 51
+train loss: 0.3791883040906148 test loss: inf
+epoch 52
+train loss: 0.41503969995489043 test loss: inf
+epoch 53
+train loss: 0.3913631407466866 test loss: inf
+epoch 54
+train loss: 0.3774441247673286 test loss: inf
+epoch 55
+train loss: 0.3756815375282188 test loss: inf
+epoch 56
+train loss: 0.3735373522004563 test loss: inf
+epoch 57
+train loss: 0.3741048783449235 test loss: inf
+epoch 58
+train loss: 0.37361895737615614 test loss: inf
+epoch 59
+train loss: 0.3739042454636949 test loss: inf
+epoch 60
+train loss: 0.3771254398110775 test loss: inf
+epoch 61
+train loss: 0.377905828414153 test loss: inf
+epoch 62
+train loss: 0.3759262514772735 test loss: inf
+epoch 63
+train loss: 0.3752770227011283 test loss: inf
+epoch 64
+train loss: 0.37189450827367 test loss: inf
+epoch 65
+train loss: 0.37214116600131664 test loss: inf
+epoch 66
+train loss: 0.37418969817918407 test loss: inf
+epoch 67
+train loss: 0.37942346394284104 test loss: inf
+epoch 68
+train loss: 0.3753149570268992 test loss: inf
+epoch 69
+train loss: 0.3724793873371366 test loss: inf
+epoch 70
+train loss: 0.37183623015717304 test loss: inf
+epoch 71
+train loss: 0.37317165682419284 test loss: inf
+epoch 72
+train loss: 0.372163374624361 test loss: inf
+epoch 73
+train loss: 0.3713082899614016 test loss: inf
+epoch 74
+train loss: 0.37092887839527344 test loss: inf
+epoch 75
+train loss: 0.3716339678529086 test loss: inf
+epoch 76
+train loss: 0.3706671403144996 test loss: inf
+epoch 77
+train loss: 0.3714558206500256 test loss: inf
+epoch 78
+train loss: 0.3730079085189941 test loss: inf
+epoch 79
+train loss: 0.3741452779091034 test loss: inf
+epoch 80
+train loss: 0.37462750889659713 test loss: inf
+epoch 81
+train loss: 0.3726103359503937 test loss: inf
+epoch 82
+train loss: 0.3728736506298645 test loss: inf
+epoch 83
+train loss: 0.3720793225897389 test loss: inf
+epoch 84
+train loss: 0.3722496522529695 test loss: inf
+epoch 85
+train loss: 0.372123268594769 test loss: inf
+epoch 86
+train loss: 0.3737904789049114 test loss: inf
+epoch 87
+train loss: 0.3735004293469256 test loss: inf
+epoch 88
+train loss: 0.3814213668799782 test loss: inf
+epoch 89
+train loss: 0.37363343459310927 test loss: inf
+epoch 90
+train loss: 0.38196398488933936 test loss: inf
+epoch 91
+train loss: 0.3843585153592213 test loss: inf
+epoch 92
+train loss: 0.38672593333285915 test loss: inf
+epoch 93
+train loss: 0.37198954079983504 test loss: inf
+epoch 94
+train loss: 0.374073214288503 test loss: inf
+epoch 95
+train loss: 0.3710050884599151 test loss: inf
+epoch 96
+train loss: 0.3718777225907372 test loss: inf
+epoch 97
+train loss: 0.36940457275267524 test loss: inf
+epoch 98
+train loss: 0.3666581569789351 test loss: inf
+epoch 99
+train loss: 0.368027893912497 test loss: inf
+epoch 100
+train loss: 0.36696341178075226 test loss: inf
+epoch 101
+train loss: 0.3672040429994147 test loss: inf
+epoch 102
+train loss: 0.3675994730370624 test loss: inf
+epoch 103
+train loss: 0.3663337528248406 test loss: inf
+epoch 104
+train loss: 0.369507891575208 test loss: inf
+epoch 105
+train loss: 0.3668535623300201 test loss: inf
+epoch 106
+train loss: 0.3694761787707963 test loss: inf
+epoch 107
+train loss: 0.3666612975031575 test loss: inf
+epoch 108
+train loss: 0.3715267670762309 test loss: inf
+epoch 109
+train loss: 0.3698746344511796 test loss: inf
+epoch 110
+train loss: 0.373050530072291 test loss: inf
+epoch 111
+train loss: 0.37642184801607076 test loss: inf
+epoch 112
+train loss: 0.37212244291679003 test loss: inf
+epoch 113
+train loss: 0.380376996007531 test loss: inf
+epoch 114
+train loss: 0.3771413874788136 test loss: inf
+epoch 115
+train loss: 0.3675770288308396 test loss: inf
+epoch 116
+train loss: 0.36564658661565835 test loss: inf
+epoch 117
+train loss: 0.3633452552168053 test loss: inf
+epoch 118
+train loss: 0.36303311194420357 test loss: inf
+epoch 119
+train loss: 0.36288245073975817 test loss: inf
+epoch 120
+train loss: 0.36452893591125674 test loss: inf
+epoch 121
+train loss: 0.3647664837651861 test loss: inf
+epoch 122
+train loss: 0.36316883153992996 test loss: inf
+epoch 123
+train loss: 0.3630982277081733 test loss: inf
+epoch 124
+train loss: 0.3637378958153693 test loss: inf
+epoch 125
+train loss: 0.3646264869336846 test loss: inf
+epoch 126
+train loss: 0.36456943162352196 test loss: inf
+epoch 127
+train loss: 0.36501762794737697 test loss: inf
+epoch 128
+train loss: 0.3629074066105039 test loss: inf
+epoch 129
+train loss: 0.3639368757135299 test loss: inf
+epoch 130
+train loss: 0.36573822786221244 test loss: inf
+epoch 131
+train loss: 0.3956156492024275 test loss: inf
+epoch 132
+train loss: 0.3818307133922576 test loss: inf
+epoch 133
+train loss: 0.3882483485567708 test loss: inf
+epoch 134
+train loss: 0.3675766010021082 test loss: inf
+epoch 135
+train loss: 0.36568511381611446 test loss: inf
+epoch 136
+train loss: 0.36192524025174655 test loss: inf
+epoch 137
+train loss: 0.36072448910151345 test loss: inf
+epoch 138
+train loss: 0.3594910053700803 test loss: inf
+epoch 139
+train loss: 0.36062281039538757 test loss: inf
+epoch 140
+train loss: 0.35992122501128343 test loss: inf
+epoch 141
+train loss: 0.35995027843602334 test loss: inf
+epoch 142
+train loss: 0.35917509749201915 test loss: inf
+epoch 143
+train loss: 0.35926311116550486 test loss: inf
+epoch 144
+train loss: 0.3596285350250095 test loss: inf
+epoch 145
+train loss: 0.36084170073087923 test loss: inf
+epoch 146
+train loss: 0.36063092577742845 test loss: inf
+epoch 147
+train loss: 0.3615270400676593 test loss: inf
+epoch 148
+train loss: 0.3620685405332008 test loss: inf
+epoch 149
+train loss: 0.36271511277242263 test loss: inf
+epoch 150
+train loss: 0.37172061913801263 test loss: inf
+fold 3
+epoch 1
+train loss: 0.40586655501193797 test loss: inf
+epoch 2
+train loss: 0.4021984295759929 test loss: inf
+epoch 3
+train loss: 0.40134410205154913 test loss: inf
+epoch 4
+train loss: 0.40317572338484947 test loss: inf
+epoch 5
+train loss: 0.3998828219936039 test loss: inf
+epoch 6
+train loss: 0.39933840724562647 test loss: inf
+epoch 7
+train loss: 0.3975275032093278 test loss: inf
+epoch 8
+train loss: 0.4113456791668066 test loss: inf
+epoch 9
+train loss: 0.4174272192692302 test loss: inf
+epoch 10
+train loss: 0.41223479698059223 test loss: inf
+epoch 11
+train loss: 0.4040038310393035 test loss: inf
+epoch 12
+train loss: 0.39665080898559957 test loss: inf
+epoch 13
+train loss: 0.39070031820989715 test loss: inf
+epoch 14
+train loss: 0.39005078788770803 test loss: inf
+epoch 15
+train loss: 0.3896013518332873 test loss: inf
+epoch 16
+train loss: 0.3894512163160429 test loss: inf
+epoch 17
+train loss: 0.38907710347776087 test loss: inf
+epoch 18
+train loss: 0.38874947114449804 test loss: inf
+epoch 19
+train loss: 0.3885468236943648 test loss: inf
+epoch 20
+train loss: 0.38889387006165815 test loss: inf
+epoch 21
+train loss: 0.3912683469256614 test loss: inf
+epoch 22
+train loss: 0.38986023351608884 test loss: inf
+epoch 23
+train loss: 0.38955772048792714 test loss: inf
+epoch 24
+train loss: 0.390793286686028 test loss: inf
+epoch 25
+train loss: 0.3907489841924329 test loss: inf
+epoch 26
+train loss: 0.391448536880009 test loss: inf
+epoch 27
+train loss: 0.3881089130684704 test loss: inf
+epoch 28
+train loss: 0.38841121977367815 test loss: inf
+epoch 29
+train loss: 0.3865435068066343 test loss: inf
+epoch 30
+train loss: 0.38754060183233946 test loss: inf
+epoch 31
+train loss: 0.3871831828509928 test loss: inf
+epoch 32
+train loss: 0.38980644070789294 test loss: inf
+epoch 33
+train loss: 0.3879686876030938 test loss: inf
+epoch 34
+train loss: 0.3901775102044325 test loss: inf
+epoch 35
+train loss: 0.3949709178901492 test loss: inf
+epoch 36
+train loss: 0.3931847556285787 test loss: inf
+epoch 37
+train loss: 0.38940835788065525 test loss: inf
+epoch 38
+train loss: 0.3860694897401308 test loss: inf
+epoch 39
+train loss: 0.3839068376662672 test loss: inf
+epoch 40
+train loss: 0.3833472654256099 test loss: inf
+epoch 41
+train loss: 0.38350312700142025 test loss: inf
+epoch 42
+train loss: 0.38389833806906776 test loss: inf
+epoch 43
+train loss: 0.38598395775617433 test loss: inf
+epoch 44
+train loss: 0.3835933944918648 test loss: inf
+epoch 45
+train loss: 0.38514653926969566 test loss: inf
+epoch 46
+train loss: 0.38254971721573094 test loss: inf
+epoch 47
+train loss: 0.382293120077206 test loss: inf
+epoch 48
+train loss: 0.3837118218296744 test loss: inf
+epoch 49
+train loss: 0.38393447082795884 test loss: inf
+epoch 50
+train loss: 0.38293058771632715 test loss: inf
+epoch 51
+train loss: 0.38667709291317653 test loss: inf
+epoch 52
+train loss: 0.38530272096166895 test loss: inf
+epoch 53
+train loss: 0.38608295647229457 test loss: inf
+epoch 54
+train loss: 0.3841892146317028 test loss: inf
+epoch 55
+train loss: 0.3848558664093304 test loss: inf
+epoch 56
+train loss: 0.3815150295439132 test loss: inf
+epoch 57
+train loss: 0.38109065334220976 test loss: inf
+epoch 58
+train loss: 0.3833563523467058 test loss: inf
+epoch 59
+train loss: 0.3846278103779158 test loss: inf
+epoch 60
+train loss: 0.3864574565676882 test loss: inf
+epoch 61
+train loss: 0.3882821323099025 test loss: inf
+epoch 62
+train loss: 0.3834980379805579 test loss: inf
+epoch 63
+train loss: 0.38714704896545243 test loss: inf
+epoch 64
+train loss: 0.38215188204559636 test loss: inf
+epoch 65
+train loss: 0.3847571435320568 test loss: inf
+epoch 66
+train loss: 0.38383499438397434 test loss: inf
+epoch 67
+train loss: 0.38261904487716586 test loss: inf
+epoch 68
+train loss: 0.378767508088419 test loss: inf
+epoch 69
+train loss: 0.3772887584526576 test loss: inf
+epoch 70
+train loss: 0.37707944039631747 test loss: inf
+epoch 71
+train loss: 0.377888793358018 test loss: inf
+epoch 72
+train loss: 0.3786611661507638 test loss: inf
+epoch 73
+train loss: 0.3764767710796292 test loss: inf
+epoch 74
+train loss: 0.3773429435805391 test loss: inf
+epoch 75
+train loss: 0.3758938039865066 test loss: inf
+epoch 76
+train loss: 0.37699253759492835 test loss: inf
+epoch 77
+train loss: 0.3788629112560682 test loss: inf
+epoch 78
+train loss: 0.37932293779891674 test loss: inf
+epoch 79
+train loss: 0.3807592364275061 test loss: inf
+epoch 80
+train loss: 0.3820153997748528 test loss: inf
+epoch 81
+train loss: 0.3862332011879784 test loss: inf
+epoch 82
+train loss: 0.4026274234905542 test loss: inf
+epoch 83
+train loss: 0.3830011991958281 test loss: inf
+epoch 84
+train loss: 0.37885421576966666 test loss: inf
+epoch 85
+train loss: 0.3766741141800998 test loss: inf
+epoch 86
+train loss: 0.3736542327639345 test loss: inf
+epoch 87
+train loss: 0.3740590165222054 test loss: inf
+epoch 88
+train loss: 0.37399070034035853 test loss: inf
+epoch 89
+train loss: 0.37399389560585633 test loss: inf
+epoch 90
+train loss: 0.37440690902514256 test loss: inf
+epoch 91
+train loss: 0.37501985885149003 test loss: inf
+epoch 92
+train loss: 0.3738786094356022 test loss: inf
+epoch 93
+train loss: 0.3745796560617411 test loss: inf
+epoch 94
+train loss: 0.3766442633440313 test loss: inf
+epoch 95
+train loss: 0.37993391825622197 test loss: inf
+epoch 96
+train loss: 0.3796105833298382 test loss: inf
+epoch 97
+train loss: 0.3775386917807934 test loss: inf
+epoch 98
+train loss: 0.37997613328997043 test loss: inf
+epoch 99
+train loss: 0.37616667150797983 test loss: inf
+epoch 100
+train loss: 0.37362395716313074 test loss: inf
+epoch 101
+train loss: 0.3710578639642361 test loss: inf
+epoch 102
+train loss: 0.37096731528009524 test loss: inf
+epoch 103
+train loss: 0.3736452993741102 test loss: inf
+epoch 104
+train loss: 0.3723571559595103 test loss: inf
+epoch 105
+train loss: 0.37107857423682444 test loss: inf
+epoch 106
+train loss: 0.37259092552409 test loss: inf
+epoch 107
+train loss: 0.37220884701831025 test loss: inf
+epoch 108
+train loss: 0.3724507448144474 test loss: inf
+epoch 109
+train loss: 0.38218400351590504 test loss: inf
+epoch 110
+train loss: 0.37858263541804105 test loss: inf
+epoch 111
+train loss: 0.37288782744456767 test loss: inf
+epoch 112
+train loss: 0.3700988804225516 test loss: inf
+epoch 113
+train loss: 0.36988169813388644 test loss: inf
+epoch 114
+train loss: 0.3693137451297694 test loss: inf
+epoch 115
+train loss: 0.3702346864461559 test loss: inf
+epoch 116
+train loss: 0.3701317404759523 test loss: inf
+epoch 117
+train loss: 0.3698877184618115 test loss: inf
+epoch 118
+train loss: 0.36936292199304877 test loss: inf
+epoch 119
+train loss: 0.3687862521141552 test loss: inf
+epoch 120
+train loss: 0.3701317030777279 test loss: inf
+epoch 121
+train loss: 0.37040189325273915 test loss: inf
+epoch 122
+train loss: 0.3718671985239986 test loss: inf
+epoch 123
+train loss: 0.3701981791221022 test loss: inf
+epoch 124
+train loss: 0.3702862684770279 test loss: inf
+epoch 125
+train loss: 0.37038450216318913 test loss: inf
+epoch 126
+train loss: 0.3711516063169719 test loss: inf
+epoch 127
+train loss: 0.3760566682377824 test loss: inf
+epoch 128
+train loss: 0.37241116016548037 test loss: inf
+epoch 129
+train loss: 0.37420929632974825 test loss: inf
+epoch 130
+train loss: 0.371443515892075 test loss: inf
+epoch 131
+train loss: 0.3714841677579288 test loss: inf
+epoch 132
+train loss: 0.3695993426327522 test loss: inf
+epoch 133
+train loss: 0.3695955510211832 test loss: inf
+epoch 134
+train loss: 0.3690512818730298 test loss: inf
+epoch 135
+train loss: 0.3687000668748687 test loss: inf
+epoch 136
+train loss: 0.36892473836125916 test loss: inf
+epoch 137
+train loss: 0.3689631986232369 test loss: inf
+epoch 138
+train loss: 0.36772234505930285 test loss: inf
+epoch 139
+train loss: 0.3675380811101769 test loss: inf
+epoch 140
+train loss: 0.36847209421794924 test loss: inf
+epoch 141
+train loss: 0.368344956039468 test loss: inf
+epoch 142
+train loss: 0.36985135062755053 test loss: inf
+epoch 143
+train loss: 0.37014437201035905 test loss: inf
+epoch 144
+train loss: 0.3759071718776485 test loss: inf
+epoch 145
+train loss: 0.37607284077614017 test loss: inf
+epoch 146
+train loss: 0.3750778184323987 test loss: inf
+epoch 147
+train loss: 0.37262421130314355 test loss: inf
+epoch 148
+train loss: 0.37488035951564896 test loss: inf
+epoch 149
+train loss: 0.37406279568185075 test loss: inf
+epoch 150
+train loss: 0.37410108992960955 test loss: inf
+fold 4
+epoch 1
+train loss: 0.39500899302340275 test loss: inf
+epoch 2
+train loss: 0.3826500142155223 test loss: inf
+epoch 3
+train loss: 0.3798073501475751 test loss: inf
+epoch 4
+train loss: 0.37501392009297196 test loss: inf
+epoch 5
+train loss: 0.3764829679004278 test loss: inf
+epoch 6
+train loss: 0.37321829884254876 test loss: inf
+epoch 7
+train loss: 0.37264912547153806 test loss: inf
+epoch 8
+train loss: 0.37273269815812526 test loss: inf
+epoch 9
+train loss: 0.37214472838466217 test loss: inf
+epoch 10
+train loss: 0.37079751467299177 test loss: inf
+epoch 11
+train loss: 0.37342802659019997 test loss: inf
+epoch 12
+train loss: 0.37093159765227174 test loss: inf
+epoch 13
+train loss: 0.3725953352570847 test loss: inf
+epoch 14
+train loss: 0.374417759610351 test loss: inf
+epoch 15
+train loss: 0.37556342200284043 test loss: inf
+epoch 16
+train loss: 0.37185303090781513 test loss: inf
+epoch 17
+train loss: 0.3726635795921812 test loss: inf
+epoch 18
+train loss: 0.37170250549889594 test loss: inf
+epoch 19
+train loss: 0.3718749322364551 test loss: inf
+epoch 20
+train loss: 0.3701533724015255 test loss: inf
+epoch 21
+train loss: 0.3719563075659073 test loss: inf
+epoch 22
+train loss: 0.37030346187065494 test loss: inf
+epoch 23
+train loss: 0.3695524538145263 test loss: inf
+epoch 24
+train loss: 0.36864591213631026 test loss: inf
+epoch 25
+train loss: 0.36854610887015044 test loss: inf
+epoch 26
+train loss: 0.36797868424413 test loss: inf
+epoch 27
+train loss: 0.3677920314915839 test loss: inf
+epoch 28
+train loss: 0.36850577449079486 test loss: inf
+epoch 29
+train loss: 0.36826807340031886 test loss: inf
+epoch 30
+train loss: 0.3692433734685868 test loss: inf
+epoch 31
+train loss: 0.36910870024020437 test loss: inf
+epoch 32
+train loss: 0.36945473930059414 test loss: inf
+epoch 33
+train loss: 0.3697249962581489 test loss: inf
+epoch 34
+train loss: 0.37230586211490785 test loss: inf
+epoch 35
+train loss: 0.37751145943355957 test loss: inf
+epoch 36
+train loss: 0.40210390558828396 test loss: inf
+epoch 37
+train loss: 0.3849707833129391 test loss: inf
+epoch 38
+train loss: 0.36897413064232787 test loss: inf
+epoch 39
+train loss: 0.3679895654431749 test loss: inf
+epoch 40
+train loss: 0.36510126471989723 test loss: inf
+epoch 41
+train loss: 0.36542247113802967 test loss: inf
+epoch 42
+train loss: 0.3636936911149308 test loss: inf
+epoch 43
+train loss: 0.36387067459770234 test loss: inf
+epoch 44
+train loss: 0.3635851317796625 test loss: inf
+epoch 45
+train loss: 0.36290699380866115 test loss: inf
+epoch 46
+train loss: 0.36620540041154004 test loss: inf
+epoch 47
+train loss: 0.36568660585733453 test loss: inf
+epoch 48
+train loss: 0.3637404911727882 test loss: inf
+epoch 49
+train loss: 0.36537088057809614 test loss: inf
+epoch 50
+train loss: 0.36651367455134715 test loss: inf
+epoch 51
+train loss: 0.36489636503011413 test loss: inf
+epoch 52
+train loss: 0.3664849764868901 test loss: inf
+epoch 53
+train loss: 0.36593011340668086 test loss: inf
+epoch 54
+train loss: 0.3672549094161443 test loss: inf
+epoch 55
+train loss: 0.36778596982134554 test loss: inf
+epoch 56
+train loss: 0.3709377619169886 test loss: inf
+epoch 57
+train loss: 0.36706655547463685 test loss: inf
+epoch 58
+train loss: 0.36568386832657496 test loss: inf
+epoch 59
+train loss: 0.36230666925320365 test loss: inf
+epoch 60
+train loss: 0.36254654583320556 test loss: inf
+epoch 61
+train loss: 0.3616639627925456 test loss: inf
+epoch 62
+train loss: 0.36194173645194677 test loss: inf
+epoch 63
+train loss: 0.3611776531983592 test loss: inf
+epoch 64
+train loss: 0.36183895220081586 test loss: inf
+epoch 65
+train loss: 0.3616629422589428 test loss: inf
+epoch 66
+train loss: 0.36268546426868375 test loss: inf
+epoch 67
+train loss: 0.36314918193415074 test loss: inf
+epoch 68
+train loss: 0.36414467158669994 test loss: inf
+epoch 69
+train loss: 0.36278049084565084 test loss: inf
+epoch 70
+train loss: 0.3626815102098021 test loss: inf
+epoch 71
+train loss: 0.36212557357203834 test loss: inf
+epoch 72
+train loss: 0.360994223039087 test loss: inf
+epoch 73
+train loss: 0.36254469224778596 test loss: inf
+epoch 74
+train loss: 0.3743471856919488 test loss: inf
+epoch 75
+train loss: 0.3712829235168029 test loss: inf
+epoch 76
+train loss: 0.3663306570024689 test loss: inf
+epoch 77
+train loss: 0.3671416194136731 test loss: inf
+epoch 78
+train loss: 0.36062427868390196 test loss: inf
+epoch 79
+train loss: 0.36209086246940353 test loss: inf
+epoch 80
+train loss: 0.3625899005184081 test loss: inf
+epoch 81
+train loss: 0.3632113025238998 test loss: inf
+epoch 82
+train loss: 0.3583953525506102 test loss: inf
+epoch 83
+train loss: 0.3576058458831588 test loss: inf
+epoch 84
+train loss: 0.3581231482949091 test loss: inf
+epoch 85
+train loss: 0.3580236484353973 test loss: inf
+epoch 86
+train loss: 0.3575561594829509 test loss: inf
+epoch 87
+train loss: 0.35744589597228427 test loss: inf
+epoch 88
+train loss: 0.35963223483670625 test loss: inf
+epoch 89
+train loss: 0.35954484457663216 test loss: inf
+epoch 90
+train loss: 0.3584940188709069 test loss: inf
+epoch 91
+train loss: 0.35786688032329617 test loss: inf
+epoch 92
+train loss: 0.357576504522788 test loss: inf
+epoch 93
+train loss: 0.3578752664995708 test loss: inf
+epoch 94
+train loss: 0.3592043452849846 test loss: inf
+epoch 95
+train loss: 0.3630347584612846 test loss: inf
+epoch 96
+train loss: 0.3630809046551765 test loss: inf
+epoch 97
+train loss: 0.3643812660683855 test loss: inf
+epoch 98
+train loss: 0.35899106437781647 test loss: inf
+epoch 99
+train loss: 0.3579564262185603 test loss: inf
+epoch 100
+train loss: 0.3581070551743032 test loss: inf
+epoch 101
+train loss: 0.36014589146775633 test loss: inf
+epoch 102
+train loss: 0.3595818600791041 test loss: inf
+epoch 103
+train loss: 0.35916622343007576 test loss: inf
+epoch 104
+train loss: 0.35765979323824354 test loss: inf
+epoch 105
+train loss: 0.358200554705139 test loss: inf
+epoch 106
+train loss: 0.3580420234914336 test loss: inf
+epoch 107
+train loss: 0.3594741791506334 test loss: inf
+epoch 108
+train loss: 0.36160149355709825 test loss: inf
+epoch 109
+train loss: 0.35950218304034887 test loss: inf
+epoch 110
+train loss: 0.3572523186969935 test loss: inf
+epoch 111
+train loss: 0.35691104459639783 test loss: inf
+epoch 112
+train loss: 0.35551234757772227 test loss: inf
+epoch 113
+train loss: 0.35519116569768433 test loss: inf
+epoch 114
+train loss: 0.35415331277046813 test loss: inf
+epoch 115
+train loss: 0.35309949249385114 test loss: inf
+epoch 116
+train loss: 0.35285465602168853 test loss: inf
+epoch 117
+train loss: 0.35218694452265753 test loss: inf
+epoch 118
+train loss: 0.35671314606436927 test loss: inf
+epoch 119
+train loss: 0.35448093481611687 test loss: inf
+epoch 120
+train loss: 0.35451380118365194 test loss: inf
+epoch 121
+train loss: 0.36156307049495673 test loss: inf
+epoch 122
+train loss: 0.35670457254264953 test loss: inf
+epoch 123
+train loss: 0.3520059443401214 test loss: inf
+epoch 124
+train loss: 0.3514266333561338 test loss: inf
+epoch 125
+train loss: 0.35112916866781524 test loss: inf
+epoch 126
+train loss: 0.35279604306829465 test loss: inf
+epoch 127
+train loss: 0.35084712109298866 test loss: inf
+epoch 128
+train loss: 0.34988016197174204 test loss: inf
+epoch 129
+train loss: 0.34917221413796706 test loss: inf
+epoch 130
+train loss: 0.34874158061970595 test loss: inf
+epoch 131
+train loss: 0.3480896129436773 test loss: inf
+epoch 132
+train loss: 0.3488535798878725 test loss: inf
+epoch 133
+train loss: 0.3491670898644124 test loss: inf
+epoch 134
+train loss: 0.3490397611058597 test loss: inf
+epoch 135
+train loss: 0.35316995208429425 test loss: inf
+epoch 136
+train loss: 0.35393607880289085 test loss: inf
+epoch 137
+train loss: 0.35699575487381396 test loss: inf
+epoch 138
+train loss: 0.3566136417382646 test loss: inf
+epoch 139
+train loss: 0.3543882645681295 test loss: inf
+epoch 140
+train loss: 0.34805164511396963 test loss: inf
+epoch 141
+train loss: 0.3499576291834775 test loss: inf
+epoch 142
+train loss: 0.34789334734934035 test loss: inf
+epoch 143
+train loss: 0.350266736544507 test loss: inf
+epoch 144
+train loss: 0.3554552279187417 test loss: inf
+epoch 145
+train loss: 0.35690315109486775 test loss: inf
+epoch 146
+train loss: 0.35165664068366675 test loss: inf
+epoch 147
+train loss: 0.35046375984558276 test loss: inf
+epoch 148
+train loss: 0.3479337183096914 test loss: inf
+epoch 149
+train loss: 0.3479934838885589 test loss: inf
+epoch 150
+train loss: 0.3470773497523314 test loss: inf
+fold 5
+epoch 1
+train loss: 0.32412716548758436 test loss: 2.4732869697198083e+17
+epoch 2
+train loss: 0.3229098947371356 test loss: 2.9516715161269677e+17
+epoch 3
+train loss: 0.32046912116682924 test loss: 9.94823355794786e+16
+epoch 4
+train loss: 0.3192907796967338 test loss: 9.896864780681643e+16
+epoch 5
+train loss: 0.317626716628256 test loss: 1.5708880877790765e+17
+epoch 6
+train loss: 0.3170542979472932 test loss: 9.229173913029248e+16
+epoch 7
+train loss: 0.3165310623000555 test loss: 9.906500156694053e+16
+epoch 8
+train loss: 0.3175073157724074 test loss: 1.0115278924635653e+17
+epoch 9
+train loss: 0.31818902801453686 test loss: 7.199624106545477e+16
+epoch 10
+train loss: 0.31392262064519744 test loss: 1.13202222125941e+17
+epoch 11
+train loss: 0.3108670597268567 test loss: 5.7962800955447064e+16
+epoch 12
+train loss: 0.30936677497571796 test loss: 7.38674156844396e+16
+epoch 13
+train loss: 0.30857906199431645 test loss: 4.966019793429285e+16
+epoch 14
+train loss: 0.3069936285644881 test loss: 1.2796224875755176e+17
+epoch 15
+train loss: 0.30667827828147814 test loss: 5.462062709555853e+16
+epoch 16
+train loss: 0.3044605598844785 test loss: 1.4735035275832333e+17
+epoch 17
+train loss: 0.3041109423508854 test loss: 1.1473988385233106e+17
+epoch 18
+train loss: 0.30254248396597383 test loss: 2.2054600457799318e+17
+epoch 19
+train loss: 0.30260315259954085 test loss: 4.598595750517178e+16
+epoch 20
+train loss: 0.30713701351200207 test loss: 3.085223114260202e+16
+epoch 21
+train loss: 0.31067558071826495 test loss: 8.161592458042264e+16
+epoch 22
+train loss: 0.3136048598658704 test loss: 3.683854012177488e+17
+epoch 23
+train loss: 0.32256963740158257 test loss: 5.991771116326765e+16
+epoch 24
+train loss: 0.304083609024037 test loss: 3.3870745735237868e+16
+epoch 25
+train loss: 0.2999752395519582 test loss: 6.668890391172192e+16
+epoch 26
+train loss: 0.2962895781063025 test loss: 1.1862729206017445e+17
+epoch 27
+train loss: 0.2983318307591509 test loss: 2.3526364686277322e+17
+epoch 28
+train loss: 0.29675569332223334 test loss: 1.116226331797707e+17
+epoch 29
+train loss: 0.2912752446233769 test loss: 1.343724783655597e+17
+epoch 30
+train loss: 0.28875940446559206 test loss: 1.794735270017641e+17
+epoch 31
+train loss: 0.28763121138640124 test loss: 1.0005005731648414e+17
+epoch 32
+train loss: 0.28663263375557174 test loss: 1.3040469771358378e+17
+epoch 33
+train loss: 0.28544271052367015 test loss: 1.2519700730719227e+17
+epoch 34
+train loss: 0.2849728437934545 test loss: 1.232497692367264e+17
+epoch 35
+train loss: 0.284242546884292 test loss: 1.8001062670336813e+17
+epoch 36
+train loss: 0.28428602944908504 test loss: 2.4100932533964406e+17
+epoch 37
+train loss: 0.28442390761500436 test loss: 1.0548314480255755e+17
+epoch 38
+train loss: 0.2851781732852381 test loss: 2.6772080383709878e+17
+epoch 39
+train loss: 0.2846568673685823 test loss: 7.60649652071009e+16
+epoch 40
+train loss: 0.28660677539794144 test loss: 2.2734465589844547e+17
+epoch 41
+train loss: 0.2822581712003865 test loss: 8.781354984250219e+16
+epoch 42
+train loss: 0.2809963116812949 test loss: 1.7362898989981504e+17
+epoch 43
+train loss: 0.2794613538033576 test loss: 9.876097330821662e+16
+epoch 44
+train loss: 0.27917367833703854 test loss: 1.1394070234383363e+17
+epoch 45
+train loss: 0.27860631154812976 test loss: 3.963840082805072e+16
+epoch 46
+train loss: 0.2778369312403418 test loss: 9.4347046138593e+16
+epoch 47
+train loss: 0.2855746009103985 test loss: 4.857645331399128e+16
+epoch 48
+train loss: 0.2872548020580947 test loss: 2.996370259285154e+17
+epoch 49
+train loss: 0.28637471525910885 test loss: 1.8739134801530618e+17
+epoch 50
+train loss: 0.2896078964709622 test loss: 1.9964797802100605e+17
+epoch 51
+train loss: 0.2889631123637359 test loss: 1.9098677772284173e+17
+epoch 52
+train loss: 0.2821256803716454 test loss: 1.925596372854501e+17
+epoch 53
+train loss: 0.28260317803206425 test loss: 2.3000425208134666e+17
+epoch 54
+train loss: 0.27895059241763653 test loss: 1.709389425941554e+17
+epoch 55
+train loss: 0.27772416830399227 test loss: 2.11646664896256e+17
+epoch 56
+train loss: 0.2770965976749573 test loss: 2.4029790996299997e+17
+epoch 57
+train loss: 0.2761610893011354 test loss: 2.3725494386409878e+17
+epoch 58
+train loss: 0.27546829451140853 test loss: 2.2447835464697398e+17
+epoch 59
+train loss: 0.2760146836526308 test loss: 2.7501966472004986e+17
+epoch 60
+train loss: 0.2761989694799793 test loss: 2.252456642779685e+17
+epoch 61
+train loss: 0.2772760710126079 test loss: 3.244946302052774e+17
+epoch 62
+train loss: 0.28334308603262914 test loss: 2.1035942151867222e+17
+epoch 63
+train loss: 0.2783321122472129 test loss: 2.3265318329710803e+17
+epoch 64
+train loss: 0.27459952610445054 test loss: 2.6624133226862976e+17
+epoch 65
+train loss: 0.27507997882221186 test loss: 2.50444805673519e+17
+epoch 66
+train loss: 0.27345315327877256 test loss: 2.965812279582889e+17
+epoch 67
+train loss: 0.2743461053396379 test loss: 2.2859399563900522e+17
+epoch 68
+train loss: 0.2759136656716012 test loss: 3.131129988184028e+17
+epoch 69
+train loss: 0.27851330140720276 test loss: 1.678895440145431e+17
+epoch 70
+train loss: 0.2741133168718545 test loss: 2.3062393083536112e+17
+epoch 71
+train loss: 0.27353748038440534 test loss: 1.4547719726145344e+17
+epoch 72
+train loss: 0.27516531265427896 test loss: 2.4454080831155357e+17
+epoch 73
+train loss: 0.2736517820877123 test loss: 1.898641311647768e+17
+epoch 74
+train loss: 0.27190181741635056 test loss: 2.183138454676188e+17
+epoch 75
+train loss: 0.272147542931533 test loss: 1.8773478647672486e+17
+epoch 76
+train loss: 0.2719716447753105 test loss: 1.718381082712445e+17
+epoch 77
+train loss: 0.27147855895889605 test loss: 7.391582556541854e+16
+epoch 78
+train loss: 0.2716650269646381 test loss: 1.4272843289825256e+17
+epoch 79
+train loss: 0.2714055311061326 test loss: 1.7443494257144406e+17
+epoch 80
+train loss: 0.2706418518379491 test loss: 1.743479028820573e+17
+epoch 81
+train loss: 0.2725427028223621 test loss: 2.0062995936815347e+17
+epoch 82
+train loss: 0.27363635050004287 test loss: 2.0314568682822848e+17
+epoch 83
+train loss: 0.274074794592733 test loss: 1.9305846926895626e+17
+epoch 84
+train loss: 0.2705207016288829 test loss: 2.8404222277784134e+17
+epoch 85
+train loss: 0.2698084964169344 test loss: 2.4041909806480963e+17
+epoch 86
+train loss: 0.2692070740625938 test loss: 3.1013618804993395e+17
+epoch 87
+train loss: 0.2701893424296455 test loss: 3.1980671185944045e+17
+epoch 88
+train loss: 0.26972520961025137 test loss: 2.42580620063321e+17
+epoch 89
+train loss: 0.2698412793765015 test loss: 4.7480267636882944e+17
+epoch 90
+train loss: 0.26819784661382273 test loss: 2.427541805981853e+17
+epoch 91
+train loss: 0.2693424989309537 test loss: 3.314283656193689e+17
+epoch 92
+train loss: 0.26849614311872594 test loss: 2.6555980667596675e+17
+epoch 93
+train loss: 0.2689864629834283 test loss: 2.9974291213770906e+17
+epoch 94
+train loss: 0.2694929771683743 test loss: 2.564945987076714e+17
+epoch 95
+train loss: 0.2709490347391559 test loss: 2.826923736527477e+17
+epoch 96
+train loss: 0.2741773868595629 test loss: 2.3370571650059405e+17
+epoch 97
+train loss: 0.2793010451036758 test loss: 2.067108366690025e+17
+epoch 98
+train loss: 0.280263847368356 test loss: 1.8619251248174067e+17
+epoch 99
+train loss: 0.27208637288270904 test loss: 1.519190165845357e+17
+epoch 100
+train loss: 0.27027269135062537 test loss: 2.7578162510058294e+17
+epoch 101
+train loss: 0.2670102511585059 test loss: 1.5444493535629645e+17
+epoch 102
+train loss: 0.2672869133000282 test loss: 2.7107725158505123e+17
+epoch 103
+train loss: 0.2673449289725586 test loss: 2.0089259021397395e+17
+epoch 104
+train loss: 0.26910002582443016 test loss: 3.469544331649423e+17
+epoch 105
+train loss: 0.2684672955899562 test loss: 3.2804588826871136e+17
+epoch 106
+train loss: 0.26546213163237237 test loss: 3.029433174634806e+17
+epoch 107
+train loss: 0.2659131037840816 test loss: 2.99549524686864e+17
+epoch 108
+train loss: 0.26543702981237804 test loss: 3.238795371653958e+17
+epoch 109
+train loss: 0.2649721571860895 test loss: 3.666357986837275e+17
+epoch 110
+train loss: 0.26471507625375534 test loss: 2.873985077490747e+17
+epoch 111
+train loss: 0.26498241350299667 test loss: 2.8341055575354342e+17
+epoch 112
+train loss: 0.2637240516339024 test loss: 2.9280552564773766e+17
+epoch 113
+train loss: 0.2635680306355877 test loss: 3.3638643435632544e+17
+epoch 114
+train loss: 0.2634977955920587 test loss: 2.9160468289043245e+17
+epoch 115
+train loss: 0.26400129826228763 test loss: 3.487610672923685e+17
+epoch 116
+train loss: 0.26416497333854955 test loss: 2.65911051431051e+17
+epoch 117
+train loss: 0.26478659597789017 test loss: 3.4378419053359104e+17
+epoch 118
+train loss: 0.26474644188364427 test loss: 2.464526408784142e+17
+epoch 119
+train loss: 0.2659907786993246 test loss: 3.5756328502265395e+17
+epoch 120
+train loss: 0.26484055891420766 test loss: 3.327975612425136e+17
+epoch 121
+train loss: 0.26463145271283267 test loss: 3.70298407694421e+17
+epoch 122
+train loss: 0.2658770832606844 test loss: 1.518518509013997e+17
+epoch 123
+train loss: 0.2669233910407958 test loss: 1.7196496502252835e+17
+epoch 124
+train loss: 0.26815036809838916 test loss: 2.1987594501893437e+17
+epoch 125
+train loss: 0.2653567649909025 test loss: 2.6673228039915462e+17
+epoch 126
+train loss: 0.2666571486170632 test loss: 3.0465592424492845e+17
+epoch 127
+train loss: 0.2674404519969124 test loss: 1.7405702074945274e+17
+epoch 128
+train loss: 0.26503986382782263 test loss: 2.5533232054643034e+17
+epoch 129
+train loss: 0.26700821726021867 test loss: 2.5511708366404468e+16
+epoch 130
+train loss: 0.26518550892030884 test loss: 2.6398447206856556e+16
+epoch 131
+train loss: 0.2660132054424837 test loss: 2.2259794995690064e+16
+epoch 132
+train loss: 0.2641013894526485 test loss: 1.5631678166326828e+16
+epoch 133
+train loss: 0.2659948331728633 test loss: 1.9472091750700536e+16
+epoch 134
+train loss: 0.281546590354603 test loss: 6429060841487770.0
+epoch 135
+train loss: 0.2734091043024896 test loss: 6177383246934008.0
+epoch 136
+train loss: 0.26603504567979175 test loss: 253089607011907.66
+epoch 137
+train loss: 0.2664438199603764 test loss: 20.838148425551797
+epoch 138
+train loss: 0.26418476138911356 test loss: 20.838132339116385
+epoch 139
+train loss: 0.2632275311382042 test loss: 4009293024845228.0
+epoch 140
+train loss: 0.2629066544805157 test loss: 18125341241533.074
+epoch 141
+train loss: 0.26220111351247133 test loss: 1766795248273686.8
+epoch 142
+train loss: 0.26181342347202374 test loss: 309650626202040.3
+epoch 143
+train loss: 0.2623962485297793 test loss: 77040396528589.5
+epoch 144
+train loss: 0.2622346535974915 test loss: 1036707018899068.2
+epoch 145
+train loss: 0.2631621875404436 test loss: 20.83757747747959
+epoch 146
+train loss: 0.264332804397 test loss: 6514916090365164.0
+epoch 147
+train loss: 0.2656234347878084 test loss: 20.83694052837304
+epoch 148
+train loss: 0.2649058498574432 test loss: 756270470404.2194
+epoch 149
+train loss: 0.26619298227413846 test loss: 1.94662335443643e+16
+epoch 150
+train loss: 0.26456651929541425 test loss: 5.385668002633342e+16
+fold 6
+epoch 1
+train loss: 0.4370796828482356 test loss: inf
+epoch 2
+train loss: 0.39081217274118774 test loss: inf
+epoch 3
+train loss: 0.3803560615635783 test loss: inf
+epoch 4
+train loss: 0.3750977941508908 test loss: inf
+epoch 5
+train loss: 0.3662591918775538 test loss: inf
+epoch 6
+train loss: 0.36483076822201255 test loss: inf
+epoch 7
+train loss: 0.36321118296028726 test loss: inf
+epoch 8
+train loss: 0.3623378171303634 test loss: inf
+epoch 9
+train loss: 0.36149596755190583 test loss: inf
+epoch 10
+train loss: 0.36013537546064206 test loss: inf
+epoch 11
+train loss: 0.3583076502674704 test loss: inf
+epoch 12
+train loss: 0.35579439589793344 test loss: inf
+epoch 13
+train loss: 0.3543332346329074 test loss: inf
+epoch 14
+train loss: 0.3531367586235349 test loss: inf
+epoch 15
+train loss: 0.35171835514901106 test loss: inf
+epoch 16
+train loss: 0.3500495462162196 test loss: inf
+epoch 17
+train loss: 0.34975656445431863 test loss: inf
+epoch 18
+train loss: 0.35041921922650066 test loss: inf
+epoch 19
+train loss: 0.3539706061812783 test loss: inf
+epoch 20
+train loss: 0.3538684753556994 test loss: inf
+epoch 21
+train loss: 0.34706969099715695 test loss: inf
+epoch 22
+train loss: 0.34476387292904315 test loss: inf
+epoch 23
+train loss: 0.34349613386501665 test loss: inf
+epoch 24
+train loss: 0.3408308689521902 test loss: inf
+epoch 25
+train loss: 0.33942979477540247 test loss: inf
+epoch 26
+train loss: 0.33795862367167273 test loss: inf
+epoch 27
+train loss: 0.33595503086672 test loss: inf
+epoch 28
+train loss: 0.3354219118830812 test loss: inf
+epoch 29
+train loss: 0.3337228675565776 test loss: inf
+epoch 30
+train loss: 0.3328674986465391 test loss: inf
+epoch 31
+train loss: 0.3334330598591661 test loss: inf
+epoch 32
+train loss: 0.3333093336677828 test loss: inf
+epoch 33
+train loss: 0.33779973981021505 test loss: inf
+epoch 34
+train loss: 0.34153293045419314 test loss: inf
+epoch 35
+train loss: 0.33020864961594965 test loss: inf
+epoch 36
+train loss: 0.33075387264170614 test loss: inf
+epoch 37
+train loss: 0.33990254654823987 test loss: inf
+epoch 38
+train loss: 0.3413947379131237 test loss: inf
+epoch 39
+train loss: 0.3327489265767519 test loss: inf
+epoch 40
+train loss: 0.3275447700163682 test loss: inf
+epoch 41
+train loss: 0.3248998934140585 test loss: inf
+epoch 42
+train loss: 0.3235797235987543 test loss: inf
+epoch 43
+train loss: 0.32384154772695783 test loss: inf
+epoch 44
+train loss: 0.3350689368497612 test loss: inf
+epoch 45
+train loss: 0.3269136900928442 test loss: inf
+epoch 46
+train loss: 0.33306567371626344 test loss: inf
+epoch 47
+train loss: 0.3268505487057911 test loss: inf
+epoch 48
+train loss: 0.32603696312525937 test loss: inf
+epoch 49
+train loss: 0.32277166311603195 test loss: inf
+epoch 50
+train loss: 0.321870012261478 test loss: inf
+epoch 51
+train loss: 0.32052585101822556 test loss: inf
+epoch 52
+train loss: 0.3200886597105371 test loss: inf
+epoch 53
+train loss: 0.31996949846522993 test loss: inf
+epoch 54
+train loss: 0.3188911569979325 test loss: inf
+epoch 55
+train loss: 0.31906912037084273 test loss: inf
+epoch 56
+train loss: 0.3234225109810634 test loss: inf
+epoch 57
+train loss: 0.3220867094998751 test loss: inf
+epoch 58
+train loss: 0.3238220311498827 test loss: inf
+epoch 59
+train loss: 0.3189319275999648 test loss: inf
+epoch 60
+train loss: 0.316920710477342 test loss: inf
+epoch 61
+train loss: 0.31544235096103446 test loss: inf
+epoch 62
+train loss: 0.3145643826700631 test loss: inf
+epoch 63
+train loss: 0.3146074030506697 test loss: inf
+epoch 64
+train loss: 0.31433191407596806 test loss: inf
+epoch 65
+train loss: 0.31357089462586984 test loss: inf
+epoch 66
+train loss: 0.3146110126063303 test loss: inf
+epoch 67
+train loss: 0.31526332594162015 test loss: inf
+epoch 68
+train loss: 0.3144371763962469 test loss: inf
+epoch 69
+train loss: 0.3134402340364161 test loss: inf
+epoch 70
+train loss: 0.31527645870024323 test loss: inf
+epoch 71
+train loss: 0.3142373730823865 test loss: inf
+epoch 72
+train loss: 0.3165975608063873 test loss: inf
+epoch 73
+train loss: 0.31585699524187527 test loss: inf
+epoch 74
+train loss: 0.3153935989710732 test loss: inf
+epoch 75
+train loss: 0.3187322916869999 test loss: inf
+epoch 76
+train loss: 0.32093535312076893 test loss: inf
+epoch 77
+train loss: 0.3216494079687415 test loss: inf
+epoch 78
+train loss: 0.3160914891439651 test loss: inf
+epoch 79
+train loss: 0.31199592202673243 test loss: inf
+epoch 80
+train loss: 0.3098449774548565 test loss: inf
+epoch 81
+train loss: 0.3104071208642628 test loss: inf
+epoch 82
+train loss: 0.31066891433536 test loss: inf
+epoch 83
+train loss: 0.31098679422437425 test loss: inf
+epoch 84
+train loss: 0.3098841700257961 test loss: inf
+epoch 85
+train loss: 0.3116001135459627 test loss: inf
+epoch 86
+train loss: 0.3099477316040416 test loss: inf
+epoch 87
+train loss: 0.31141219061637904 test loss: inf
+epoch 88
+train loss: 0.30876106305940615 test loss: inf
+epoch 89
+train loss: 0.31015167923600506 test loss: inf
+epoch 90
+train loss: 0.30693460458005023 test loss: inf
+epoch 91
+train loss: 0.30753207200847904 test loss: inf
+epoch 92
+train loss: 0.3069317917491152 test loss: inf
+epoch 93
+train loss: 0.3067114246417667 test loss: inf
+epoch 94
+train loss: 0.307100820720666 test loss: inf
+epoch 95
+train loss: 0.3065121841839197 test loss: inf
+epoch 96
+train loss: 0.30764485022562155 test loss: inf
+epoch 97
+train loss: 0.3080926629882645 test loss: inf
+epoch 98
+train loss: 0.30812743902630957 test loss: inf
+epoch 99
+train loss: 0.3105653919150582 test loss: inf
+epoch 100
+train loss: 0.3132393187360559 test loss: inf
+epoch 101
+train loss: 0.31217641771368726 test loss: inf
+epoch 102
+train loss: 0.315197893850458 test loss: inf
+epoch 103
+train loss: 0.30880716290066124 test loss: inf
+epoch 104
+train loss: 0.31881117409676046 test loss: inf
+epoch 105
+train loss: 0.3166160744459985 test loss: inf
+epoch 106
+train loss: 0.30888841012682594 test loss: inf
+epoch 107
+train loss: 0.30534667264545223 test loss: inf
+epoch 108
+train loss: 0.30434061401531204 test loss: inf
+epoch 109
+train loss: 0.30489372775536633 test loss: inf
+epoch 110
+train loss: 0.30496349038914217 test loss: inf
+epoch 111
+train loss: 0.3062199080689889 test loss: inf
+epoch 112
+train loss: 0.3046533786513135 test loss: inf
+epoch 113
+train loss: 0.3050677570755835 test loss: inf
+epoch 114
+train loss: 0.3037971000258739 test loss: inf
+epoch 115
+train loss: 0.30383472857821703 test loss: inf
+epoch 116
+train loss: 0.3042289356919671 test loss: inf
+epoch 117
+train loss: 0.304498174943972 test loss: inf
+epoch 118
+train loss: 0.3038008037579836 test loss: inf
+epoch 119
+train loss: 0.3038891858237369 test loss: inf
+epoch 120
+train loss: 0.3042585793927511 test loss: inf
+epoch 121
+train loss: 0.3039527568478752 test loss: inf
+epoch 122
+train loss: 0.30850296359612916 test loss: inf
+epoch 123
+train loss: 0.30707737602948254 test loss: inf
+epoch 124
+train loss: 0.3045817647090926 test loss: inf
+epoch 125
+train loss: 0.30359851353894246 test loss: inf
+epoch 126
+train loss: 0.30299852918257925 test loss: inf
+epoch 127
+train loss: 0.3020358606462687 test loss: inf
+epoch 128
+train loss: 0.30182655801032815 test loss: inf
+epoch 129
+train loss: 0.3025377933658478 test loss: inf
+epoch 130
+train loss: 0.30226325858061887 test loss: inf
+epoch 131
+train loss: 0.3033441615103369 test loss: inf
+epoch 132
+train loss: 0.3038176567524952 test loss: inf
+epoch 133
+train loss: 0.30382529775314676 test loss: inf
+epoch 134
+train loss: 0.30262770197604694 test loss: inf
+epoch 135
+train loss: 0.3027821454620991 test loss: inf
+epoch 136
+train loss: 0.3047648720564078 test loss: inf
+epoch 137
+train loss: 0.3075821900182248 test loss: inf
+epoch 138
+train loss: 0.3081087109118654 test loss: inf
+epoch 139
+train loss: 0.3110927919927211 test loss: inf
+epoch 140
+train loss: 0.30591678631630953 test loss: inf
+epoch 141
+train loss: 0.3059624295400869 test loss: inf
+epoch 142
+train loss: 0.3050014587968699 test loss: inf
+epoch 143
+train loss: 0.3024341834889884 test loss: inf
+epoch 144
+train loss: 0.30175125920492357 test loss: inf
+epoch 145
+train loss: 0.3015574462909383 test loss: inf
+epoch 146
+train loss: 0.2999906493373315 test loss: inf
+epoch 147
+train loss: 0.300283851837174 test loss: inf
+epoch 148
+train loss: 0.30001445388845543 test loss: inf
+epoch 149
+train loss: 0.3010350831462029 test loss: inf
+epoch 150
+train loss: 0.30179415403026616 test loss: inf
+fold 7
+epoch 1
+train loss: 0.4325517691898811 test loss: inf
+epoch 2
+train loss: 0.3933774483274426 test loss: inf
+epoch 3
+train loss: 0.38637799424215835 test loss: inf
+epoch 4
+train loss: 0.3823027721329227 test loss: inf
+epoch 5
+train loss: 0.38038725573867527 test loss: inf
+epoch 6
+train loss: 0.37674638126702675 test loss: inf
+epoch 7
+train loss: 0.37465485728625636 test loss: inf
+epoch 8
+train loss: 0.37404564363135334 test loss: inf
+epoch 9
+train loss: 0.3731610470561834 test loss: inf
+epoch 10
+train loss: 0.3741676296590583 test loss: inf
+epoch 11
+train loss: 0.3742586726140302 test loss: inf
+epoch 12
+train loss: 0.3742082497313596 test loss: inf
+epoch 13
+train loss: 0.3737288910961715 test loss: inf
+epoch 14
+train loss: 0.3738214539708098 test loss: inf
+epoch 15
+train loss: 0.3740948934043522 test loss: inf
+epoch 16
+train loss: 0.37094206100812666 test loss: inf
+epoch 17
+train loss: 0.37527343653650264 test loss: inf
+epoch 18
+train loss: 0.37273679053851344 test loss: inf
+epoch 19
+train loss: 0.37247601783532935 test loss: inf
+epoch 20
+train loss: 0.37079304973989785 test loss: inf
+epoch 21
+train loss: 0.36886669307581404 test loss: inf
+epoch 22
+train loss: 0.36791414286146923 test loss: inf
+epoch 23
+train loss: 0.3680918289904868 test loss: inf
+epoch 24
+train loss: 0.36775766387941045 test loss: inf
+epoch 25
+train loss: 0.3670407861443418 test loss: inf
+epoch 26
+train loss: 0.36629448096718337 test loss: inf
+epoch 27
+train loss: 0.36833372213674653 test loss: inf
+epoch 28
+train loss: 0.36577522593999207 test loss: inf
+epoch 29
+train loss: 0.3658796196234819 test loss: inf
+epoch 30
+train loss: 0.36555857726834257 test loss: inf
+epoch 31
+train loss: 0.3645737196996223 test loss: inf
+epoch 32
+train loss: 0.3659209332708698 test loss: inf
+epoch 33
+train loss: 0.36483495300315255 test loss: inf
+epoch 34
+train loss: 0.36413265093948766 test loss: inf
+epoch 35
+train loss: 0.3645268204762189 test loss: inf
+epoch 36
+train loss: 0.36491928235391974 test loss: inf
+epoch 37
+train loss: 0.36324205124636844 test loss: inf
+epoch 38
+train loss: 0.3641867578370893 test loss: inf
+epoch 39
+train loss: 0.3633421984148697 test loss: inf
+epoch 40
+train loss: 0.3634209703460561 test loss: inf
+epoch 41
+train loss: 0.3651318524760255 test loss: inf
+epoch 42
+train loss: 0.3646635283923596 test loss: inf
+epoch 43
+train loss: 0.362339885721284 test loss: inf
+epoch 44
+train loss: 0.3594034070333981 test loss: inf
+epoch 45
+train loss: 0.36544144318918503 test loss: inf
+epoch 46
+train loss: 0.35768924084980447 test loss: inf
+epoch 47
+train loss: 0.35849834072444225 test loss: inf
+epoch 48
+train loss: 0.35601055229488054 test loss: inf
+epoch 49
+train loss: 0.35581575569117274 test loss: inf
+epoch 50
+train loss: 0.3563019731825978 test loss: inf
+epoch 51
+train loss: 0.35591969080350977 test loss: inf
+epoch 52
+train loss: 0.3556110178257796 test loss: inf
+epoch 53
+train loss: 0.3556523760492907 test loss: inf
+epoch 54
+train loss: 0.3658160299451341 test loss: inf
+epoch 55
+train loss: 0.3666546543733138 test loss: inf
+epoch 56
+train loss: 0.3628765228754487 test loss: inf
+epoch 57
+train loss: 0.3558226454657681 test loss: inf
+epoch 58
+train loss: 0.3543654098468354 test loss: inf
+epoch 59
+train loss: 0.3530304895066102 test loss: inf
+epoch 60
+train loss: 0.35209695762013127 test loss: inf
+epoch 61
+train loss: 0.35208093830525755 test loss: inf
+epoch 62
+train loss: 0.3517540634297277 test loss: inf
+epoch 63
+train loss: 0.3511539708807454 test loss: inf
+epoch 64
+train loss: 0.35097455954799234 test loss: inf
+epoch 65
+train loss: 0.3506203624773987 test loss: inf
+epoch 66
+train loss: 0.3536540096119102 test loss: inf
+epoch 67
+train loss: 0.35213861754643744 test loss: inf
+epoch 68
+train loss: 0.35398319535367245 test loss: inf
+epoch 69
+train loss: 0.3553457902730125 test loss: inf
+epoch 70
+train loss: 0.3551911772589019 test loss: inf
+epoch 71
+train loss: 0.3522330218946074 test loss: inf
+epoch 72
+train loss: 0.35105511452574073 test loss: inf
+epoch 73
+train loss: 0.35092613264941186 test loss: inf
+epoch 74
+train loss: 0.35113627147790816 test loss: inf
+epoch 75
+train loss: 0.3505335541675939 test loss: inf
+epoch 76
+train loss: 0.3515203908239309 test loss: inf
+epoch 77
+train loss: 0.35125712396990516 test loss: inf
+epoch 78
+train loss: 0.3516364241242997 test loss: inf
+epoch 79
+train loss: 0.3516260147602535 test loss: inf
+epoch 80
+train loss: 0.3530207321157182 test loss: inf
+epoch 81
+train loss: 0.3559315316550517 test loss: inf
+epoch 82
+train loss: 0.3556737038514057 test loss: inf
+epoch 83
+train loss: 0.3566507354473404 test loss: inf
+epoch 84
+train loss: 0.3591998713991111 test loss: inf
+epoch 85
+train loss: 0.3597748567993746 test loss: inf
+epoch 86
+train loss: 0.3518124031649591 test loss: inf
+epoch 87
+train loss: 0.3526820645320841 test loss: inf
+epoch 88
+train loss: 0.35009775961353906 test loss: inf
+epoch 89
+train loss: 0.35220891313756764 test loss: inf
+epoch 90
+train loss: 0.3521033142773553 test loss: inf
+epoch 91
+train loss: 0.3539017109792666 test loss: inf
+epoch 92
+train loss: 0.34900922705661225 test loss: inf
+epoch 93
+train loss: 0.3488094779419293 test loss: inf
+epoch 94
+train loss: 0.3486053783413077 test loss: inf
+epoch 95
+train loss: 0.34862687299609735 test loss: inf
+epoch 96
+train loss: 0.34841794579071667 test loss: inf
+epoch 97
+train loss: 0.34850382222237813 test loss: inf
+epoch 98
+train loss: 0.3488116351389164 test loss: inf
+epoch 99
+train loss: 0.3492532103058541 test loss: inf
+epoch 100
+train loss: 0.34937084163329907 test loss: inf
+epoch 101
+train loss: 0.3504942986961522 test loss: inf
+epoch 102
+train loss: 0.35008117183471443 test loss: inf
+epoch 103
+train loss: 0.349747542274735 test loss: inf
+epoch 104
+train loss: 0.3507145849982558 test loss: inf
+epoch 105
+train loss: 0.3494462158246023 test loss: inf
+epoch 106
+train loss: 0.3515866323946313 test loss: inf
+epoch 107
+train loss: 0.35337871114339464 test loss: inf
+epoch 108
+train loss: 0.3509955253617794 test loss: inf
+epoch 109
+train loss: 0.3507657462721615 test loss: inf
+epoch 110
+train loss: 0.349255156991691 test loss: inf
+epoch 111
+train loss: 0.3496493077297078 test loss: inf
+epoch 112
+train loss: 0.34950723976497716 test loss: inf
+epoch 113
+train loss: 0.3487231307990609 test loss: inf
+epoch 114
+train loss: 0.34847565621150683 test loss: inf
+epoch 115
+train loss: 0.3477433961592639 test loss: inf
+epoch 116
+train loss: 0.34736154306987754 test loss: inf
+epoch 117
+train loss: 0.3495842644501067 test loss: inf
+epoch 118
+train loss: 0.3590217861627542 test loss: inf
+epoch 119
+train loss: 0.3605634927587984 test loss: inf
+epoch 120
+train loss: 0.35839103085464247 test loss: inf
+epoch 121
+train loss: 0.3529205625717992 test loss: inf
+epoch 122
+train loss: 0.3573617734359514 test loss: inf
+epoch 123
+train loss: 0.351464711702787 test loss: inf
+epoch 124
+train loss: 0.3535016982304065 test loss: inf
+epoch 125
+train loss: 0.3503598893127001 test loss: inf
+epoch 126
+train loss: 0.34999590045902096 test loss: inf
+epoch 127
+train loss: 0.3489596365734448 test loss: inf
+epoch 128
+train loss: 0.349482610368615 test loss: inf
+epoch 129
+train loss: 0.3491385543505442 test loss: inf
+epoch 130
+train loss: 0.34893904003283444 test loss: inf
+epoch 131
+train loss: 0.3490911001013398 test loss: inf
+epoch 132
+train loss: 0.3488746401467084 test loss: inf
+epoch 133
+train loss: 0.3492041217792251 test loss: inf
+epoch 134
+train loss: 0.35039834648782214 test loss: inf
+epoch 135
+train loss: 0.3528391729183895 test loss: inf
+epoch 136
+train loss: 0.356721894166108 test loss: inf
+epoch 137
+train loss: 0.3585831751928971 test loss: inf
+epoch 138
+train loss: 0.35531167087065346 test loss: inf
+epoch 139
+train loss: 0.3496685566296121 test loss: inf
+epoch 140
+train loss: 0.3480879486267625 test loss: inf
+epoch 141
+train loss: 0.3480514058308097 test loss: inf
+epoch 142
+train loss: 0.34798141183144243 test loss: inf
+epoch 143
+train loss: 0.3468882688273209 test loss: inf
+epoch 144
+train loss: 0.3463366612932438 test loss: inf
+epoch 145
+train loss: 0.34618584192152835 test loss: inf
+epoch 146
+train loss: 0.34638570264429214 test loss: inf
+epoch 147
+train loss: 0.34634563495996307 test loss: inf
+epoch 148
+train loss: 0.3472495888244118 test loss: inf
+epoch 149
+train loss: 0.3468703842523287 test loss: inf
+epoch 150
+train loss: 0.34724263580560477 test loss: inf
+fold 8
+epoch 1
+train loss: 0.4135564913670731 test loss: 7215123856106071.0
+epoch 2
+train loss: 0.39153422380477326 test loss: 10.538113372095474
+epoch 3
+train loss: 0.39422281853464414 test loss: 2.8064248585967178e+17
+epoch 4
+train loss: 0.39692076914169183 test loss: 4.340978714205429e+16
+epoch 5
+train loss: 0.3974099140593861 test loss: 1.612260185179278e+17
+epoch 6
+train loss: 0.39046647253526084 test loss: 9.402848303230309e+16
+epoch 7
+train loss: 0.3875533546399266 test loss: 5.126235987673101e+16
+epoch 8
+train loss: 0.393489659962465 test loss: 457440272142669.44
+epoch 9
+train loss: 0.38571002266267507 test loss: 10.539716914325542
+epoch 10
+train loss: 0.38378229995186514 test loss: 10.53863322429168
+epoch 11
+train loss: 0.38775432031212237 test loss: 10.53763819963504
+epoch 12
+train loss: 0.385132620018445 test loss: 10.537066143645337
+epoch 13
+train loss: 0.38400017097020867 test loss: 10.5385797715046
+epoch 14
+train loss: 0.3832332750652969 test loss: 10.538766061530781
+epoch 15
+train loss: 0.3833437134449926 test loss: 10.538706559401293
+epoch 16
+train loss: 0.3825058126366964 test loss: 10.537863520710662
+epoch 17
+train loss: 0.3823567467374078 test loss: 10.540023621252537
+epoch 18
+train loss: 0.38193104401273265 test loss: 10.539139205887473
+epoch 19
+train loss: 0.3841384867830363 test loss: 10.537901583037668
+epoch 20
+train loss: 0.3923975203946354 test loss: 10.536977218688122
+epoch 21
+train loss: 0.3876910974920031 test loss: 10.53811973274577
+epoch 22
+train loss: 0.3846504053453226 test loss: 10.539395439554248
+epoch 23
+train loss: 0.3843635860671345 test loss: 10.538157423572427
+epoch 24
+train loss: 0.3828802809793581 test loss: 10.538324540418516
+epoch 25
+train loss: 0.3812640262732975 test loss: 10.539323005450548
+epoch 26
+train loss: 0.37909367192661503 test loss: 10.538391530866454
+epoch 27
+train loss: 0.3786045092123526 test loss: 10.538610859970605
+epoch 28
+train loss: 0.3781496754531311 test loss: 10.539619323534843
+epoch 29
+train loss: 0.3779404196588585 test loss: 10.53896042110887
+epoch 30
+train loss: 0.37774121935707733 test loss: 10.538022925397584
+epoch 31
+train loss: 0.376954100136985 test loss: 10.538875457568047
+epoch 32
+train loss: 0.3770807349963353 test loss: 10.539413247117865
+epoch 33
+train loss: 0.37718070165398887 test loss: 10.539155303608972
+epoch 34
+train loss: 0.3775353048281687 test loss: 10.537781924185667
+epoch 35
+train loss: 0.3780232337961692 test loss: 10.538207740708451
+epoch 36
+train loss: 0.3785711411087105 test loss: 10.53953131651267
+epoch 37
+train loss: 0.3809794928048254 test loss: 10.537380675592367
+epoch 38
+train loss: 0.3804434170901984 test loss: 10.537563504551995
+epoch 39
+train loss: 0.38939474322229994 test loss: 10.539723373729096
+epoch 40
+train loss: 0.3887815109457973 test loss: 10.537998342419987
+epoch 41
+train loss: 0.4067359328206278 test loss: 10.537979960206462
+epoch 42
+train loss: 0.3820994670935336 test loss: 10.539219045544987
+epoch 43
+train loss: 0.37825291495873903 test loss: 10.539120030826366
+epoch 44
+train loss: 0.3783565699668822 test loss: 10.538901834092902
+epoch 45
+train loss: 0.38259546835413893 test loss: 10.537598658830692
+epoch 46
+train loss: 0.38019862137661414 test loss: 10.53673355207876
+epoch 47
+train loss: 0.37708070330320154 test loss: 10.53846982621112
+epoch 48
+train loss: 0.37402160839470966 test loss: 10.537754431278747
+epoch 49
+train loss: 0.3731455791316259 test loss: 10.538113530100684
+epoch 50
+train loss: 0.37258028552024325 test loss: 10.539923141223674
+epoch 51
+train loss: 0.3724719821376456 test loss: 10.537698085491474
+epoch 52
+train loss: 0.3716929103585612 test loss: 10.538308507592015
+epoch 53
+train loss: 0.3714158336027604 test loss: 10.539686157858583
+epoch 54
+train loss: 0.37096045767868424 test loss: 10.539117380477032
+epoch 55
+train loss: 0.3708793297654935 test loss: 10.539295070505236
+epoch 56
+train loss: 0.3701379274932695 test loss: 10.539094382254094
+epoch 57
+train loss: 0.37058047960391305 test loss: 10.538749687300161
+epoch 58
+train loss: 0.3714303570474393 test loss: 10.538175966612686
+epoch 59
+train loss: 0.3721896574903731 test loss: 10.5396921037452
+epoch 60
+train loss: 0.3716052813431378 test loss: 10.539091800561788
+epoch 61
+train loss: 0.3734867175681377 test loss: 10.5369735920923
+epoch 62
+train loss: 0.3741220268962769 test loss: 10.538565908428245
+epoch 63
+train loss: 0.37298930885644566 test loss: 10.53929135362072
+epoch 64
+train loss: 0.3744884371461966 test loss: 10.53797364470051
+epoch 65
+train loss: 0.3764906589104279 test loss: 10.539775823935484
+epoch 66
+train loss: 0.3762752602618566 test loss: 10.538162632101386
+epoch 67
+train loss: 0.3802524349902665 test loss: 10.539409612057478
+epoch 68
+train loss: 0.38534210483847076 test loss: 10.53852924369496
+epoch 69
+train loss: 0.37837243653179103 test loss: 10.536520561052733
+epoch 70
+train loss: 0.375357198177684 test loss: 10.538228531560954
+epoch 71
+train loss: 0.37425839359199115 test loss: 10.539016311690652
+epoch 72
+train loss: 0.370661523589081 test loss: 10.538295168378179
+epoch 73
+train loss: 0.37123845207725154 test loss: 10.537843890444062
+epoch 74
+train loss: 0.37021986466883283 test loss: 10.538744841806988
+epoch 75
+train loss: 0.37048989177034297 test loss: 10.538232188253009
+epoch 76
+train loss: 0.3678286654669355 test loss: 10.537772620688294
+epoch 77
+train loss: 0.36721275485080507 test loss: 10.538998176830525
+epoch 78
+train loss: 0.3668768638820468 test loss: 10.538773687163284
+epoch 79
+train loss: 0.3666234682300831 test loss: 10.539184167775412
+epoch 80
+train loss: 0.36677709045698903 test loss: 10.53858616507265
+epoch 81
+train loss: 0.3667236687609391 test loss: 10.53911394950671
+epoch 82
+train loss: 0.3678555573232075 test loss: 10.5371521549112
+epoch 83
+train loss: 0.3679724440701941 test loss: 10.538171390104576
+epoch 84
+train loss: 0.36920721615200736 test loss: 10.538336383285372
+epoch 85
+train loss: 0.36884521962407385 test loss: 10.53739604536128
+epoch 86
+train loss: 0.3826667291832524 test loss: 10.539872455408823
+epoch 87
+train loss: 0.38050046333246734 test loss: 10.537697455351639
+epoch 88
+train loss: 0.3770145602914526 test loss: 10.539236251183986
+epoch 89
+train loss: 0.3731000152251816 test loss: 10.539103299203004
+epoch 90
+train loss: 0.36948741117989103 test loss: 10.53902500573935
+epoch 91
+train loss: 0.3688348556280711 test loss: 10.538976202819944
+epoch 92
+train loss: 0.3676412350875935 test loss: 10.536873136516624
+epoch 93
+train loss: 0.3670412902145722 test loss: 10.539873843597473
+epoch 94
+train loss: 0.3665251918373833 test loss: 10.539184542097283
+epoch 95
+train loss: 0.3662927089854601 test loss: 10.540103775039462
+epoch 96
+train loss: 0.36705210579364494 test loss: 10.538087288068361
+epoch 97
+train loss: 0.3661584743330634 test loss: 10.539735056709725
+epoch 98
+train loss: 0.3663851880855612 test loss: 10.536492652441623
+epoch 99
+train loss: 0.3660672558208267 test loss: 10.54057010297004
+epoch 100
+train loss: 0.36566204779583217 test loss: 10.537966912549864
+epoch 101
+train loss: 0.3659641406197389 test loss: 10.538695604373247
+epoch 102
+train loss: 0.3659351573876976 test loss: 10.538979714673887
+epoch 103
+train loss: 0.36651902047885815 test loss: 10.538096742046891
+epoch 104
+train loss: 0.366776106457438 test loss: 10.538923587084287
+epoch 105
+train loss: 0.3682716298132397 test loss: 10.540026437131141
+epoch 106
+train loss: 0.37665395872676005 test loss: 10.53879998938807
+epoch 107
+train loss: 0.37703628403322625 test loss: 10.537678246432272
+epoch 108
+train loss: 0.3754366228461866 test loss: 10.538190875533065
+epoch 109
+train loss: 0.3697538543774218 test loss: 10.538942585330037
+epoch 110
+train loss: 0.367691518058386 test loss: 10.540218451084234
+epoch 111
+train loss: 0.3653371176320538 test loss: 10.537927317196095
+epoch 112
+train loss: 0.3651408027076235 test loss: 10.538129435958712
+epoch 113
+train loss: 0.3651736634688539 test loss: 10.538126736703004
+epoch 114
+train loss: 0.36624360639367637 test loss: 10.539595334957808
+epoch 115
+train loss: 0.36651626663617654 test loss: 10.53665752711851
+epoch 116
+train loss: 0.3887162223187241 test loss: 10.539443687574398
+epoch 117
+train loss: 0.3766918591232434 test loss: 10.537191486922946
+epoch 118
+train loss: 0.370764233665053 test loss: 10.537294568394769
+epoch 119
+train loss: 0.3671788590826109 test loss: 10.538308837710048
+epoch 120
+train loss: 0.36575487400391843 test loss: 10.537401156077488
+epoch 121
+train loss: 0.36792145746203075 test loss: 10.537005971874711
+epoch 122
+train loss: 0.37725482082372824 test loss: 10.53924104212774
+epoch 123
+train loss: 0.3764623074506377 test loss: 10.53934939984504
+epoch 124
+train loss: 0.3762411963951423 test loss: 10.539523355119092
+epoch 125
+train loss: 0.36709411566701083 test loss: 10.539394122844147
+epoch 126
+train loss: 0.3656297861246354 test loss: 10.541497359379274
+epoch 127
+train loss: 0.36552906180963607 test loss: 10.537071954098915
+epoch 128
+train loss: 0.3653625498452117 test loss: 10.540211485687797
+epoch 129
+train loss: 0.36493974442077576 test loss: 10.53716708640375
+epoch 130
+train loss: 0.36471586444713344 test loss: 10.53780617046168
+epoch 131
+train loss: 0.3643970655731705 test loss: 10.539133734016493
+epoch 132
+train loss: 0.3643348643169666 test loss: 10.537938928698177
+epoch 133
+train loss: 0.36446904953885123 test loss: 10.538213050812189
+epoch 134
+train loss: 0.3656050647928765 test loss: 10.537815400599493
+epoch 135
+train loss: 0.36515894681688804 test loss: 10.53801326638848
+epoch 136
+train loss: 0.36591404704848535 test loss: 10.536877933103423
+epoch 137
+train loss: 0.36639287286674194 test loss: 10.538548147889989
+epoch 138
+train loss: 0.3725453201365424 test loss: 10.538701104459443
+epoch 139
+train loss: 0.3743075890033464 test loss: 10.538472371223646
+epoch 140
+train loss: 0.3699917907049174 test loss: 10.538465588285607
+epoch 141
+train loss: 0.367986083652807 test loss: 10.540930311590492
+epoch 142
+train loss: 0.3669864235659349 test loss: 10.538020660656208
+epoch 143
+train loss: 0.36586190445980116 test loss: 10.538610065242008
+epoch 144
+train loss: 0.3652595395188425 test loss: 10.539174696867752
+epoch 145
+train loss: 0.36510536475741834 test loss: 10.539291978117513
+epoch 146
+train loss: 0.36361584537434993 test loss: 10.536710189879528
+epoch 147
+train loss: 0.36370022669712126 test loss: 10.53573167112452
+epoch 148
+train loss: 0.3637272438943491 test loss: 10.53969866284252
+epoch 149
+train loss: 0.3659401325647334 test loss: 10.539425417281231
+epoch 150
+train loss: 0.38167041461443707 test loss: 10.537801535642124
+fold 9
+epoch 1
+train loss: 0.4318191110369356 test loss: 12.544555675348587
+epoch 2
+train loss: 0.3992475855237503 test loss: 12.545900194367478
+epoch 3
+train loss: 0.395751073504197 test loss: 12.543878709541035
+epoch 4
+train loss: 0.39795470843836583 test loss: 12.54516834620188
+epoch 5
+train loss: 0.3946122878686054 test loss: 12.542699539214667
+epoch 6
+train loss: 0.39461923238365976 test loss: 12.545124169637466
+epoch 7
+train loss: 0.39072140692968965 test loss: 12.544936642844297
+epoch 8
+train loss: 0.3918935468764504 test loss: 12.543412591343566
+epoch 9
+train loss: 0.38868837957210234 test loss: 12.54546431817952
+epoch 10
+train loss: 0.38865578367754267 test loss: 12.543990910170816
+epoch 11
+train loss: 0.38904888592554293 test loss: 12.543799883750298
+epoch 12
+train loss: 0.38832223095708435 test loss: 12.545045593081142
+epoch 13
+train loss: 0.38780635277737185 test loss: 12.544471003364999
+epoch 14
+train loss: 0.38794241300570764 test loss: 12.543259718479254
+epoch 15
+train loss: 0.38638432105787224 test loss: 12.545908450139816
+epoch 16
+train loss: 0.38631675064681315 test loss: 12.54575677077916
+epoch 17
+train loss: 0.38564696013290656 test loss: 12.54660318400968
+epoch 18
+train loss: 0.3853640538831565 test loss: 12.543990804834008
+epoch 19
+train loss: 0.38527580370680364 test loss: 12.543447219878729
+epoch 20
+train loss: 0.384877523181602 test loss: 12.544987757530437
+epoch 21
+train loss: 0.3847138917246279 test loss: 12.543831198878543
+epoch 22
+train loss: 0.3846047258609916 test loss: 12.545063804122353
+epoch 23
+train loss: 0.38499090545093334 test loss: 12.543313389464007
+epoch 24
+train loss: 0.38577550432313934 test loss: 12.544500087610128
+epoch 25
+train loss: 0.3859350686480987 test loss: 12.543804037030162
+epoch 26
+train loss: 0.3873627759530935 test loss: 12.545475161287206
+epoch 27
+train loss: 0.3879198414072927 test loss: 12.544565027752336
+epoch 28
+train loss: 0.3885100372707128 test loss: 12.543611441843609
+epoch 29
+train loss: 0.38864451373878106 test loss: 12.545193006301067
+epoch 30
+train loss: 0.3903294934664814 test loss: 12.544272462291831
+epoch 31
+train loss: 0.3894308283565835 test loss: 12.545819853419617
+epoch 32
+train loss: 0.3906573402435535 test loss: 12.543874541213055
+epoch 33
+train loss: 0.3874823198770709 test loss: 12.545269873955782
+epoch 34
+train loss: 0.3902686315227595 test loss: 12.543546680397771
+epoch 35
+train loss: 0.3864520270554559 test loss: 12.546269348152055
+epoch 36
+train loss: 0.38764803121676705 test loss: 12.545500317033696
+epoch 37
+train loss: 0.38538777734982244 test loss: 12.543803290267432
+epoch 38
+train loss: 0.38451870091777085 test loss: 12.54582814775275
+epoch 39
+train loss: 0.3852050576376178 test loss: 12.545429624749358
+epoch 40
+train loss: 0.3851276742779788 test loss: 12.54469745869232
+epoch 41
+train loss: 0.3836782141024283 test loss: 12.5448790038596
+epoch 42
+train loss: 0.3840590208554944 test loss: 12.544794592396512
+epoch 43
+train loss: 0.38441805947762214 test loss: 12.546155019154446
+epoch 44
+train loss: 0.38354866666449494 test loss: 12.544864602813119
+epoch 45
+train loss: 0.38375142092342807 test loss: 12.545215946212558
+epoch 46
+train loss: 0.3842552343504669 test loss: 12.544945110230756
+epoch 47
+train loss: 0.3841990550942009 test loss: 12.54490794232611
+epoch 48
+train loss: 0.3851900965452142 test loss: 12.544957602988099
+epoch 49
+train loss: 0.38537744816075076 test loss: 12.542836009633142
+epoch 50
+train loss: 0.3860537061402862 test loss: 12.545966823660645
+epoch 51
+train loss: 0.38567504411513887 test loss: 12.544636116930718
+epoch 52
+train loss: 0.38618298682849345 test loss: 12.544391680986454
+epoch 53
+train loss: 0.3862329604148656 test loss: 12.544987018291767
+epoch 54
+train loss: 0.3849875361924171 test loss: 12.544491102004192
+epoch 55
+train loss: 0.38597244947802567 test loss: 12.543510323210345
+epoch 56
+train loss: 0.3855855193535291 test loss: 12.545996325490977
+epoch 57
+train loss: 0.3850246677381308 test loss: 12.544924768000195
+epoch 58
+train loss: 0.3857450395693532 test loss: 12.544354790531436
+epoch 59
+train loss: 0.38487778381476556 test loss: 12.544742411175188
+epoch 60
+train loss: 0.3851548049263387 test loss: 12.543854100229238
+epoch 61
+train loss: 0.38626503978359733 test loss: 12.544822463387334
+epoch 62
+train loss: 0.3848953014580521 test loss: 12.543781675530608
+epoch 63
+train loss: 0.38649388967657883 test loss: 12.543569907163961
+epoch 64
+train loss: 0.3891300057554334 test loss: 12.545997566960502
+epoch 65
+train loss: 0.3857016640476704 test loss: 12.544469571913018
+epoch 66
+train loss: 0.3911569867509252 test loss: 12.545014985214324
+epoch 67
+train loss: 0.39471628071069587 test loss: 12.544759374163325
+epoch 68
+train loss: 0.39269974831521914 test loss: 12.545234937874758
+epoch 69
+train loss: 0.39172599347499726 test loss: 12.544774263333052
+epoch 70
+train loss: 0.3921790673770378 test loss: 12.545768874166514
+epoch 71
+train loss: 0.39065167203679463 test loss: 12.545104512096156
+epoch 72
+train loss: 0.3874497218088129 test loss: 12.544700947974091
+epoch 73
+train loss: 0.3877501398579687 test loss: 12.545747942237929
+epoch 74
+train loss: 0.3823871534826357 test loss: 12.544505202088365
+epoch 75
+train loss: 0.37851209727238594 test loss: 12.544579409988675
+epoch 76
+train loss: 0.37579527543092306 test loss: 12.544655021125749
+epoch 77
+train loss: 0.3738859487995881 test loss: 12.544131631681905
+epoch 78
+train loss: 0.37331947533659915 test loss: 12.545419973264314
+epoch 79
+train loss: 0.37158186510842073 test loss: 12.544323242157404
+epoch 80
+train loss: 0.3728155865661152 test loss: 12.545824043379262
+epoch 81
+train loss: 0.36982884682729633 test loss: 12.544708760767529
+epoch 82
+train loss: 0.36815803937422925 test loss: 12.5441922295023
+epoch 83
+train loss: 0.366621887862826 test loss: 12.545805985640728
+epoch 84
+train loss: 0.3683151148215553 test loss: 12.546178823392067
+epoch 85
+train loss: 0.3664636763203387 test loss: 12.546671999041616
+epoch 86
+train loss: 0.3645934867887951 test loss: 12.543372176808013
+epoch 87
+train loss: 0.3635173539385941 test loss: 12.544605583363971
+epoch 88
+train loss: 0.36276156706896734 test loss: 12.544471919419028
+epoch 89
+train loss: 0.36194616493630405 test loss: 12.545468595606335
+epoch 90
+train loss: 0.36279029394094814 test loss: 12.546815307888053
+epoch 91
+train loss: 0.36112686152419526 test loss: 12.544906420585436
+epoch 92
+train loss: 0.3645414065372884 test loss: 12.545303457587428
+epoch 93
+train loss: 0.36440049815509057 test loss: 12.544893381393402
+epoch 94
+train loss: 0.3658824841259813 test loss: 12.545288691624148
+epoch 95
+train loss: 0.3601006448151327 test loss: 12.544945448813353
+epoch 96
+train loss: 0.3617063390040852 test loss: 12.545425379299788
+epoch 97
+train loss: 0.3630013474665946 test loss: 12.544395138290977
+epoch 98
+train loss: 0.3597061508221896 test loss: 12.54614489177275
+epoch 99
+train loss: 0.3568236807113464 test loss: 12.544655440591967
+epoch 100
+train loss: 0.3561667431143457 test loss: 12.5447883210944
+epoch 101
+train loss: 0.35600518142555904 test loss: 12.5452291951377
+epoch 102
+train loss: 0.3567337053235022 test loss: 12.544167388825727
+epoch 103
+train loss: 0.35971636739205354 test loss: 12.544992425267749
+epoch 104
+train loss: 0.3663386500761184 test loss: 12.545290123076128
+epoch 105
+train loss: 0.35900982984639873 test loss: 12.54553535092747
+epoch 106
+train loss: 0.3551697696532802 test loss: 12.543741164122812
+epoch 107
+train loss: 0.35473160848834656 test loss: 12.54559197134285
+epoch 108
+train loss: 0.3548488098137699 test loss: 12.544309198503663
+epoch 109
+train loss: 0.3547544108098363 test loss: 12.54695133532763
+epoch 110
+train loss: 0.3542819452071377 test loss: 12.546387905670105
+epoch 111
+train loss: 0.353761794610525 test loss: 12.544860125058266
+epoch 112
+train loss: 0.3544282336363582 test loss: 12.545034833678598
+epoch 113
+train loss: 0.35457316024501206 test loss: 12.5451688963986
+epoch 114
+train loss: 0.3552478928312434 test loss: 12.543568214250975
+epoch 115
+train loss: 0.3554206973408336 test loss: 12.543497055475058
+epoch 116
+train loss: 0.35456317131626564 test loss: 12.54499697073912
+epoch 117
+train loss: 0.3543782871328384 test loss: 12.5447577546099
+epoch 118
+train loss: 0.35436654389525046 test loss: 12.545085349261644
+epoch 119
+train loss: 0.3541916183753414 test loss: 12.546360698677379
+epoch 120
+train loss: 0.3541983695475843 test loss: 12.544785042486247
+epoch 121
+train loss: 0.3535180754392993 test loss: 12.545282856717382
+epoch 122
+train loss: 0.35399124749313443 test loss: 12.544277384906596
+epoch 123
+train loss: 0.35406819088970287 test loss: 12.544890755497256
+epoch 124
+train loss: 0.35384167721011306 test loss: 12.543805055599476
+epoch 125
+train loss: 0.35671150146300024 test loss: 12.544320650119518
+epoch 126
+train loss: 0.35597251999307666 test loss: 12.544267993001544
+epoch 127
+train loss: 0.3582922318199604 test loss: 12.5454784060371
+epoch 128
+train loss: 0.36883739566292884 test loss: 12.544577813007422
+epoch 129
+train loss: 0.36061632273497873 test loss: 12.545086762843988
+epoch 130
+train loss: 0.36197954622990675 test loss: 12.545331891001563
+epoch 131
+train loss: 0.4038000500934664 test loss: 12.544274081845256
+epoch 132
+train loss: 0.37122029124704237 test loss: 12.544724970409385
+epoch 133
+train loss: 0.35880830245871775 test loss: 12.545596166005032
+epoch 134
+train loss: 0.36600718861468234 test loss: 12.546602271717681
+epoch 135
+train loss: 0.36235597598158864 test loss: 12.543681742876945
+epoch 136
+train loss: 0.35415071783268526 test loss: 12.544569607081968
+epoch 137
+train loss: 0.3557376213659131 test loss: 12.543867035965478
+epoch 138
+train loss: 0.3523949965770937 test loss: 12.545033746452257
+epoch 139
+train loss: 0.3505430076301503 test loss: 12.546419986371223
+epoch 140
+train loss: 0.3494441638305316 test loss: 12.545005386397683
+epoch 141
+train loss: 0.34935292405156537 test loss: 12.545225779215494
+epoch 142
+train loss: 0.34934927519543924 test loss: 12.544211436540653
+epoch 143
+train loss: 0.3491291469336536 test loss: 12.545332188201844
+epoch 144
+train loss: 0.34920392853111754 test loss: 12.545081257114749
+epoch 145
+train loss: 0.34951961385022906 test loss: 12.545936141493758
+epoch 146
+train loss: 0.3495411362638605 test loss: 12.5449797622786
+epoch 147
+train loss: 0.34965808679470756 test loss: 12.544691279559917
+epoch 148
+train loss: 0.35013003002851384 test loss: 12.546122428698418
+epoch 149
+train loss: 0.35050360863257235 test loss: 12.545160760070681
+epoch 150
+train loss: 0.3511537244539759 test loss: 12.54541391827886
+fold 10
+epoch 1
+train loss: 0.36679655513349607 test loss: 12.460755835388303
+epoch 2
+train loss: 0.36471989502509433 test loss: 12.462102942683053
+epoch 3
+train loss: 0.36378668701599076 test loss: 12.461963834141839
+epoch 4
+train loss: 0.3619634190497954 test loss: 12.461224873860678
+epoch 5
+train loss: 0.3624390402342206 test loss: 12.460759448817026
+epoch 6
+train loss: 0.3628166036114159 test loss: 12.461441301500068
+epoch 7
+train loss: 0.3618595610504777 test loss: 12.461266118864101
+epoch 8
+train loss: 0.3586828124693303 test loss: 12.461186501166289
+epoch 9
+train loss: 0.35806512190778084 test loss: 12.46139529564912
+epoch 10
+train loss: 0.3580192587126733 test loss: 12.461641247691016
+epoch 11
+train loss: 0.35743058478423384 test loss: 12.461762693506726
+epoch 12
+train loss: 0.35756878665689834 test loss: 12.461457555345765
+epoch 13
+train loss: 0.35697040264214075 test loss: 12.460520575032431
+epoch 14
+train loss: 0.356891928628861 test loss: 12.46038895669068
+epoch 15
+train loss: 0.3562887518121933 test loss: 12.46124208138069
+epoch 16
+train loss: 0.35610834114153916 test loss: 12.46109463242149
+epoch 17
+train loss: 0.35619448182756197 test loss: 12.461015366473376
+epoch 18
+train loss: 0.3568676138582876 test loss: inf
+epoch 19
+train loss: 0.3565989062892171 test loss: 12.461336028646436
+epoch 20
+train loss: 0.35746343961667654 test loss: 12.460458360480134
+epoch 21
+train loss: 0.35605791978311074 test loss: 12.461022764503133
+epoch 22
+train loss: 0.35723862860865324 test loss: inf
+epoch 23
+train loss: 0.3639000311123222 test loss: inf
+epoch 24
+train loss: 0.3704782141690554 test loss: 12.459716563629211
+epoch 25
+train loss: 0.36581639997920734 test loss: 12.461749082486305
+epoch 26
+train loss: 0.35879750011695755 test loss: 12.462584679883848
+epoch 27
+train loss: 0.35518799656391825 test loss: 12.461681241819845
+epoch 28
+train loss: 0.3537651006521793 test loss: 12.46067399621245
+epoch 29
+train loss: 0.353744953300101 test loss: 12.46100527671197
+epoch 30
+train loss: 0.35359153895427226 test loss: 12.461663096614139
+epoch 31
+train loss: 0.35397054963328195 test loss: 12.461427154390535
+epoch 32
+train loss: 0.3534919883800316 test loss: 12.461198910218489
+epoch 33
+train loss: 0.3543159639103199 test loss: 12.461935240841477
+epoch 34
+train loss: 0.3539524992000056 test loss: 12.461610820401585
+epoch 35
+train loss: 0.3547477758220745 test loss: 12.459281343915288
+epoch 36
+train loss: 0.354716104696338 test loss: 12.460866918695514
+epoch 37
+train loss: 0.3534735047333751 test loss: inf
+epoch 38
+train loss: 0.3518159429704166 test loss: 12.460756249211478
+epoch 39
+train loss: 0.3517273584466061 test loss: inf
+epoch 40
+train loss: 0.3518740447948775 test loss: 12.460159218993178
+epoch 41
+train loss: 0.3522330315674629 test loss: 12.460933918548523
+epoch 42
+train loss: 0.3520165100030776 test loss: 12.461668582592726
+epoch 43
+train loss: 0.35239123445026266 test loss: 12.461579693374784
+epoch 44
+train loss: 0.351329484629136 test loss: inf
+epoch 45
+train loss: 0.35090915002737055 test loss: inf
+epoch 46
+train loss: 0.35147471661933966 test loss: inf
+epoch 47
+train loss: 0.3523367367735459 test loss: inf
+epoch 48
+train loss: 0.35305502258997173 test loss: inf
+epoch 49
+train loss: 0.3522923842069221 test loss: inf
+epoch 50
+train loss: 0.35163421623544316 test loss: 12.459301917510626
+epoch 51
+train loss: 0.3674779844315408 test loss: 12.46061559541691
+epoch 52
+train loss: 0.367999499209377 test loss: 12.462952073979425
+epoch 53
+train loss: 0.3590070543671527 test loss: inf
+epoch 54
+train loss: 0.35385847691248157 test loss: inf
+epoch 55
+train loss: 0.35368458337881 test loss: inf
+epoch 56
+train loss: 0.35645078056159835 test loss: 12.46044109276766
+epoch 57
+train loss: 0.3495540818493016 test loss: 12.46117806763809
+epoch 58
+train loss: 0.34741091047648975 test loss: 12.46105193715594
+epoch 59
+train loss: 0.34579625989284113 test loss: 12.461235422589604
+epoch 60
+train loss: 0.345545518597163 test loss: 12.459672967357749
+epoch 61
+train loss: 0.34525634754965917 test loss: 12.462661013330463
+epoch 62
+train loss: 0.34512755258444394 test loss: 12.461042944966454
+epoch 63
+train loss: 0.34496388760883767 test loss: 12.46186062664205
+epoch 64
+train loss: 0.34534370512792395 test loss: 12.461211872288931
+epoch 65
+train loss: 0.34602448711861206 test loss: 12.460284671369624
+epoch 66
+train loss: 0.34642753932798953 test loss: 12.4595598976993
+epoch 67
+train loss: 0.34753412993858707 test loss: 12.460508229934723
+epoch 68
+train loss: 0.34865852453201557 test loss: 12.461423362265442
+epoch 69
+train loss: 0.3471348494252118 test loss: inf
+epoch 70
+train loss: 0.3465075673000308 test loss: inf
+epoch 71
+train loss: 0.34646031525252996 test loss: 12.461087465756508
+epoch 72
+train loss: 0.3457294850104633 test loss: inf
+epoch 73
+train loss: 0.34612072942524974 test loss: 12.461731495941885
+epoch 74
+train loss: 0.34656147630495404 test loss: inf
+epoch 75
+train loss: 0.3475957695854395 test loss: 12.46175064090676
+epoch 76
+train loss: 0.3472083929257515 test loss: 12.46096527317807
+epoch 77
+train loss: 0.34820809125175295 test loss: 12.461955234143861
+epoch 78
+train loss: 0.34787557535845015 test loss: 12.461050962790464
+epoch 79
+train loss: 0.3468762234901614 test loss: 12.462076042295678
+epoch 80
+train loss: 0.36670972541735514 test loss: 12.460379102056079
+epoch 81
+train loss: 0.3820127995258984 test loss: 12.460519897867236
+epoch 82
+train loss: 0.35440646792200087 test loss: inf
+epoch 83
+train loss: 0.3529337865318642 test loss: 12.460505602157562
+epoch 84
+train loss: 0.3558128683854555 test loss: inf
+epoch 85
+train loss: 0.35001775892110554 test loss: inf
+epoch 86
+train loss: 0.3470109842983798 test loss: inf
+epoch 87
+train loss: 0.34628808217699947 test loss: inf
+epoch 88
+train loss: 0.34641196907469574 test loss: inf
+epoch 89
+train loss: 0.346460307059014 test loss: inf
+epoch 90
+train loss: 0.34665733284198375 test loss: inf
+epoch 91
+train loss: 0.34627831002047077 test loss: inf
+epoch 92
+train loss: 0.34726904612177434 test loss: inf
+epoch 93
+train loss: 0.34698594120865245 test loss: inf
+epoch 94
+train loss: 0.3466701980058937 test loss: inf
+epoch 95
+train loss: 0.34631093644518457 test loss: inf
+epoch 96
+train loss: 0.34614471269805336 test loss: inf
+epoch 97
+train loss: 0.3456547819771919 test loss: inf
+epoch 98
+train loss: 0.34665771210886603 test loss: inf
+epoch 99
+train loss: 0.3473586975897897 test loss: inf
+epoch 100
+train loss: 0.34952371625289724 test loss: inf
+epoch 101
+train loss: 0.3492238113157404 test loss: inf
+epoch 102
+train loss: 0.3468871605138611 test loss: inf
+epoch 103
+train loss: 0.34507538619570216 test loss: inf
+epoch 104
+train loss: 0.3548737807701861 test loss: inf
+epoch 105
+train loss: 0.34970440319264745 test loss: inf
+epoch 106
+train loss: 0.35017726219473716 test loss: inf
+epoch 107
+train loss: 0.3477281849099021 test loss: inf
+epoch 108
+train loss: 0.34571001508973054 test loss: inf
+epoch 109
+train loss: 0.3437991475524373 test loss: inf
+epoch 110
+train loss: 0.34332989385249896 test loss: inf
+epoch 111
+train loss: 0.34281296665251004 test loss: inf
+epoch 112
+train loss: 0.3427973162777168 test loss: inf
+epoch 113
+train loss: 0.34251068154631176 test loss: inf
+epoch 114
+train loss: 0.34309468996788023 test loss: inf
+epoch 115
+train loss: 0.34270073486761043 test loss: inf
+epoch 116
+train loss: 0.34241271440577353 test loss: inf
+epoch 117
+train loss: 0.34258240235366505 test loss: inf
+epoch 118
+train loss: 0.34221686034375787 test loss: inf
+epoch 119
+train loss: 0.3427035110759129 test loss: inf
+epoch 120
+train loss: 0.34256984172305227 test loss: inf
+epoch 121
+train loss: 0.34292994513732156 test loss: inf
+epoch 122
+train loss: 0.34347982770279 test loss: inf
+epoch 123
+train loss: 0.3436190490330256 test loss: inf
+epoch 124
+train loss: 0.3432273436300971 test loss: inf
+epoch 125
+train loss: 0.3427389978141135 test loss: inf
+epoch 126
+train loss: 0.34231075372301173 test loss: inf
+epoch 127
+train loss: 0.3425074490899583 test loss: inf
+epoch 128
+train loss: 0.3431079774350418 test loss: inf
+epoch 129
+train loss: 0.3429175133243572 test loss: inf
+epoch 130
+train loss: 0.3580882912295549 test loss: inf
+epoch 131
+train loss: 0.35024758161858144 test loss: inf
+epoch 132
+train loss: 0.3491906015177502 test loss: inf
+epoch 133
+train loss: 0.3530513654390945 test loss: inf
+epoch 134
+train loss: 0.348685997649913 test loss: inf
+epoch 135
+train loss: 0.35152751933142407 test loss: inf
+epoch 136
+train loss: 0.3512558006542099 test loss: inf
+epoch 137
+train loss: 0.3470282206353051 test loss: inf
+epoch 138
+train loss: 0.3460178221497336 test loss: inf
+epoch 139
+train loss: 0.34473613449993845 test loss: inf
+epoch 140
+train loss: 0.34409708908607817 test loss: inf
+epoch 141
+train loss: 0.34359164994578206 test loss: inf
+epoch 142
+train loss: 0.3436153691246495 test loss: inf
+epoch 143
+train loss: 0.34456070888572793 test loss: inf
+epoch 144
+train loss: 0.3443208433109667 test loss: inf
+epoch 145
+train loss: 0.3444230989162177 test loss: inf
+epoch 146
+train loss: 0.3434117523454899 test loss: inf
+epoch 147
+train loss: 0.34379471019775804 test loss: inf
+epoch 148
+train loss: 0.34407965495362763 test loss: inf
+epoch 149
+train loss: 0.3443242304946361 test loss: inf
+epoch 150
+train loss: 0.34476715650098405 test loss: inf

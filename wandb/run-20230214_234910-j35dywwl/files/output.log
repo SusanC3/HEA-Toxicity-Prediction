@@ -1,0 +1,77 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+45
+0.0
+0.0
+epoch 2
+45
+0.0
+0.0
+epoch 3
+45
+0.0
+0.0
+epoch 4
+45
+0.0
+0.0
+epoch 5
+45
+0.0
+0.0
+epoch 6
+45
+0.0
+0.0
+epoch 7
+45
+0.0
+0.0
+epoch 8
+45
+0.0
+0.0
+epoch 9
+45
+0.0
+0.0
+epoch 10
+45
+0.0
+0.0
+epoch 11
+45
+0.0
+0.0
+epoch 12
+45
+0.0
+0.0
+epoch 13
+45
+0.0
+0.0
+epoch 14
+45
+0.0
+0.0
+epoch 15
+45
+0.0
+0.0
+epoch 16
+45
+4.444444444444445
+40.0
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(161)<module>()
+-> wandb.log({"train_loss": train_loss, "test_loss": test_loss, "train_acc": train_acc, "test_acc": test_acc})

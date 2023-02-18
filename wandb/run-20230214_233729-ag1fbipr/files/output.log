@@ -1,0 +1,56 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+<class 'torch.Tensor'>
+epoch 2
+<class 'torch.Tensor'>
+epoch 3
+<class 'torch.Tensor'>
+epoch 4
+<class 'torch.Tensor'>
+epoch 5
+<class 'torch.Tensor'>
+epoch 6
+<class 'torch.Tensor'>
+epoch 7
+<class 'torch.Tensor'>
+epoch 8
+<class 'torch.Tensor'>
+epoch 9
+<class 'torch.Tensor'>
+epoch 10
+<class 'torch.Tensor'>
+epoch 11
+<class 'torch.Tensor'>
+epoch 12
+<class 'torch.Tensor'>
+epoch 13
+<class 'torch.Tensor'>
+epoch 14
+<class 'torch.Tensor'>
+epoch 15
+<class 'torch.Tensor'>
+epoch 16
+<class 'torch.Tensor'>
+epoch 17
+<class 'torch.Tensor'>
+epoch 18
+<class 'torch.Tensor'>
+epoch 19
+<class 'torch.Tensor'>
+epoch 20
+<class 'torch.Tensor'>
+epoch 21
+<class 'torch.Tensor'>
+epoch 22
+<class 'torch.Tensor'>
+epoch 23

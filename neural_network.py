@@ -1,6 +1,8 @@
 import torch.nn as nn
 import torch.nn.functional as F
 
+#using https://towardsdatascience.com/pytorch-tabular-regression-428e9c9ac93
+#official pytorch classification https://pytorch.org/tutorials/beginner/introyt/trainingyt.html
 class ToxicityRegressor(nn.Module):
     def __init__(self, dim_input, dim_output):
         super(ToxicityRegressor, self).__init__()
