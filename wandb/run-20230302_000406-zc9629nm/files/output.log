@@ -1,0 +1,17 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 136, in <module>
+    train_test_loss, train_test_correct = train_epoch(model, device, test_loader, criterion, optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 101, in train_epoch
+    valid_loss /= len(dataloader)
+UnboundLocalError: local variable 'valid_loss' referenced before assignment

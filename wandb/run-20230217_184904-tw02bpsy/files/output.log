@@ -1,0 +1,20 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+test loss 131.55136646330357
+train loss 3305.8471151664853
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(147)<module>()
+-> for epoch in range(max_epochs):
+0.2594701508151944
+0.7244898345751666
+507
+4563
+8

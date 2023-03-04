@@ -70,13 +70,17 @@ def get_input_output():
     for cid in cids:
         cid = str(int(cid))
         if cid_to_toxid[cid] in toxid_to_input:
-           # print(cid)
+            print(cid)
             input[counter] = toxid_to_input[cid_to_toxid[cid]]
             counter += 1
         else:
             print("uh oh...")
 
     input = input[:5070] #somehow the last 6 cids got cut off from output, TODO fix this issue (prob to do with splitting into files)
+
+    pdb.set_trace()
+
+    #want cid at index 4058
 
     print("len input:", len(input))
     print("len output:", len(output))

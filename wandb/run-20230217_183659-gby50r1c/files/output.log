@@ -1,0 +1,79 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+loss item: 0.7178016304969788
+input size 64
+loss item: 0.11583156138658524
+input size 64
+loss item: 0.08604701608419418
+input size 64
+loss item: 0.1232232004404068
+input size 64
+loss item: 0.10533863306045532
+input size 64
+loss item: 0.09286320209503174
+input size 64
+loss item: 0.07974062860012054
+input size 64
+loss item: 0.8037089109420776
+input size 59
+test loss 131.95296156406403
+epoch 1
+len sampler: 507
+train loss: 0.7088970621113397 test loss: 0.260262251605649
+epoch 2
+len sampler: 507
+train loss: 0.7015578366412736 test loss: 0.0005133377743701163
+epoch 3
+len sampler: 507
+train loss: 0.7014524186409253 test loss: 1.0125005411639375e-06
+epoch 4
+len sampler: 507
+train loss: 0.7013037902285283 test loss: 1.9970424875028353e-09
+epoch 5
+len sampler: 507
+train loss: 0.7010323995042208 test loss: 3.938939817559833e-12
+epoch 6
+len sampler: 507
+train loss: 0.700545052267691 test loss: 7.769112066192964e-15
+epoch 7
+len sampler: 507
+train loss: 0.6996816508586263 test loss: 1.532369243825042e-17
+epoch 8
+len sampler: 507
+train loss: 0.6988620557480414 test loss: 3.0224245440336136e-20
+epoch 9
+len sampler: 507
+train loss: 0.6962142368432019 test loss: 5.961389633202393e-23
+epoch 10
+len sampler: 507
+train loss: 0.6914136374890543 test loss: 1.1758164957006692e-25
+epoch 11
+len sampler: 507
+train loss: 0.6889369289929371 test loss: 2.3191646858001367e-28
+epoch 12
+len sampler: 507
+train loss: 0.6848143154076388 test loss: 4.574289321104806e-31
+epoch 13
+len sampler: 507
+train loss: 0.6773852428636503 test loss: 9.022266905532161e-34
+epoch 14
+len sampler: 507
+train loss: 0.6702574130744493 test loss: 1.779539823576363e-36
+epoch 15
+len sampler: 507
+train loss: 0.6695818436049772 test loss: 3.509940480426752e-39
+epoch 16
+len sampler: 507
+train loss: 0.6634758636502355 test loss: 6.922959527468939e-42
+epoch 17
+len sampler: 507
+train loss: 0.6506944862550519 test loss: 1.36547525196626e-44

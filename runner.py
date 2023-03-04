@@ -47,7 +47,7 @@ len_data = 5070
 wandb.login()
 wandb.init(
     project="HEA-Toxicity-Prediction",
-    name=f"experiment_gauss_normalization",
+    name=f"experiment_strange_loss",
     config={
         "batch_size": params["batch_size"],
         "epochs": max_epochs,
@@ -79,7 +79,7 @@ history = {'train_loss': [], 'test_loss': [], 'train_acc': [], 'test_acc': []}
 #kfold stuff
 #https://medium.com/dataseries/k-fold-cross-validation-with-pytorch-and-sklearn-d094aa00105f
 k = 10
-splits = KFold(n_splits=k, shuffle=True, random_state=42)
+splits = KFold(n_splits=k, shuffle=True, random_state=33)
 foldperf={}
 
 def train_epoch(model, device, dataloader, loss_fn, optimizer):
@@ -93,26 +93,31 @@ def train_epoch(model, device, dataloader, loss_fn, optimizer):
 
         pred_result = model(input)
         loss = loss_fn(pred_result, output)
+      #  print("before backward", loss.item())
         loss.backward()
         optimizer.step()
-        train_loss += loss.item() * input.size(0)
-        #scores, predictions = torch.max(pred_result.data, 1)
-        train_correct += (pred_result == output).sum().item()
+      #  print("after backward", loss.item)
+        train_loss += loss.item()
+        # train_correct += (pred_result == output).sum().item()
 
+#
+    train_loss /= len(dataloader)
     return train_loss, train_correct
 
 
 def valid_epoch(model, device, dataloader, loss_fn):
     valid_loss, val_correct = 0.0, 0
     model.eval()
+
     for input, output in dataloader:
         input, output = input.to(device), output.to(device)
+        input, output = input_normalizer.encode(input), output_normalizer.encode(output)       
+
         pred_result = model(input)
         loss = loss_fn(pred_result, output)
-        valid_loss += loss.item() * input.size(0)
-        #scores, predictions = torch.max(pred_result.data, 1)
-        val_correct += (pred_result == output).sum().item()
+        valid_loss += loss.item()
 
+    valid_loss /= len(dataloader)
     return valid_loss, val_correct
 
 
@@ -132,14 +137,26 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
     train_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=train_sampler)
     test_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=test_sampler)
 
+    # train_test_loss, train_test_correct = train_epoch(model, device, test_loader, criterion, optimizer)
+    # print("train test loss", train_test_loss)
+    # train_train_loss, train_train_correct = train_epoch(model, device, train_loader, criterion, optimizer)
+    # print("train train loss", train_train_loss)
+
+    # print()
+
+    # test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
+    # print("valid test loss", test_loss)
+    # train_loss, train_correct = valid_epoch(model, device, train_loader, criterion)
+    # print("valid train loss", train_loss)
+
+    # pdb.set_trace()
+
     for epoch in range(max_epochs):
         print("epoch", epoch + 1)
         train_loss, train_correct = train_epoch(model, device, train_loader, criterion, optimizer)
         test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
-
-        train_loss /= len(train_loader.sampler)
+        
         train_acc = train_correct / len(train_loader.sampler) * 100
-        test_loss /= len(test_loader.sampler)
         test_acc = train_correct / len(test_loader.sampler) * 100
 
         # if (train_acc > 0 or test_acc > 0):

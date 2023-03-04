@@ -1,0 +1,33 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(96)train_epoch()
+-> pred_result = model(input)
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(97)train_epoch()
+-> loss = loss_fn(pred_result, output)
+torch.Size([64, 229432])
+torch.Size([64, 229432])
+tensor(0.0530, device='cuda:0', grad_fn=<SelectBackward0>)
+tensor(-0.7381, device='cuda:0')
+tensor(-0.1100, device='cuda:0')
+tensor(0.2101, device='cuda:0', grad_fn=<SelectBackward0>)
+*** NameError: name 'loss' is not defined
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(98)train_epoch()
+-> loss.backward()
+tensor(0.1025, device='cuda:0', grad_fn=<MseLossBackward0>)
+0.1024651750922203
+72
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(99)train_epoch()
+-> optimizer.step()
+0.1024651750922203
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(100)train_epoch()
+-> train_loss += loss.item()

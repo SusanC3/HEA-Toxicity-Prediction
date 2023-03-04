@@ -1,0 +1,37 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(116)valid_epoch()
+-> val_correct += (pred_result == output).sum().item()
+0.07736515998840332
+8
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(115)valid_epoch()
+-> pdb.set_trace()
+0.7225767374038696
+0.799941897392273
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(116)valid_epoch()
+-> val_correct += (pred_result == output).sum().item()
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(115)valid_epoch()
+-> pdb.set_trace()
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(116)valid_epoch()
+-> val_correct += (pred_result == output).sum().item()
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(115)valid_epoch()
+-> pdb.set_trace()
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(116)valid_epoch()
+-> val_correct += (pred_result == output).sum().item()
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(115)valid_epoch()
+-> pdb.set_trace()
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 139, in <module>
+    test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 115, in valid_epoch
+    pdb.set_trace()
+UnboundLocalError: local variable 'val_loss' referenced before assignment

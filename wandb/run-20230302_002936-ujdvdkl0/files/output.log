@@ -1,0 +1,268 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 48.196576569229364 test loss: 0.5400490113534033
+epoch 2
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 47.61488186195493 test loss: 0.5392469335347414
+epoch 3
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 47.590693697333336 test loss: 0.5454174177721143
+epoch 4
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 50.719060737639666 test loss: 0.545666360296309
+epoch 5
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 50.41237672418356 test loss: 0.5393062173388898
+epoch 6
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 47.56485727801919 test loss: 0.5393410590477288
+epoch 7
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 47.428701139986515 test loss: 0.5386679223738611
+epoch 8
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 48.89802711457014 test loss: 0.5415377020835876
+epoch 9
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 47.25887789949775 test loss: 0.5562631282955408
+epoch 10
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 47.05850331299007 test loss: 0.5401709764264524
+epoch 11
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 46.63017989695072 test loss: 0.5488492269068956
+epoch 12
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 46.46103776991367 test loss: 0.5559345805086195
+epoch 13
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 46.34713550657034 test loss: 0.5461505898274481
+epoch 14
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 45.90282130241394 test loss: 0.5535134202800691
+epoch 15
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 44.623669024556875 test loss: 0.557729022577405
+epoch 16
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 46.76427372917533 test loss: 0.546099896542728
+epoch 17
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 44.15131838992238 test loss: 0.5555999237112701
+epoch 18
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 44.47907932847738 test loss: 0.5467747342772782
+epoch 19
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 44.1407686509192 test loss: 0.5488431821577251
+epoch 20
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 44.03683789819479 test loss: 0.5415312531404197
+epoch 21
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 42.85917305573821 test loss: 0.555730052292347
+epoch 22
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 44.771865986287594 test loss: 0.5606042514555156
+epoch 23
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 42.44521103054285 test loss: 0.5418162890709937
+epoch 24
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 41.58670613542199 test loss: 0.5416605724021792
+epoch 25
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 41.53258480504155 test loss: 0.5525474604219198
+epoch 26
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 41.04463425092399 test loss: 0.558607205748558
+epoch 27
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 40.61627730727196 test loss: 0.5512593439780176
+epoch 28
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 40.29304845817387 test loss: 0.548372476361692
+epoch 29
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 40.00663645751774 test loss: 0.5562182739377022
+epoch 30
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 39.79817410185933 test loss: 0.5569785898551345
+epoch 31
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 39.67294164374471 test loss: 0.564737185370177
+epoch 32
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 39.80100319907069 test loss: 0.5555896298028529
+epoch 33
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 41.1361265219748 test loss: 0.5537084583193064
+epoch 34
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 40.10622350871563 test loss: 0.5696381540037692
+epoch 35
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 39.29959259927273 test loss: 0.5481985160149634
+epoch 36
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.827612329274416 test loss: 0.5443626348860562
+epoch 37
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.924568112939596 test loss: 0.5414541540667415
+epoch 38
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.55088961869478 test loss: 0.5451928707771003
+epoch 39
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.49249865114689 test loss: 0.5417445711791515
+epoch 40
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.075040861964226 test loss: 0.5427631787024438
+epoch 41
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.104518473148346 test loss: 0.5419088653288782
+epoch 42
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.06918604671955 test loss: 0.5442526522092521
+epoch 43
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.15910982713103 test loss: 0.5515997763723135
+epoch 44
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 38.85687818005681 test loss: 0.5512290513142943
+epoch 45
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 37.92725429683924 test loss: 0.570255289785564
+epoch 46
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 37.6090089045465 test loss: 0.5674038697034121
+epoch 47
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 37.51688911020756 test loss: 0.5517904828302562
+epoch 48
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 37.59134338051081 test loss: 0.5737414252944291
+epoch 49
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 39.13947652280331 test loss: 0.5588638749904931
+epoch 50
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 37.55486457422376 test loss: 0.5734651740640402
+epoch 51
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 37.16112082079053 test loss: 0.5844443119131029
+epoch 52
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 37.14022782817483 test loss: 0.5639180708676577
+epoch 53
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.82506303489208 test loss: 0.556173522491008
+epoch 54
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.62122968956828 test loss: 0.5642678821459413
+epoch 55
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.815540470182896 test loss: 0.5559120266698301
+epoch 56
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.934644959867 test loss: 0.5475999619811773
+epoch 57
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.59594489634037 test loss: 0.5661233882419765
+epoch 58
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.28333404287696 test loss: 0.5748151438310742
+epoch 59
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.251694180071354 test loss: 0.5716961994767189
+epoch 60
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.41741796955466 test loss: 0.6128585729748011
+epoch 61
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 37.22625442221761 test loss: 0.553415319416672
+epoch 62
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 35.90392243117094 test loss: 0.5756610063835979
+epoch 63
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 35.9166153781116 test loss: 0.5554877906106412
+epoch 64
+train len input 19 train len output 19 train len dataloader 72
+train len input 59 train len output 59 train len dataloader 8
+train loss: 36.125515446066856 test loss: 0.5933731636032462
+epoch 65

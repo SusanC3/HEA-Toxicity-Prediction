@@ -1,0 +1,15 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+train loss: 0.7106401644543641 test loss: 0.16775464080274105
+epoch 2
+train loss: 0.7026875122553773 test loss: 0.16709484113380313

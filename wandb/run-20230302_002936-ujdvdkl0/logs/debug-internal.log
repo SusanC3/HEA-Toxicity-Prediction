@@ -1,0 +1,1450 @@
+2023-03-02 00:29:36,656 INFO    StreamThr :1727 [internal.py:wandb_internal():87] W&B internal server running at pid: 1727, started at: 2023-03-02 00:29:36.655059
+2023-03-02 00:29:36,658 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status
+2023-03-02 00:29:36,661 INFO    WriterThread:1727 [datastore.py:open_for_write():85] open: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/run-ujdvdkl0.wandb
+2023-03-02 00:29:36,664 DEBUG   SenderThread:1727 [sender.py:send():336] send: header
+2023-03-02 00:29:36,734 DEBUG   SenderThread:1727 [sender.py:send():336] send: run
+2023-03-02 00:29:37,083 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: check_version
+2023-03-02 00:29:37,085 INFO    SenderThread:1727 [dir_watcher.py:__init__():216] watching files in: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files
+2023-03-02 00:29:37,086 INFO    SenderThread:1727 [sender.py:_start_run_threads():1067] run started: ujdvdkl0 with start time 1677745776.65938
+2023-03-02 00:29:37,087 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:29:37,091 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:29:37,094 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: check_version
+2023-03-02 00:29:37,326 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: run_start
+2023-03-02 00:29:37,447 DEBUG   HandlerThread:1727 [system_info.py:__init__():31] System info init
+2023-03-02 00:29:37,447 DEBUG   HandlerThread:1727 [system_info.py:__init__():46] System info init done
+2023-03-02 00:29:37,447 INFO    HandlerThread:1727 [system_monitor.py:start():151] Starting system monitor
+2023-03-02 00:29:37,448 INFO    SystemMonitor:1727 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-02 00:29:37,448 INFO    HandlerThread:1727 [system_monitor.py:probe():172] Collecting system info
+2023-03-02 00:29:37,448 INFO    SystemMonitor:1727 [interfaces.py:start():168] Started cpu
+2023-03-02 00:29:37,450 INFO    SystemMonitor:1727 [interfaces.py:start():168] Started disk
+2023-03-02 00:29:37,450 INFO    SystemMonitor:1727 [interfaces.py:start():168] Started gpu
+2023-03-02 00:29:37,451 INFO    SystemMonitor:1727 [interfaces.py:start():168] Started memory
+2023-03-02 00:29:37,451 INFO    SystemMonitor:1727 [interfaces.py:start():168] Started network
+2023-03-02 00:29:37,466 DEBUG   HandlerThread:1727 [system_info.py:probe():195] Probing system
+2023-03-02 00:29:37,473 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:37,498 DEBUG   HandlerThread:1727 [system_info.py:_probe_git():180] Probing git
+2023-03-02 00:29:37,551 DEBUG   HandlerThread:1727 [system_info.py:_probe_git():188] Probing git done
+2023-03-02 00:29:37,551 DEBUG   HandlerThread:1727 [system_info.py:probe():241] Probing system done
+2023-03-02 00:29:37,551 DEBUG   HandlerThread:1727 [system_monitor.py:probe():181] {'os': 'Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.9.12', 'heartbeatAt': '2023-03-02T08:29:37.467092', 'startedAt': '2023-03-02T08:29:36.546473', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py', 'codePath': 'runner.py', 'git': {'remote': 'git@github.com:SusanC3/HEA-Toxicity-Prediction.git', 'commit': '3f1e9e521a12d055bec54c3ed6ad233ddce43dc3'}, 'email': 'susanclay333@gmail.com', 'root': '/mnt/c/Users/susan/git/HEA-Toxicity-Prediction', 'host': 'MSI', 'username': 'susan', 'executable': '/home/susan/miniconda3/bin/python', 'cpu_count': 10, 'cpu_count_logical': 20, 'cpu_freq': {'current': 2918.400000000001, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}, {'current': 2918.4, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 250.98248672485352, 'used': 64.12875366210938}, 'gpu': 'NVIDIA GeForce RTX 3070 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3070 Ti Laptop GPU', 'memory_total': 8589934592}], 'memory': {'total': 51.97193145751953}}
+2023-03-02 00:29:37,551 INFO    HandlerThread:1727 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-02 00:29:37,552 INFO    HandlerThread:1727 [system_monitor.py:probe():185] Publishing system info
+2023-03-02 00:29:37,552 DEBUG   HandlerThread:1727 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-02 00:29:37,554 DEBUG   HandlerThread:1727 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-02 00:29:37,554 DEBUG   HandlerThread:1727 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-03-02 00:29:38,092 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:29:38,093 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/requirements.txt
+2023-03-02 00:29:38,095 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/conda-environment.yaml
+2023-03-02 00:29:39,481 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:40,105 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/conda-environment.yaml
+2023-03-02 00:29:40,168 DEBUG   HandlerThread:1727 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-02 00:29:40,179 INFO    HandlerThread:1727 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-02 00:29:40,200 DEBUG   SenderThread:1727 [sender.py:send():336] send: files
+2023-03-02 00:29:40,201 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-02 00:29:40,213 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-02 00:29:40,214 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: stop_status
+2023-03-02 00:29:40,385 DEBUG   SenderThread:1727 [sender.py:send():336] send: telemetry
+2023-03-02 00:29:40,797 INFO    wandb-upload_0:1727 [upload_job.py:push():138] Uploaded file /tmp/tmp7aix_1v0wandb/79z3nctq-wandb-metadata.json
+2023-03-02 00:29:41,123 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:29:41,124 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-metadata.json
+2023-03-02 00:29:41,750 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:42,397 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:29:43,139 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:29:43,756 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:45,761 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:47,398 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:29:47,769 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:49,775 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:51,784 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:52,399 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:29:53,792 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:55,212 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:29:55,800 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:57,268 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:29:57,806 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:29:58,242 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:29:59,024 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:29:59,027 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:29:59,028 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:29:59,035 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:29:59,287 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:29:59,815 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:00,213 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:00,480 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:00,482 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:00,483 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:00,487 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:01,302 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:01,303 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:01,821 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:01,951 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:01,954 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:01,954 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:01,960 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:02,311 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:03,248 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:03,318 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:03,367 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:03,368 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:03,368 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:03,372 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:03,831 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:04,326 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:04,810 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:04,812 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:04,813 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:04,817 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:05,214 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:05,334 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:05,334 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:05,842 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:06,277 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:06,279 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:06,279 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:06,284 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:06,339 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:07,344 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:07,782 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:07,785 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:07,786 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:07,791 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:07,867 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:08,349 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:08,797 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:09,291 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:09,293 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:09,293 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:09,298 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:09,358 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:09,360 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/config.yaml
+2023-03-02 00:30:09,361 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:09,871 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:10,215 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:10,849 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:10,850 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:10,851 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:10,856 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:11,370 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:11,371 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:11,876 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:12,459 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:12,461 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:12,461 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:12,464 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:13,381 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:13,382 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:13,879 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:13,972 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:13,973 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:13,974 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:13,978 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:14,390 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:14,980 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:15,216 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:15,401 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:15,455 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:15,456 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:15,457 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:15,462 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:15,887 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:16,405 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:16,879 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:16,881 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:16,881 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:16,885 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:17,412 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:17,413 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:17,895 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:18,352 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:18,354 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:18,355 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:18,359 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:18,419 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:19,425 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:19,796 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:19,798 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:19,799 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:19,803 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:19,905 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:20,218 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:20,434 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:20,805 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:21,253 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:21,254 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:21,255 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:21,259 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:21,440 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:21,441 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:21,913 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:22,801 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:22,802 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:22,803 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:22,808 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:23,453 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:23,454 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:23,917 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:24,319 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:24,321 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:24,322 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:24,326 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:24,460 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:25,218 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:25,465 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:25,922 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:25,936 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:25,937 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:25,938 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:25,939 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:25,942 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:26,470 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:27,427 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:27,432 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:27,433 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:27,437 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:27,477 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:27,478 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:27,928 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:28,484 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:28,918 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:28,919 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:28,919 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:28,923 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:29,490 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:29,935 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:30,219 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:30,433 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:30,435 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:30,435 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:30,439 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:30,497 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:30,498 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:31,442 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:31,934 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:31,936 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:31,937 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:31,941 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:31,944 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:32,512 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:32,514 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:33,394 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:33,396 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:33,397 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:33,402 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:33,518 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:33,949 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:34,528 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:34,857 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:34,858 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:34,858 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:34,863 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:35,220 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:35,533 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:35,953 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:36,275 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:36,277 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:36,278 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:36,282 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:36,539 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:36,541 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:37,284 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:37,452 DEBUG   SystemMonitor:1727 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-02 00:30:37,453 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:30:37,708 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:37,710 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:37,711 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:37,715 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:37,965 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:38,552 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:38,554 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:39,146 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:39,148 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:39,148 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:39,152 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:39,559 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:39,970 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:40,222 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:40,565 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:40,574 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:40,576 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:40,576 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:40,580 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:41,571 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:41,975 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:42,003 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:42,005 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:42,006 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:42,010 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:42,579 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:42,580 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:43,012 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:43,435 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:43,438 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:43,438 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:43,442 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:43,584 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:43,981 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:44,593 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:44,862 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:44,863 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:44,864 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:44,868 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:45,223 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:45,598 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:45,986 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:46,278 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:46,280 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:46,281 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:46,286 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:46,604 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:46,606 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:47,712 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:47,714 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:47,714 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:47,720 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:47,991 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:48,621 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:48,622 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:48,722 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:49,137 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:49,140 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:49,140 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:49,146 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:49,628 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:49,999 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:50,224 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:50,549 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:50,552 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:50,552 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:50,557 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:50,638 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:50,639 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:51,957 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:51,959 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:51,959 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:51,964 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:52,008 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:52,654 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:52,655 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:53,364 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:53,365 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:53,365 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:53,370 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:53,661 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:54,017 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:54,372 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:30:54,668 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:54,787 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:54,789 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:54,790 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:54,794 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:55,225 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:30:55,674 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:56,024 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:56,196 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:56,199 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:56,199 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:56,204 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:56,681 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:56,682 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:57,607 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:57,609 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:57,610 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:57,615 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:57,691 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:30:58,029 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:30:58,698 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:30:59,069 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:30:59,070 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:30:59,071 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:30:59,075 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:30:59,704 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:00,035 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:00,077 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:00,226 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:31:00,558 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:00,560 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:00,561 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:00,565 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:00,708 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:00,709 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:02,042 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:02,043 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:02,044 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:02,044 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:02,048 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:02,718 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:02,719 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:03,556 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:03,558 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:03,559 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:03,563 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:03,723 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:04,050 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:04,731 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:05,004 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:05,007 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:05,008 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:05,013 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:05,228 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:31:05,736 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:06,015 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:06,057 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:06,436 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:06,437 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:06,438 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:06,443 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:06,744 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:06,745 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:07,454 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:31:07,968 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:07,970 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:07,970 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:07,974 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:08,069 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:08,758 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:08,760 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:09,451 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:09,453 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:09,454 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:09,458 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:09,765 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:10,078 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:10,228 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:31:10,773 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:10,948 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:10,949 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:10,950 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:10,955 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:11,780 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:11,958 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:12,084 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:12,412 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:12,414 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:12,414 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:12,420 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:12,786 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:12,787 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:13,834 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:13,837 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:13,838 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:13,845 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:14,091 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:14,801 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:14,803 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:15,229 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:31:15,331 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:15,333 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:15,333 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:15,338 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:15,808 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:16,099 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:16,816 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:16,826 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:16,828 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:16,829 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:16,833 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:17,823 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:17,835 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:18,107 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:18,359 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:18,361 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:18,362 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:18,365 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:18,830 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:18,831 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:19,875 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:19,877 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:19,877 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:19,882 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:20,117 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:20,230 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:31:20,844 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:20,846 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:21,334 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:21,336 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:21,336 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:21,341 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:21,852 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:22,125 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:22,838 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:22,839 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:22,840 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:22,840 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:22,844 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:22,857 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:22,858 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:24,131 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:24,358 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:24,359 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:24,360 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:24,364 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:24,871 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:24,873 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:25,231 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:31:25,845 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:25,847 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:25,847 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:25,853 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:25,879 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:26,138 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:26,890 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:27,321 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:27,323 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:27,323 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:27,328 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:27,897 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:28,142 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:28,331 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:28,799 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:28,802 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:28,803 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:28,808 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:28,905 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:28,907 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:30,146 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:30,233 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-02 00:31:30,286 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:30,288 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:30,288 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:30,292 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:30,919 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:30,920 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:31,772 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-02 00:31:31,773 DEBUG   SenderThread:1727 [sender.py:send():336] send: history
+2023-03-02 00:31:31,774 DEBUG   SenderThread:1727 [sender.py:send_request():363] send_request: summary_record
+2023-03-02 00:31:31,779 INFO    SenderThread:1727 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-02 00:31:31,935 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:31:32,151 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:32,952 INFO    Thread-13 :1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:31:33,781 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:34,158 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:36,166 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:37,458 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:31:38,184 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:39,462 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:40,193 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:42,202 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:44,212 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:44,465 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:46,220 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:48,230 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:49,467 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:50,241 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:52,253 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:54,267 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:54,468 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:31:56,293 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:58,316 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:31:59,470 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:00,344 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:02,371 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:04,397 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:04,472 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:06,427 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:07,458 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:32:08,455 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:10,460 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:10,480 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:12,503 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:14,521 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:15,462 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:16,555 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:18,580 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:20,465 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:20,616 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:22,641 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:24,677 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:25,466 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:26,714 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:28,738 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:30,468 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:30,769 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:32,804 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:34,841 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:35,472 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:36,873 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:37,462 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:32:38,911 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:40,947 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:41,466 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:42,978 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:45,013 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:46,470 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:47,054 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:49,080 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:51,114 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:51,473 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:53,148 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:55,183 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:56,477 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:32:57,222 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:32:59,255 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:01,271 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:01,479 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:03,289 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:05,302 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:06,482 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:07,316 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:07,465 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:33:09,331 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:11,341 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:12,470 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:13,353 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:15,364 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:17,373 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:17,472 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:19,398 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:21,428 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:22,474 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:23,463 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:25,497 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:27,477 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:27,527 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:29,560 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:31,589 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:32,480 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:33,619 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:35,648 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:37,466 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:33:37,679 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:38,469 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:39,709 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:41,739 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:43,472 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:43,773 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:45,810 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:47,850 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:48,475 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:49,871 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:51,900 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:53,479 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:33:53,933 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:55,968 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:58,000 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:33:58,484 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:00,032 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:02,062 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:03,485 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:04,097 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:06,130 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:07,470 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:34:08,163 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:09,473 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:10,191 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:12,226 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:14,258 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:14,478 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:16,296 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:18,334 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:19,480 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:20,362 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:22,392 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:24,428 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:24,483 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:26,464 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:28,498 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:29,486 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:30,537 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:32,569 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:34,489 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:34,601 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:36,633 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:37,472 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:34:38,665 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:40,475 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:40,700 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:42,735 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:44,765 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:45,479 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:46,787 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:48,829 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:50,482 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:50,856 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:52,886 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:54,921 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:55,484 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:34:56,953 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:34:58,990 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:00,487 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:01,028 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:03,061 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:05,094 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:05,490 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:07,131 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:07,474 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:35:09,169 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:11,207 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:11,479 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:13,229 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:15,262 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:16,482 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:17,304 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:19,341 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:21,369 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:21,485 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:23,400 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:25,426 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:26,489 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:27,471 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:29,496 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:31,492 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:31,513 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:33,525 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:35,543 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:36,497 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:37,474 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:35:37,557 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:39,575 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:41,606 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:42,479 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:43,623 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:45,642 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:47,482 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:47,685 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:49,711 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:51,725 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:52,484 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:53,738 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:55,750 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:57,488 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:35:57,763 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:35:59,782 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:01,816 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:02,490 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:03,828 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:05,843 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:07,481 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:36:07,853 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:08,484 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:09,866 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:11,888 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:13,488 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:13,897 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:15,913 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:17,929 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:18,491 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:19,943 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:21,959 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:23,493 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:23,973 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:25,989 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:28,002 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:28,497 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:30,014 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:32,024 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:33,498 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:34,040 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:36,055 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:37,478 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:36:38,066 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:39,480 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:40,076 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:42,095 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:44,104 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:44,481 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:46,119 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:48,134 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:49,484 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:50,147 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:52,162 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:54,174 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:54,486 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:36:56,183 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:58,193 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:36:59,488 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:00,206 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:02,221 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:04,242 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:04,491 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:06,265 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:07,481 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:37:08,301 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:10,313 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:10,483 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:12,344 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:14,357 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:15,485 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:16,369 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:18,381 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:20,388 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:20,488 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:22,406 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:24,427 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:25,490 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:26,474 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:28,507 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:30,494 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:30,541 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:32,569 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:34,586 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:35,497 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:36,603 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:37,482 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:37:38,625 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:40,653 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:41,484 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:42,684 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:44,709 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:46,487 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:46,723 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:48,738 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:50,755 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:51,490 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:52,769 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:54,780 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:56,493 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:37:56,796 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:37:58,827 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:00,847 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:01,495 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:02,866 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:04,877 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:06,498 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:06,893 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:07,484 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:38:08,907 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:10,925 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:12,489 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:12,952 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:14,963 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:16,973 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:17,491 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:18,995 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:21,020 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:22,494 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:23,037 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:25,055 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:27,070 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:27,498 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:29,095 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:31,127 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:32,501 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:33,159 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:35,175 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:37,205 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:37,496 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:38:38,499 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:39,226 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:41,249 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:43,286 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:43,502 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:45,311 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:47,325 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:48,505 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:49,354 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:51,375 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:53,393 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:53,509 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:55,409 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:57,424 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:38:58,512 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:38:59,437 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:01,447 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:03,461 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:03,515 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:05,475 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:07,486 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:39:07,493 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:09,489 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:09,509 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:11,529 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:13,551 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:14,493 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:15,574 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:17,593 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:19,495 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:19,612 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:21,624 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:23,635 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:24,500 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:25,647 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:27,664 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:29,504 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:29,682 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:31,698 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:33,715 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:34,507 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:35,728 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:37,487 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:39:37,744 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:39,761 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:40,491 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:41,780 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:43,803 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:45,494 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:45,831 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:47,851 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:49,870 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:50,498 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:51,893 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:53,913 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:55,503 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:39:55,926 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:57,937 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:39:59,949 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:00,506 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:01,967 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:03,990 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:05,509 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:06,004 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:07,489 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:40:08,021 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:10,042 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:11,494 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:12,062 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:14,096 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:16,112 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:16,498 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:18,128 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:20,148 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:21,501 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:22,166 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:24,180 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:26,208 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:26,504 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:28,238 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:30,266 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:31,507 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:32,289 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:34,308 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:36,320 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:36,511 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:37,494 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:40:38,332 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:40,352 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:42,372 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:42,500 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:44,393 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:46,408 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:47,503 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:48,424 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:50,437 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:52,450 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:52,507 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:54,466 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:56,487 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:40:57,510 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:40:58,506 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:00,525 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:02,512 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:02,541 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:04,547 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:06,558 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:07,492 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:41:08,493 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:08,569 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:10,580 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:12,590 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:13,494 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:14,602 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:16,608 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:18,496 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:18,625 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:20,643 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:22,659 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:23,500 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:24,675 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:26,694 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:28,503 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:28,715 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:30,739 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:32,763 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:33,507 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:34,786 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:36,810 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:37,495 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:41:38,833 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:39,500 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:40,851 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:42,875 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:44,503 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:44,902 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:46,917 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:48,931 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:49,506 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:50,945 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:52,957 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:54,510 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:41:54,970 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:56,986 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:59,006 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:41:59,514 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:01,024 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:03,045 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:04,517 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:05,060 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:07,077 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:07,499 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:42:09,094 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:10,503 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:11,110 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:13,132 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:15,154 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:15,507 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:17,170 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:19,184 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:20,510 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:21,203 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:23,221 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:25,246 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:25,514 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:27,276 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:29,302 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:30,518 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:31,325 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:33,348 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:35,371 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:35,522 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:37,391 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:37,500 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:42:39,409 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:41,423 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:41,506 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:43,437 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:45,463 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:46,509 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:47,479 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:49,495 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:51,510 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:51,510 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:53,519 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:55,539 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:56,512 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:42:57,558 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:42:59,572 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:01,514 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:01,582 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:03,597 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:05,611 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:06,518 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:07,503 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:43:07,628 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:09,647 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:11,662 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:12,509 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:13,678 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:15,710 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:17,512 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:17,732 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:19,761 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:21,787 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:22,515 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:23,810 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:25,830 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:27,520 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:27,849 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:29,869 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:31,886 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:32,523 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:33,902 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:35,917 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:37,504 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:43:37,928 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:38,505 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:39,938 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:41,951 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:43,509 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:43,969 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:45,994 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:48,011 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:48,512 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:50,031 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:52,048 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:53,514 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:43:54,063 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:56,077 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:58,090 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:43:58,516 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:00,104 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:02,119 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:03,518 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:04,132 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:06,146 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:07,504 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:44:08,161 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:09,506 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:10,176 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:12,191 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:14,208 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:14,508 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:16,231 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:18,247 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:19,510 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:20,262 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:22,276 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:24,290 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:24,512 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:26,302 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:28,315 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:29,514 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:30,332 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:32,347 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:34,361 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:34,516 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:36,378 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:37,504 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:44:38,393 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:40,409 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:40,506 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:42,425 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:44,441 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:45,509 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:46,465 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:48,481 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:50,495 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:50,511 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:52,507 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:54,518 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:55,513 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:44:56,526 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:44:58,533 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:00,514 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:00,546 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:02,561 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:04,577 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:05,515 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:06,589 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:07,505 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:45:08,605 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:10,621 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:11,509 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:12,634 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:14,651 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:16,512 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:16,684 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:18,705 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:20,727 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:21,515 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:22,748 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:24,762 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:26,518 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:26,781 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:28,797 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:30,816 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:31,521 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:32,833 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:34,855 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:36,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:36,882 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:37,508 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:45:38,906 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:40,924 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:42,513 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:42,938 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:44,954 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:46,983 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:47,517 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:48,999 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:51,012 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:52,521 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:53,033 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:55,050 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:57,068 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:45:57,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:45:59,083 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:01,108 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:02,527 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:03,131 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:05,146 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:07,172 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:07,509 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:46:08,512 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:09,194 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:11,216 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:13,252 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:13,514 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:15,292 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:17,327 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:18,516 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:19,344 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:21,363 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:23,380 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:23,520 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:25,396 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:27,415 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:28,523 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:29,435 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:31,450 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:33,469 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:33,526 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:35,492 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:37,510 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:46:37,513 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:39,513 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:39,536 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:41,554 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:43,569 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:44,516 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:45,582 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:47,605 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:49,517 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:49,618 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:51,628 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:53,633 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:54,519 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:55,638 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:57,641 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:46:59,520 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:46:59,649 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:01,678 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:03,710 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:04,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:05,753 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:07,512 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:47:07,797 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:09,841 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:10,517 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:11,884 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:13,924 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:15,521 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:15,964 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:18,004 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:20,043 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:20,525 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:22,091 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:24,132 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:25,527 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:26,173 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:28,205 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:30,245 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:30,531 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:32,284 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:34,326 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:35,534 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:36,366 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:37,515 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:47:38,416 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:40,460 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:41,521 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:42,502 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:44,545 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:46,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:46,586 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:48,631 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:50,668 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:51,528 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:52,709 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:54,751 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:56,532 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:47:56,793 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:47:58,825 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:00,862 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:01,537 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:02,902 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:04,948 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:06,541 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:06,994 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:07,516 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:48:09,026 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:11,058 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:12,520 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:13,095 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:15,136 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:17,171 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:17,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:19,205 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:21,245 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:22,528 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:23,279 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:25,319 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:27,357 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:27,531 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:29,377 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:31,416 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:32,534 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:33,455 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:35,493 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:37,515 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:48:37,534 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:38,517 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:39,569 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:41,607 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:43,521 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:43,652 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:45,695 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:47,733 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:48,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:49,771 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:51,812 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:53,528 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:53,847 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:55,887 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:57,930 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:48:58,531 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:48:59,958 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:01,968 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:03,534 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:03,981 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:05,996 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:07,518 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:49:08,010 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:09,521 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:10,021 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:12,036 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:14,055 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:14,525 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:16,072 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:18,090 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:19,529 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:20,109 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:22,120 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:24,134 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:24,532 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:26,147 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:28,160 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:29,535 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:30,176 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:32,192 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:34,206 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:34,538 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:36,227 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:37,518 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:49:38,242 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:40,266 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:40,520 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:42,273 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:44,287 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:45,522 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:46,316 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:48,336 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:50,361 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:50,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:52,372 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:54,386 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:55,525 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:49:56,401 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:49:58,414 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:00,424 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:00,527 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:02,433 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:04,437 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:05,528 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:06,444 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:07,519 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:50:08,454 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:10,475 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:11,522 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:12,490 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:14,506 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:16,515 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:16,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:18,525 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:20,553 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:21,526 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:22,568 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:24,583 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:26,529 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:26,597 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:28,611 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:30,616 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:31,530 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:32,628 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:34,635 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:36,531 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:36,650 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:37,519 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:50:38,662 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:40,672 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:42,521 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:42,682 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:44,692 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:46,700 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:47,522 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:48,710 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:50,727 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:52,523 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:52,737 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:54,746 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:56,758 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:50:57,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:50:58,772 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:00,786 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:02,526 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:51:02,803 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:04,817 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:06,828 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:07,521 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:51:08,522 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:51:08,840 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:10,853 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:12,865 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:13,524 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:51:14,876 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:16,888 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:18,525 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:51:18,902 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:20,926 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:22,936 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:23,527 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:51:24,949 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:26,956 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:28,529 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:51:28,965 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:30,985 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:32,999 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:33,530 DEBUG   HandlerThread:1727 [handler.py:handle_request():144] handle_request: status_report
+2023-03-02 00:51:35,012 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:37,026 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:37,521 DEBUG   SenderThread:1727 [sender.py:send():336] send: stats
+2023-03-02 00:51:39,038 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-03-02 00:51:39,489 WARNING StreamThr :1727 [internal.py:is_dead():415] Internal process exiting, parent pid 1682 disappeared
+2023-03-02 00:51:39,489 ERROR   StreamThr :1727 [internal.py:wandb_internal():153] Internal process shutdown.
+2023-03-02 00:51:39,522 INFO    HandlerThread:1727 [handler.py:finish():841] shutting down handler
+2023-03-02 00:51:39,522 INFO    WriterThread:1727 [datastore.py:close():299] close: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/run-ujdvdkl0.wandb
+2023-03-02 00:51:39,523 INFO    SenderThread:1727 [sender.py:finish():1493] shutting down sender
+2023-03-02 00:51:40,118 INFO    SenderThread:1727 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-02 00:51:40,350 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:40,351 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:40,352 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:40,353 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:40,544 INFO    SenderThread:1727 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:51:40,545 INFO    SenderThread:1727 [dir_watcher.py:finish():392] scan: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files
+2023-03-02 00:51:40,546 INFO    SenderThread:1727 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/conda-environment.yaml conda-environment.yaml
+2023-03-02 00:51:40,549 INFO    SenderThread:1727 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/config.yaml config.yaml
+2023-03-02 00:51:40,555 INFO    SenderThread:1727 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log output.log
+2023-03-02 00:51:40,561 INFO    SenderThread:1727 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/requirements.txt requirements.txt
+2023-03-02 00:51:40,567 INFO    SenderThread:1727 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-metadata.json wandb-metadata.json
+2023-03-02 00:51:40,567 INFO    SenderThread:1727 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json wandb-summary.json
+2023-03-02 00:51:40,572 INFO    SenderThread:1727 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-02 00:51:40,572 INFO    SenderThread:1727 [file_pusher.py:join():167] waiting for file pusher
+2023-03-02 00:51:41,139 INFO    wandb-upload_4:1727 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/wandb-summary.json
+2023-03-02 00:51:41,145 INFO    wandb-upload_0:1727 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/conda-environment.yaml
+2023-03-02 00:51:41,160 INFO    wandb-upload_2:1727 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/output.log
+2023-03-02 00:51:41,182 INFO    wandb-upload_3:1727 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230302_002936-ujdvdkl0/files/requirements.txt
+2023-03-02 00:51:41,779 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:41,780 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:42,351 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:42,352 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:42,353 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:42,354 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:44,352 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:44,353 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:44,354 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:44,355 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:44,581 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:44,582 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:46,354 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:46,355 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:46,356 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:46,358 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:47,388 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:47,390 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:48,357 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:48,358 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:48,359 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:48,361 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:50,190 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:50,191 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:50,360 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:50,360 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:50,362 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:50,363 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:52,361 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:52,361 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:52,364 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:52,364 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:52,991 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:52,993 ERROR   gpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: No data
+2023-03-02 00:51:54,362 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:54,363 ERROR   memory    :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:54,365 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)
+2023-03-02 00:51:54,366 ERROR   cpu       :1727 [interfaces.py:monitor():129] Failed to sample metric: process no longer exists (pid=1682)

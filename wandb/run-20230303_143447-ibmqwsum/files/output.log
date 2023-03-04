@@ -1,0 +1,158 @@
+
+loading data
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+Begin training
+fold 1
+epoch 1
+before backward 0.09159629791975021
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 1.42848539352417
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 2.172154426574707
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 1.1221990585327148
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.06578463315963745
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.05280226841568947
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.06600713729858398
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 0.1866208016872406
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.05807044357061386
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.0908961147069931
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 1.1905125379562378
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.07192416489124298
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 0.7090769410133362
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 2.2748568058013916
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 1.2286330461502075
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.05410364270210266
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 1.0085817575454712
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 1.2518919706344604
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.0643647164106369
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 0.64115309715271
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.19423148036003113
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.08048179745674133
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.723382830619812
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 1.3660987615585327
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 1.1840448379516602
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.7598515152931213
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.07350637018680573
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.8503935933113098
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.7873754501342773
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 1.4386367797851562
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.06947992742061615
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 1.4612195491790771
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 1.6594688892364502
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.5368253588676453
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.6210470795631409
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.8686524629592896
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 2.309195041656494
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 1.0028696060180664
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.06341183185577393
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.16839337348937988
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.042883437126874924
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.8963819742202759
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.05309136584401131
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 0.6589853167533875
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 1.020811676979065
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.054232850670814514
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.06477876007556915
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.0564068928360939
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 3.2550435066223145
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.0634583979845047
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.08270162343978882
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.044901322573423386
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.05620230734348297
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.5646003484725952
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 6.269286155700684
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 1.7242100238800049
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.6495546698570251
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.1246802806854248
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.6398032307624817
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.12306980043649673
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 1.4397577047348022
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.3537275493144989
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.04728543758392334
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.05489734560251236
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.6112924218177795
+after backward <built-in method item of Tensor object at 0x7fb4b6f84680>
+before backward 0.08643072098493576
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.07717225700616837
+after backward <built-in method item of Tensor object at 0x7fb555e81860>
+before backward 0.7440211176872253
+after backward <built-in method item of Tensor object at 0x7fb555e81770>
+before backward 0.6058467626571655
+after backward <built-in method item of Tensor object at 0x7fb555e81900>
+before backward 0.036532510071992874
+after backward <built-in method item of Tensor object at 0x7fb555e818b0>
+before backward 0.042199794203042984
+after backward <built-in method item of Tensor object at 0x7fb555e81950>
+before backward 0.04160887002944946
+after backward <built-in method item of Tensor object at 0x7fb4b6f844a0>
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(104)train_epoch()
+-> loss /= len(dataloader)
