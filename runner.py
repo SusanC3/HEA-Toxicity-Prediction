@@ -43,19 +43,19 @@ dim_input = 801
 dim_output = 229432
 len_data = 5070
 
-#wandb stuff
-# wandb.login()
-# wandb.init(
-#     project="HEA-Toxicity-Prediction",
-#     name=f"experiment_strange_loss",
-#     config={
-#         "batch_size": params["batch_size"],
-#         "epochs": max_epochs,
-#         "learning_rate": LEARNING_RATE,
-#         "architecture": "NN",
-#         "datset": "Full"
-#     }
-# )
+##wandb stuff
+wandb.login()
+wandb.init(
+    project="HEA-Toxicity-Prediction",
+    name=f"working?",
+    config={
+        "batch_size": params["batch_size"],
+        "epochs": max_epochs,
+        "learning_rate": LEARNING_RATE,
+        "architecture": "NN",
+        "datset": "Full"
+    }
+)
 
 print("loading data")
 dataset = Data.Dataset() #__init__ not called for some reason
@@ -82,22 +82,27 @@ foldperf={}
 def train_epoch(model, device, dataloader, loss_fn, optimizer):
     train_loss, train_correct = 0.0, 0
     model.train()
+
+    tot_squared_error = 0
+    counter = 0
     
     for input, output in dataloader:
         input, output = input.to(device), output.to(device)     
         optimizer.zero_grad()
 
         pred_result = model(input)
+
+        #calculate total squared error for this batch, add it to total squared error
+        local_se = (pred_result - output)**2
+        tot_squared_error += torch.sum(local_se).item()
+        counter += local_se.shape[0]*local_se.shape[1]
+
         loss = loss_fn(pred_result, output)
-      #  print("before backward", loss.item())
         loss.backward()
         optimizer.step()
-      #  print("after backward", loss.item)
-        train_loss += loss.item()
-        # train_correct += (pred_result == output).sum().item()
+       # train_loss += loss.item()
 
-#
-    train_loss /= len(dataloader)
+    train_loss = tot_squared_error / counter
     return train_loss, train_correct
 
 
@@ -118,7 +123,6 @@ def valid_epoch(model, device, dataloader, loss_fn):
         tot_squared_error += torch.sum(local_se).item()
         counter += local_se.shape[0]*local_se.shape[1]
 
-      #  pdb.set_trace()
         #loss = torch.mean( (pred_result - output)**2) #loss_fn(pred_result, output)
         #valid_loss += loss.item()
 
@@ -148,12 +152,12 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
     train_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=train_sampler)
     test_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=test_sampler)
 
-    test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
-    print("valid test loss", test_loss)
-    train_loss, train_correct = valid_epoch(model, device, train_loader, criterion)
-    print("valid train loss", train_loss)
+    # test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
+    # print("valid test loss", test_loss)
+    # train_loss, train_correct = valid_epoch(model, device, train_loader, criterion)
+    # print("valid train loss", train_loss)
 
-    pdb.set_trace()
+    # pdb.set_trace()
 
 
     # print()
