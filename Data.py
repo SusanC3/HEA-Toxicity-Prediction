@@ -11,8 +11,13 @@ class Dataset:
         # self.labels = labels
         # self.list_IDS = list_IDs
         #self.X, self.y = input_output.get_input_output()
-        self.X = np.load(open("input.npy", "rb"), allow_pickle=True)
-        self.y = np.load(open("output.npy", "rb"), allow_pickle=True)
+        self.Xraw = np.load(open("input.npy", "rb"), allow_pickle=True)
+        self.yraw = np.load(open("output.npy", "rb"), allow_pickle=True)
+
+        input_normalizer, output_normalizer = UnitGaussianNormalizer(torch.from_numpy(self.Xraw)), UnitGaussianNormalizer(torch.from_numpy(self.yraw))
+
+        self.X = input_normalizer.encode(torch.from_numpy(self.Xraw)).data.numpy()
+        self.y = output_normalizer.encode(torch.from_numpy(self.yraw)).data.numpy()
 
     'Returns total numper of samples'
     def __len__(self):
@@ -34,6 +39,7 @@ class UnitGaussianNormalizer(object):
         self.eps = eps  
   
     def encode(self, x):  
+       # pdb.set_trace()
         x = (x - self.mean) / (self.std + self.eps)  
         return x  
   

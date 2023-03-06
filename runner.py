@@ -44,24 +44,21 @@ dim_output = 229432
 len_data = 5070
 
 #wandb stuff
-wandb.login()
-wandb.init(
-    project="HEA-Toxicity-Prediction",
-    name=f"experiment_strange_loss",
-    config={
-        "batch_size": params["batch_size"],
-        "epochs": max_epochs,
-        "learning_rate": LEARNING_RATE,
-        "architecture": "NN",
-        "datset": "Full"
-    }
-)
+# wandb.login()
+# wandb.init(
+#     project="HEA-Toxicity-Prediction",
+#     name=f"experiment_strange_loss",
+#     config={
+#         "batch_size": params["batch_size"],
+#         "epochs": max_epochs,
+#         "learning_rate": LEARNING_RATE,
+#         "architecture": "NN",
+#         "datset": "Full"
+#     }
+# )
 
 print("loading data")
 dataset = Data.Dataset() #__init__ not called for some reason
-input_normalizer, output_normalizer = Data.UnitGaussianNormalizer(torch.from_numpy(dataset.X)), Data.UnitGaussianNormalizer(torch.from_numpy(dataset.y))
-input_normalizer.cuda()
-output_normalizer.cuda()
 
 #training_generator = DataLoader(training_data, **params)
 
@@ -79,7 +76,7 @@ history = {'train_loss': [], 'test_loss': [], 'train_acc': [], 'test_acc': []}
 #kfold stuff
 #https://medium.com/dataseries/k-fold-cross-validation-with-pytorch-and-sklearn-d094aa00105f
 k = 10
-splits = KFold(n_splits=k, shuffle=True, random_state=33)
+splits = KFold(n_splits=k, shuffle=True, random_state=1)
 foldperf={}
 
 def train_epoch(model, device, dataloader, loss_fn, optimizer):
@@ -87,8 +84,7 @@ def train_epoch(model, device, dataloader, loss_fn, optimizer):
     model.train()
     
     for input, output in dataloader:
-        input, output = input.to(device), output.to(device) 
-        input, output = input_normalizer.encode(input), output_normalizer.encode(output)       
+        input, output = input.to(device), output.to(device)     
         optimizer.zero_grad()
 
         pred_result = model(input)
@@ -109,15 +105,25 @@ def valid_epoch(model, device, dataloader, loss_fn):
     valid_loss, val_correct = 0.0, 0
     model.eval()
 
+    tot_squared_error = 0
+    counter = 0
+
     for input, output in dataloader:
-        input, output = input.to(device), output.to(device)
-        input, output = input_normalizer.encode(input), output_normalizer.encode(output)       
-
+        input, output = input.to(device), output.to(device)           
+       
         pred_result = model(input)
-        loss = loss_fn(pred_result, output)
-        valid_loss += loss.item()
+        
+        #calculate total squared error for this batch, add it to total squared error
+        local_se = (pred_result - output)**2
+        tot_squared_error += torch.sum(local_se).item()
+        counter += local_se.shape[0]*local_se.shape[1]
 
-    valid_loss /= len(dataloader)
+      #  pdb.set_trace()
+        #loss = torch.mean( (pred_result - output)**2) #loss_fn(pred_result, output)
+        #valid_loss += loss.item()
+
+    #valid_loss /= len(dataloader)
+    valid_loss = tot_squared_error / counter #the mean of all the squared errors
     return valid_loss, val_correct
 
 
@@ -130,26 +136,34 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
     # f.write("\n")
     # f.write('Fold {}'.format(fold + 1), "\n")
 
+
     print("fold", fold + 1)
 
     train_sampler = SubsetRandomSampler(train_idx)
     test_sampler = SubsetRandomSampler(val_idx)
+    # train_size = int(0.8 * len(dataset))
+    # test_size = len(dataset) - train_size  
+    # train_set, test_set = torch.utils.data.random_split(dataset, [train_size, test_size], generator=torch.Generator().manual_seed(1))  
+    
     train_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=train_sampler)
     test_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=test_sampler)
 
+    test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
+    print("valid test loss", test_loss)
+    train_loss, train_correct = valid_epoch(model, device, train_loader, criterion)
+    print("valid train loss", train_loss)
+
+    pdb.set_trace()
+
+
+    # print()
+    
     # train_test_loss, train_test_correct = train_epoch(model, device, test_loader, criterion, optimizer)
     # print("train test loss", train_test_loss)
     # train_train_loss, train_train_correct = train_epoch(model, device, train_loader, criterion, optimizer)
     # print("train train loss", train_train_loss)
 
-    # print()
-
-    # test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
-    # print("valid test loss", test_loss)
-    # train_loss, train_correct = valid_epoch(model, device, train_loader, criterion)
-    # print("valid train loss", train_loss)
-
-    # pdb.set_trace()
+    
 
     for epoch in range(max_epochs):
         print("epoch", epoch + 1)
@@ -158,17 +172,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
         
         train_acc = train_correct / len(train_loader.sampler) * 100
         test_acc = train_correct / len(test_loader.sampler) * 100
-
-        # if (train_acc > 0 or test_acc > 0):
-        #     pdb.set_trace()
         
-
-        # f.write("Epoch:{}/{} AVG Training Loss:{:.3f} AVG Test Loss:{:.3f} AVG Training Acc {:.2f} % AVG Test Acc {:.2f} %\n".format(epoch + 1,
-        #                                                                                                      max_epochs,
-        #                                                                                                      train_loss,
-        #                                                                                                      test_loss,
-        #                                                                                                      train_acc,
-        #                                                                                                      test_acc))
 
         #don't want to log all hyperparameters, for now i'll just log the max and the average param
 
