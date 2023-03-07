@@ -1,0 +1,20 @@
+
+loading data
+Begin training
+fold 1
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+epoch 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 151, in <module>
+    train_loss = train_epoch(model, device, train_loader, criterion, optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 71, in train_epoch
+    grad_norms = np.zeros(model.n_layers)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1207, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'ToxicityRegressor' object has no attribute 'n_layers'

@@ -1,0 +1,74 @@
+2023-03-06 23:40:13,029 INFO    StreamThr :78 [internal.py:wandb_internal():87] W&B internal server running at pid: 78, started at: 2023-03-06 23:40:13.027568
+2023-03-06 23:40:13,030 DEBUG   HandlerThread:78 [handler.py:handle_request():144] handle_request: status
+2023-03-06 23:40:13,033 INFO    WriterThread:78 [datastore.py:open_for_write():85] open: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230306_234012-utq8ea1y/run-utq8ea1y.wandb
+2023-03-06 23:40:13,036 DEBUG   SenderThread:78 [sender.py:send():336] send: header
+2023-03-06 23:40:13,100 DEBUG   SenderThread:78 [sender.py:send():336] send: run
+2023-03-06 23:40:18,104 DEBUG   HandlerThread:78 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 23:40:23,109 DEBUG   HandlerThread:78 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 23:40:28,110 DEBUG   HandlerThread:78 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 23:40:33,112 DEBUG   HandlerThread:78 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 23:40:38,116 DEBUG   HandlerThread:78 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 23:40:43,121 DEBUG   HandlerThread:78 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-06 23:40:46,505 INFO    SenderThread:78 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/home/susan/miniconda3/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f16c2e30af0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/susan/.local/lib/python3.9/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f16c2e30af0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 242, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/susan/miniconda3/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/susan/.local/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/susan/.local/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/susan/.local/lib/python3.9/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/susan/.local/lib/python3.9/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/susan/.local/lib/python3.9/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f16c2e30af0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+2023-03-06 23:42:30,210 WARNING StreamThr :78 [internal.py:is_dead():415] Internal process exiting, parent pid 30 disappeared
+2023-03-06 23:42:30,212 ERROR   StreamThr :78 [internal.py:wandb_internal():153] Internal process shutdown.
+2023-03-06 23:42:31,093 INFO    MainThread:78 [internal.py:handle_exit():77] Internal process exited

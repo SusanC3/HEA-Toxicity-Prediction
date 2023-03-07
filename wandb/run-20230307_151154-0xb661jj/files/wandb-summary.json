@@ -1,0 +1,1 @@
+{"grad norm layer1": 5.928688128692146, "_timestamp": 1678230950.6823115, "_runtime": 236.5568585395813, "_step": 744, "grad norm layer2": 7.580153107723191, "grad norm layer3": 7.170318797655733, "grad norm layer4": 0.38212307880322305, "fold 1 train loss": 0.43165492168294994, "fold 1 test loss": 0.9340550891721072, "epoch": 149}

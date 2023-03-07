@@ -1,0 +1,27 @@
+
+loading data
+Begin training
+fold 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(142)<module>()
+-> model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
+cl(ear) filename:lineno
+cl(ear) [bpnumber [bpnumber...]]
+        With a space separated list of breakpoint numbers, clear
+        those breakpoints.  Without argument, clear all breaks (but
+        first ask confirmation).  With a filename:lineno argument,
+        clear all breaks at that line in that file.
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+epoch 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 142, in <module>
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 91, in train_epoch
+    grad_norm += model.compute_grad_norm()
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1207, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'ToxicityRegressor' object has no attribute 'compute_grad_norm'

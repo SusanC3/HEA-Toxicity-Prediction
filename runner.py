@@ -38,16 +38,17 @@ params = {'batch_size': 64,
             'shuffle': True, #shuffle order of data each train
             'num_workers': 6}
 max_epochs = 150
-LEARNING_RATE = 0.002
+LEARNING_RATE = 0.001
 dim_input = 801
 dim_output = 229432
 len_data = 5070
+max_grad_norm = 1
 
-##wandb stuff
+#wandb stuff
 wandb.login()
 wandb.init(
     project="HEA-Toxicity-Prediction",
-    name=f"working?",
+    name=f"clip_grad_norm",
     config={
         "batch_size": params["batch_size"],
         "epochs": max_epochs,
@@ -60,19 +61,6 @@ wandb.init(
 print("loading data")
 dataset = Data.Dataset() #__init__ not called for some reason
 
-#training_generator = DataLoader(training_data, **params)
-
-model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
-model.to(device)
-
-print(model)
-
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
-
-history = {'train_loss': [], 'test_loss': [], 'train_acc': [], 'test_acc': []}
-
-
 #kfold stuff
 #https://medium.com/dataseries/k-fold-cross-validation-with-pytorch-and-sklearn-d094aa00105f
 k = 10
@@ -80,7 +68,9 @@ splits = KFold(n_splits=k, shuffle=True, random_state=1)
 foldperf={}
 
 def train_epoch(model, device, dataloader, loss_fn, optimizer):
-    train_loss, train_correct = 0.0, 0
+    train_loss = 0.0
+    pre_clip_grad_norms = np.zeros(model.n_layers)
+    post_clip_grad_norms = np.zeros(model.n_layers)
     model.train()
 
     tot_squared_error = 0
@@ -99,15 +89,24 @@ def train_epoch(model, device, dataloader, loss_fn, optimizer):
 
         loss = loss_fn(pred_result, output)
         loss.backward()
+
+        #clip gradient norm
+        pre_clip_grad_norms += model.compute_grad_norm()
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=max_grad_norm)
+        post_clip_grad_norms += model.compute_grad_norm()
+
         optimizer.step()
        # train_loss += loss.item()
 
     train_loss = tot_squared_error / counter
-    return train_loss, train_correct
+    for i in range(len(pre_clip_grad_norms)):    
+        wandb.log({"pre clip layer " + str(i+1): pre_clip_grad_norms[i]})
+        wandb.log({"post clip layer " + str(i+1): post_clip_grad_norms[i]})
+    return train_loss
 
 
 def valid_epoch(model, device, dataloader, loss_fn):
-    valid_loss, val_correct = 0.0, 0
+    valid_loss = 0.0
     model.eval()
 
     tot_squared_error = 0
@@ -128,7 +127,7 @@ def valid_epoch(model, device, dataloader, loss_fn):
 
     #valid_loss /= len(dataloader)
     valid_loss = tot_squared_error / counter #the mean of all the squared errors
-    return valid_loss, val_correct
+    return valid_loss
 
 
 print("Begin training")
@@ -137,60 +136,29 @@ f = open("performance2.txt", "a")
 
 for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
 
-    # f.write("\n")
-    # f.write('Fold {}'.format(fold + 1), "\n")
-
-
     print("fold", fold + 1)
 
     train_sampler = SubsetRandomSampler(train_idx)
     test_sampler = SubsetRandomSampler(val_idx)
-    # train_size = int(0.8 * len(dataset))
-    # test_size = len(dataset) - train_size  
-    # train_set, test_set = torch.utils.data.random_split(dataset, [train_size, test_size], generator=torch.Generator().manual_seed(1))  
-    
     train_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=train_sampler)
     test_loader = DataLoader(dataset, batch_size=params['batch_size'], sampler=test_sampler)
 
-    # test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
-    # print("valid test loss", test_loss)
-    # train_loss, train_correct = valid_epoch(model, device, train_loader, criterion)
-    # print("valid train loss", train_loss)
+    #make new model for each fold
+    model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
+    model.to(device)
 
-    # pdb.set_trace()
-
-
-    # print()
-    
-    # train_test_loss, train_test_correct = train_epoch(model, device, test_loader, criterion, optimizer)
-    # print("train test loss", train_test_loss)
-    # train_train_loss, train_train_correct = train_epoch(model, device, train_loader, criterion, optimizer)
-    # print("train train loss", train_train_loss)
-
-    
+    criterion = nn.MSELoss()
+    optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
 
     for epoch in range(max_epochs):
         print("epoch", epoch + 1)
-        train_loss, train_correct = train_epoch(model, device, train_loader, criterion, optimizer)
-        test_loss, test_correct = valid_epoch(model, device, test_loader, criterion)
-        
-        train_acc = train_correct / len(train_loader.sampler) * 100
-        test_acc = train_correct / len(test_loader.sampler) * 100
-        
+        train_loss = train_epoch(model, device, train_loader, criterion, optimizer)
+        test_loss = valid_epoch(model, device, test_loader, criterion)
 
-        #don't want to log all hyperparameters, for now i'll just log the max and the average param
-
-        if (math.isinf(test_loss) or math.isnan(test_loss)):
-            pdb.set_trace()
-
-        wandb.log({"train_loss": train_loss, "test_loss": test_loss, "train_acc": train_acc, "test_acc": test_acc})
+        wandb.log({"fold " + str(fold + 1) + " train loss": train_loss, 
+                   "fold " + str(fold + 1) + " test loss": test_loss, 
+                   "epoch": epoch+1})
         print("train loss:", train_loss, "test loss:", test_loss)
-      
-        history['train_loss'].append(train_loss)
-        history['test_loss'].append(test_loss)
-        history['train_acc'].append(train_acc)
-        history['test_acc'].append(test_acc)
-
 
 
 wandb.finish()

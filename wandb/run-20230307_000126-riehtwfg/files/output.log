@@ -1,0 +1,16 @@
+
+loading data
+Begin training
+fold 1
+ToxicityRegressor(
+  (layer_1): Linear(in_features=801, out_features=16, bias=True)
+  (layer_2): Linear(in_features=16, out_features=32, bias=True)
+  (layer_3): Linear(in_features=32, out_features=16, bias=True)
+  (layer_out): Linear(in_features=16, out_features=229432, bias=True)
+  (relu): ReLU()
+)
+epoch 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 154, in <module>
+    wandb.log({"fold " + fold + 1 + " train loss": train_loss, "fold " + fold + 1 + " test loss": test_loss})
+TypeError: can only concatenate str (not "int") to str
