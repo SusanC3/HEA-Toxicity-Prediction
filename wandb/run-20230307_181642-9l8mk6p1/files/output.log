@@ -1,0 +1,12 @@
+
+loading data
+Begin training
+fold 1
+test loss 0.3376948101633789
+train loss 0.33769480962607734
+epoch 1
+train loss: 0.7165513532358527 test loss: 0.33769480747687125
+epoch 2
+train loss: 0.7165513572954642 test loss: 0.33769481983480615
+epoch 3
+train loss: 0.7165513511463468 test loss: 0.33769480371576066
