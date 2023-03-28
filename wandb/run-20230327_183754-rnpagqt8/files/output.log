@@ -1,0 +1,16 @@
+loading data
+Begin training
+test loss 1.1411624753451677
+train loss 1.015576993702745
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(174)<module>()
+-> for epoch in range(max_epochs):
+*** Breakpoint number 172 out of range
+epoch 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 174, in <module>
+    for epoch in range(max_epochs):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 135, in do_epoch
+    optimizer.step()
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1207, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'MSELoss' object has no attribute 'step'

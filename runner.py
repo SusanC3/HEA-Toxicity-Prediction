@@ -40,23 +40,23 @@ params = {'batch_size': 64,
 max_epochs = 150
 LEARNING_RATE = 0.000
 dim_input = 801
-dim_output = 229432
+dim_output = 100
 len_data = 5070
 max_grad_norm = 1
 
 #wandb stuff
-# wandb.login()
-# wandb.init(
-#     project="HEA-Toxicity-Prediction",
-#     name=f"split_test",
-#     config={
-#         "batch_size": params["batch_size"],
-#         "epochs": max_epochs,
-#         "learning_rate": LEARNING_RATE,
-#         "architecture": "NN",
-#         "datset": "Full"
-#     }
-# )
+wandb.login()
+wandb.init(
+    project="HEA-Toxicity-Prediction",
+    name=f"PCA-test",
+    config={
+        "batch_size": params["batch_size"],
+        "epochs": max_epochs,
+        "learning_rate": LEARNING_RATE,
+        "architecture": "NN",
+        "datset": "Full"
+    }
+)
 
 print("loading data")
 dataset = Data.Dataset() #__init__ not called for some reason
@@ -169,7 +169,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
     print("test loss", test_loss)
     print("train loss", train_loss)  
 
-    pdb.set_trace()
+  #  pdb.set_trace()
 
     for epoch in range(max_epochs):
         print("epoch", epoch + 1)

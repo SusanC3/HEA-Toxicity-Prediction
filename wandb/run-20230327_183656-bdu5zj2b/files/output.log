@@ -1,0 +1,8 @@
+loading data
+Begin training
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 166, in <module>
+    test_loss = do_epoch(model, device, test_loader, False)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 127, in do_epoch
+    local_se = (pred_result - output)**2
+RuntimeError: The size of tensor a (229432) must match the size of tensor b (100) at non-singleton dimension 1
