@@ -1,0 +1,1 @@
+{"fold 1 train loss": 1.0114833343392162, "fold 1 test loss": 1.1395108134553749, "epoch": 150, "_timestamp": 1679967975.9743905, "_runtime": 52.22561860084534, "_step": 299, "fold 2 train loss": 1.0284280426941654, "fold 2 test loss": 0.9445599979197485, "_wandb": {"runtime": 51}}

@@ -84,3 +84,5 @@ NoneType: None
 NoneType: None
 2023-03-03 07:04:53 ERROR dropped chunk HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/susanclay333/HEA-Toxicity-Prediction/ck9lfkf3/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2b8d2d09a0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
 NoneType: None
+2023-03-27 21:46:39 ERROR dropped chunk HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/susanclay333/HEA-Toxicity-Prediction/09qr5a51/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f12106b5cd0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+NoneType: None

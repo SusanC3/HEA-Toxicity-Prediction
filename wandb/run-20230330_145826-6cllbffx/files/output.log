@@ -1,0 +1,7 @@
+loading data
+Begin training
+fold: 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 124, in <module>
+    scheduler.step(test_loss, factor=0.5, patience=5)
+TypeError: step() got an unexpected keyword argument 'factor'

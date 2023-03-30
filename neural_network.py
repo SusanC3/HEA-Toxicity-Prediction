@@ -17,13 +17,13 @@ class ToxicityRegressor(nn.Module):
         # self.fc2 = nn.Linear(120, 84)
         # self.fc3 = nn.Linear(84, 10)
 
-        self.layer_1 = nn.Linear(dim_input, 16)
-        self.layer_2 = nn.Linear(16, 32)
-        self.layer_3 = nn.Linear(32, 16)
-        self.layer_out = nn.Linear(16, dim_output)
+        self.layer_1 = nn.Linear(dim_input, 450)
+        self.layer_2 = nn.Linear(450, 1000)
+        self.layer_3 = nn.Linear(1000, 450)
+        self.layer_out = nn.Linear(450, dim_output)
         
-        self.n_layers = 4
-        self.linears = [self.layer_1, self.layer_2, self.layer_3, self.layer_out]
+        self.n_layers = 3
+        self.linears = [self.layer_1, self.layer_2, self.layer_out]
         self.use_bilinear = False
 
         self.relu = nn.ReLU()

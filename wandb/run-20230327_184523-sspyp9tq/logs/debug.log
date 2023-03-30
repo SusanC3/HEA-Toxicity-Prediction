@@ -1,0 +1,32 @@
+2023-03-27 18:45:23,739 INFO    MainThread:1085 [wandb_setup.py:_flush():68] Configure stats pid to 1085
+2023-03-27 18:45:23,740 INFO    MainThread:1085 [wandb_setup.py:_flush():68] Loading settings from /home/susan/.config/wandb/settings
+2023-03-27 18:45:23,740 INFO    MainThread:1085 [wandb_setup.py:_flush():68] Loading settings from /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/settings
+2023-03-27 18:45:23,740 INFO    MainThread:1085 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-03-27 18:45:23,741 INFO    MainThread:1085 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'runner.py', 'program': '/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py'}
+2023-03-27 18:45:23,741 INFO    MainThread:1085 [wandb_init.py:_log_setup():492] Logging user logs to /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230327_184523-sspyp9tq/logs/debug.log
+2023-03-27 18:45:23,741 INFO    MainThread:1085 [wandb_init.py:_log_setup():493] Logging internal logs to /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/wandb/run-20230327_184523-sspyp9tq/logs/debug-internal.log
+2023-03-27 18:45:23,741 INFO    MainThread:1085 [wandb_init.py:init():532] calling init triggers
+2023-03-27 18:45:23,742 INFO    MainThread:1085 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'batch_size': 64, 'epochs': 150, 'learning_rate': 0.0, 'architecture': 'NN', 'datset': 'Full'}
+2023-03-27 18:45:23,742 INFO    MainThread:1085 [wandb_init.py:init():588] starting backend
+2023-03-27 18:45:23,742 INFO    MainThread:1085 [wandb_init.py:init():592] setting up manager
+2023-03-27 18:45:23,745 INFO    MainThread:1085 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-03-27 18:45:23,748 INFO    MainThread:1085 [wandb_init.py:init():599] backend started and connected
+2023-03-27 18:45:23,750 INFO    MainThread:1085 [wandb_init.py:init():687] updated telemetry
+2023-03-27 18:45:23,819 INFO    MainThread:1085 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-03-27 18:45:24,103 INFO    MainThread:1085 [wandb_run.py:_on_init():2134] communicating current version
+2023-03-27 18:45:24,182 INFO    MainThread:1085 [wandb_run.py:_on_init():2143] got version response upgrade_message: "wandb version 0.14.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-03-27 18:45:24,182 INFO    MainThread:1085 [wandb_init.py:init():775] starting run threads in backend
+2023-03-27 18:45:25,876 INFO    MainThread:1085 [wandb_run.py:_console_start():2114] atexit reg
+2023-03-27 18:45:25,877 INFO    MainThread:1085 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-03-27 18:45:25,878 INFO    MainThread:1085 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-03-27 18:45:25,878 INFO    MainThread:1085 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-03-27 18:45:25,878 INFO    MainThread:1085 [wandb_init.py:init():817] run started, returning control to user process
+2023-03-27 18:46:15,975 INFO    MainThread:1085 [wandb_run.py:_finish():1854] finishing run susanclay333/HEA-Toxicity-Prediction/sspyp9tq
+2023-03-27 18:46:15,976 INFO    MainThread:1085 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 0
+2023-03-27 18:46:15,976 INFO    MainThread:1085 [wandb_run.py:_restore():2066] restore
+2023-03-27 18:46:15,976 INFO    MainThread:1085 [wandb_run.py:_restore():2072] restore done
+2023-03-27 18:46:23,475 INFO    MainThread:1085 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-03-27 18:46:23,475 INFO    MainThread:1085 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-03-27 18:46:23,480 INFO    MainThread:1085 [wandb_run.py:_footer_sync_info():3398] logging synced files
