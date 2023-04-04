@@ -115,7 +115,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
 
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.5, patience=5)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer)
 
     for epoch in range(max_epochs):
         train_loss = do_epoch(model, device, train_loader, True, optimizer=optimizer)
