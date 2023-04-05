@@ -9,9 +9,9 @@ class ToxicityRegressor(nn.Module):
     def __init__(self, dim_input, dim_output):
         super(ToxicityRegressor, self).__init__()
 
-        self.layer_1 = nn.Linear(dim_input, 1000)
-        #self.layer_2 = nn.Linear(1000, 450)
-        self.layer_3 = nn.Linear(1000, 450)
+        self.layer_1 = nn.Linear(dim_input, 450)
+       # self.layer_2 = nn.Linear(450, 450)
+        self.layer_3 = nn.Linear(450, 450)
         self.layer_out = nn.Linear(450, dim_output)
         
         self.n_layers = 3
@@ -23,7 +23,7 @@ class ToxicityRegressor(nn.Module):
     def forward(self, input):
 
         x = self.relu(self.layer_1(input))
-       # x = self.relu(self.layer_2(x))
+      #  x = self.relu(self.layer_2(x))
         x = self.relu(self.layer_3(x))
         x = self.layer_out(x)
 
@@ -40,7 +40,7 @@ class ToxicityRegressor(nn.Module):
     
     def reset_parameters(self):
         self.layer_1.reset_parameters()
-      #  self.layer_2.reset_parameters()
+       # self.layer_2.reset_parameters()
         self.layer_3.reset_parameters()
         self.layer_out.reset_parameters()
     
