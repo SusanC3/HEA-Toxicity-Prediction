@@ -22,18 +22,18 @@ class ToxicityRegressor(nn.Module):
 
     def forward(self, input):
 
-        x = self.relu(self.layer_1(input))
+        x = self.layer_1(input)
       #  x = self.relu(self.layer_2(x))
-        x = self.relu(self.layer_3(x))
+        x = self.layer_3(x)
         x = self.layer_out(x)
 
         return x
 
     def predict(self, test_inputs):
 
-        x = self.relu(self.layer_1(test_inputs))
+        x = self.layer_1(test_inputs)
        # x = self.relu(self.layer_2(x))
-        x = self.relu(self.layer_3(x))
+        x = self.layer_3(x)
         x = self.layer_out(x)
 
         return x

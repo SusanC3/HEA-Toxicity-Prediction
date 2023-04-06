@@ -37,7 +37,7 @@ torch.backends.cudnn.benchmark = True
 params = {'batch_size': 64,
             'shuffle': True, #shuffle order of data each train
             'num_workers': 6}
-max_epochs = 150
+max_epochs = 75
 LEARNING_RATE = 0.001
 dim_input = 801
 dim_output = 1
@@ -48,7 +48,7 @@ max_grad_norm = 1
 wandb.login()
 wandb.init(
     project="HEA-Toxicity-Prediction",
-    name=f"PC1",
+    name=f"no-ReLU",
     config={
         "batch_size": params["batch_size"],
         "epochs": max_epochs,
@@ -115,17 +115,17 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
 
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
-    #scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.1, patience=5)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.9, patience=5)
 
     for epoch in range(max_epochs):
         train_loss = do_epoch(model, device, train_loader, True, optimizer=optimizer)
         test_loss = do_epoch(model, device, test_loader, False)
 
-        #scheduler.step(test_loss)
+        scheduler.step(test_loss)
 
         wandb.log({"fold " + str(fold + 1) + " train loss": train_loss, 
                    "fold " + str(fold + 1) + " test loss": test_loss, 
-                  # "fold " + str(fold + 1) + " lr" : optimizer.param_groups[0]['lr'],
+                  "fold " + str(fold + 1) + " lr" : optimizer.param_groups[0]['lr'],
                    "epoch": epoch+1})
 
         #print("epoch", epoch + 1)
