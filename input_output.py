@@ -100,7 +100,7 @@ get_input_output()
 
 
 """" --------------------------------------------------------------------------------------------------------------------------------"""
-#what i did to go from assays to output files
+#what i did to go from assays to output txt files
 # for name in assay_names:
 #     count += 1
 #     print("assay:", count, "out of", len(assay_names))

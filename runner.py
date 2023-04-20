@@ -59,7 +59,7 @@ wandb.init(
 )
 
 print("loading data")
-dataset = Data.Dataset() #__init__ not called for some reason
+dataset = Data.Dataset() 
 
 #kfold stuff
 #https://medium.com/dataseries/k-fold-cross-validation-with-pytorch-and-sklearn-d094aa00105f
