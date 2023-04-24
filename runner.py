@@ -2,25 +2,13 @@ import Data
 import neural_network
 
 import numpy as np
-import pandas as pd
-import seaborn as sns
-from tqdm.notebook import tqdm
-import matplotlib.pyplot as plt
-import random
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import Dataset, DataLoader, TensorDataset,random_split,SubsetRandomSampler, ConcatDataset
-from torch.nn import functional as F
-import torchvision
-from torchvision import datasets,transforms
-import torchvision.transforms as transforms
+from torch.utils.data import DataLoader, SubsetRandomSampler
 
-from sklearn.preprocessing import MinMaxScaler    
-from sklearn.model_selection import train_test_split
 from sklearn.model_selection import KFold
-from sklearn.metrics import mean_squared_error, r2_score
 
 import pdb
 import math

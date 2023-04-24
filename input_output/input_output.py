@@ -122,6 +122,8 @@ get_input_output()
 #         cid_to_output[cid].append(row)
 #         output_file.write(cid + ":" + " ".join(row) + "\n")
 
+
+"""-------------------------------------------------------------------------------------------------------------------------------------"""
 #What i did to go from output files to .npy files
 # cids_file = open("all_important_cids.txt")
 # whole_thing = cids_file.read()
