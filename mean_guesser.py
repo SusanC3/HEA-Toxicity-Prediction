@@ -3,14 +3,15 @@
 
 import Data
 import numpy as np
+import pdb
 
 dataset = Data.Dataset()
 
-X_train = dataset.X[:int(0.9*len(dataset.X))]
-y_train = dataset.y[:int(0.9*len(dataset.y))]
+X_train = dataset.X[int(0.1*len(dataset.X)):]
+y_train = dataset.y[int(0.1*len(dataset.y)):]
 
-X_test = dataset.X[int(0.9*len(dataset.X)):]
-y_test = dataset.y[int(0.9*len(dataset.y)):]
+X_test = dataset.X[:int(0.1*len(dataset.X))]
+y_test = dataset.y[:int(0.1*len(dataset.y))]
 
 #our prediction is just the average of all the outputs
 pred_train = []
@@ -34,3 +35,5 @@ MSE_test = tot_squared_error / (y_test.shape[0]*y_test.shape[1])
 
 print("MSE train:", MSE_train)
 print("MSE test:", MSE_test)
+
+pdb.set_trace()

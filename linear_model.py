@@ -36,6 +36,11 @@ denominator = preds_score.shape[0]*preds_score.shape[1]
 print("MSE test:", tot_squared_error/denominator)
 mse_test.append(tot_squared_error/denominator)
 
+plt.title("Output vs input (using first PC for both)")
+plt.scatter(X_train, y_train, label = "Train")
+plt.scatter(X_test, y_test, label = "Test")
+plt.legend()
+plt.savefig("plot")
 
 
 def MSE_from_alpha(a):
