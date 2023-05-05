@@ -4,7 +4,7 @@ import pdb
 import math
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("assays/AID_1159525_ap1-agonist-p1_viability.csv", skiprows=[1, 2, 3, 4])
+df = pd.read_csv("assays/AID_1159525_ap1-agonist-p1_viability.csv", skiprows=[1, 2, 3, 4, 5])
 
 #ith replicate, jth molecule
 activity_025 = []
