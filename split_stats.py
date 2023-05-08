@@ -3,6 +3,7 @@ import numpy as np
 import Data
 import pdb
 import matplotlib.pyplot as plt
+import math
 
 print("loading data")
 dataset = Data.Dataset()
@@ -25,23 +26,30 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
         X_test.append(dataset.__getitem__(id)[0])
         y_test.append(dataset.__getitem__(id)[1]) 
 
-    print("Fold", str(fold + 1), "output train mean:", str(np.mean(y_train)))
-    print("Fold", str(fold + 1), "output test mean:", str(np.mean(y_test)))
-    print("Fold", str(fold + 1), "output train variance:", str(np.var(y_train)))
-    print("Fold", str(fold + 1), "output test variance:", str(np.var(y_test)))
+    print("output mean percent diff:", str(100*abs(np.mean(y_train) - np.mean(y_test)) / abs(np.mean(y_train))))
+    print("output variance percent diff:", str(100*abs(np.var(y_train) - np.var(y_test)) / abs(np.var(y_train))))
     print()
 
+    var_train = np.var(X_train, axis = 0)
+    var_test = np.var(X_test, axis = 0)
+    var_with_nan = 100*abs(var_train - var_test) / abs(var_train)
+    var_perc_diff = var_with_nan[~np.isnan(var_with_nan)]
+
     #want variance among each feature --> axis = 0
-    plt.title("Variances of Input Features for Fold " + str(fold + 1))
-    plt.hist(np.var(X_test, axis=0), label="Test", alpha = 0.7, bins=100)
-    plt.hist(np.var(X_train, axis=0), label="Train", alpha = 0.7, bins=100)
-    plt.legend()
+    plt.title("Percent difference between train and test variances for fold " + str(fold + 1))
+    plt.hist(var_perc_diff, bins=100)
     plt.savefig("stats_plots/var_"+str(fold+1))
     plt.clf()
 
-    plt.title("Means of Input Features for Fold " + str(fold + 1))
-    plt.hist(np.mean(X_test, axis=0), label="Test", alpha = 0.7, bins=100)
-    plt.hist(np.mean(X_train, axis=0), label="Train", alpha = 0.7, bins=100)
-    plt.legend()
+    mean_train = np.mean(X_train, axis = 0)
+    mean_test = np.mean(X_test, axis = 0)
+    mean_with_nan = abs(mean_train - mean_test) / abs(var_test)
+    mean_perc_diff = mean_with_nan[~np.isnan(mean_with_nan)]
+
+    plt.title("Percent difference between train and test means for fold  " + str(fold + 1))
+    plt.hist(mean_perc_diff, bins=100)
     plt.savefig("stats_plots/mean_"+str(fold+1))
     plt.clf()
+    print()
+
+    #pdb.set_trace()
