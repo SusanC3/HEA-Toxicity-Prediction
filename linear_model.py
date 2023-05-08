@@ -1,6 +1,5 @@
 from sklearn.linear_model import Ridge
 from sklearn.model_selection import KFold
-from torch.utils.data import SubsetRandomSampler, DataLoader
 import numpy as np
 import Data
 import pdb
