@@ -34,10 +34,13 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
     var_test = np.var(X_test, axis = 0)
     var_with_nan = 100*abs(var_train - var_test) / abs(var_train)
     var_perc_diff = var_with_nan[~np.isnan(var_with_nan)]
+    for i in range(len(var_perc_diff)):
+        if var_perc_diff[i] > 100:
+            var_perc_diff[i] = 100
 
     #want variance among each feature --> axis = 0
     plt.title("Percent difference between train and test variances for fold " + str(fold + 1))
-    plt.xscale("log")
+    #plt.xscale("log")
     plt.hist(var_perc_diff, bins=100)
     plt.savefig("stats_plots/var_"+str(fold+1))
     plt.clf()
@@ -46,9 +49,12 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
     mean_test = np.mean(X_test, axis = 0)
     mean_with_nan = abs(mean_train - mean_test) / abs(var_test)
     mean_perc_diff = mean_with_nan[~np.isnan(mean_with_nan)]
+    for i in range(len(mean_perc_diff)):
+        if mean_perc_diff[i] > 100:
+            mean_perc_diff[i] = 100
 
     plt.title("Percent difference between train and test means for fold  " + str(fold + 1))
-    plt.xscale("log")
+    #plt.xscale("log")
     plt.hist(mean_perc_diff, bins=100)
     plt.savefig("stats_plots/mean_"+str(fold+1))
     plt.clf()
