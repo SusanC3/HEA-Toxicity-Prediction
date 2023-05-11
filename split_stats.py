@@ -37,6 +37,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
 
     #want variance among each feature --> axis = 0
     plt.title("Percent difference between train and test variances for fold " + str(fold + 1))
+    plt.xscale("log")
     plt.hist(var_perc_diff, bins=100)
     plt.savefig("stats_plots/var_"+str(fold+1))
     plt.clf()
@@ -47,6 +48,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
     mean_perc_diff = mean_with_nan[~np.isnan(mean_with_nan)]
 
     plt.title("Percent difference between train and test means for fold  " + str(fold + 1))
+    plt.xscale("log")
     plt.hist(mean_perc_diff, bins=100)
     plt.savefig("stats_plots/mean_"+str(fold+1))
     plt.clf()
