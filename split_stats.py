@@ -55,7 +55,8 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(5070))):
 
     plt.title("Percent difference between train and test means for fold  " + str(fold + 1))
     #plt.xscale("log")
-    plt.hist(mean_perc_diff, bins=100)
+    plt.hist(mean_perc_diff[mean_perc_diff < 5], bins=100)
+   # plt.xlim([0, 5])
     plt.savefig("stats_plots/mean_"+str(fold+1))
     plt.clf()
     print()

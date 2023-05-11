@@ -17,10 +17,10 @@ class Dataset:
         self.yraw = np.load(open("activity_scores.npy", "rb"), allow_pickle=True)
       #  self.yraw = np.load(open("PCA/PCA1Sklearn.npy", "rb"), allow_pickle=True)
 
-        input_normalizer, output_normalizer = UnitGaussianNormalizer(torch.from_numpy(self.Xraw)), UnitGaussianNormalizer(torch.from_numpy(self.yraw))
+        self.input_normalizer, self.output_normalizer = UnitGaussianNormalizer(torch.from_numpy(self.Xraw)), UnitGaussianNormalizer(torch.from_numpy(self.yraw))
 
-        self.X = input_normalizer.encode(torch.from_numpy(self.Xraw)).data.numpy()
-        self.y = output_normalizer.encode(torch.from_numpy(self.yraw)).data.numpy()
+        self.X = self.input_normalizer.encode(torch.from_numpy(self.Xraw)).data.numpy()
+        self.y = self.output_normalizer.encode(torch.from_numpy(self.yraw)).data.numpy()
 
     'Returns total numper of samples'
     def __len__(self):

@@ -1,5 +1,6 @@
 import Data
 import neural_network
+import activity_score_perc_error
 
 import numpy as np
 
@@ -33,18 +34,18 @@ len_data = 5070
 max_grad_norm = 1
 
 #wandb stuff
-wandb.login()
-wandb.init(
-    project="HEA-Toxicity-Prediction",
-    name=f"no-ReLU",
-    config={
-        "batch_size": params["batch_size"],
-        "epochs": max_epochs,
-        "learning_rate": LEARNING_RATE,
-        "architecture": "NN",
-        "datset": "Full"
-    }
-)
+# wandb.login()
+# wandb.init(
+#     project="HEA-Toxicity-Prediction",
+#     name=f"activity-score",
+#     config={
+#         "batch_size": params["batch_size"],
+#         "epochs": max_epochs,
+#         "learning_rate": LEARNING_RATE,
+#         "architecture": "NN",
+#         "datset": "Full"
+#     }
+# )
 
 print("loading data")
 dataset = Data.Dataset() 
@@ -111,13 +112,17 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
 
         scheduler.step(test_loss)
 
-        wandb.log({"fold " + str(fold + 1) + " train loss": train_loss, 
-                   "fold " + str(fold + 1) + " test loss": test_loss, 
-                  "fold " + str(fold + 1) + " lr" : optimizer.param_groups[0]['lr'],
-                   "epoch": epoch+1})
+        # wandb.log({"fold " + str(fold + 1) + " train loss": train_loss, 
+        #            "fold " + str(fold + 1) + " test loss": test_loss, 
+        #           "fold " + str(fold + 1) + " lr" : optimizer.param_groups[0]['lr'],
+        #            "epoch": epoch+1})
 
         #print("epoch", epoch + 1)
         #print("train loss:", train_loss, "test loss:", test_loss)
+
+    #evaluate percent error
+    activity_score_perc_error.score_model(model, val_idx)
+
 
 wandb.finish()
 
