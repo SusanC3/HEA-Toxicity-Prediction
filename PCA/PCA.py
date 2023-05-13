@@ -18,13 +18,13 @@ n = 801 #n features
 num_features = n
 
 print("Starting pca")
-pca = PCA(n_components=1)
+pca = PCA(n_components=100)
 new_output = pca.fit_transform(dataset.X)
 
 evals = pca.explained_variance_ratio_
 print("Saving new output")
 
-np.save("PCA/PCA1InputSklearn.npy", new_output)
+np.save("PCA/PCA100Input.npy", new_output)
 
 #pickle.dump(pca, open("PCA-Object.pickle", "wb"))
 

@@ -1,0 +1,5 @@
+loading data
+Begin training
+fold: 1
+train MSE: 0.22420850265785747 test MSE: 0.2112503161188614
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/activity_score_perc_error.py(18)score_model()

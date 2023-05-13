@@ -34,18 +34,18 @@ len_data = 5070
 max_grad_norm = 1
 
 #wandb stuff
-# wandb.login()
-# wandb.init(
-#     project="HEA-Toxicity-Prediction",
-#     name=f"activity-score",
-#     config={
-#         "batch_size": params["batch_size"],
-#         "epochs": max_epochs,
-#         "learning_rate": LEARNING_RATE,
-#         "architecture": "NN",
-#         "datset": "Full"
-#     }
-# )
+wandb.login()
+wandb.init(
+    project="HEA-Toxicity-Prediction",
+    name=f"activity-score-many-layers-reduced-lr",
+    config={
+        "batch_size": params["batch_size"],
+        "epochs": max_epochs,
+        "learning_rate": LEARNING_RATE,
+        "architecture": "NN",
+        "datset": "Full"
+    }
+)
 
 print("loading data")
 dataset = Data.Dataset() 
@@ -104,7 +104,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
 
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.9, patience=5)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
 
     for epoch in range(max_epochs):
         train_loss = do_epoch(model, device, train_loader, True, optimizer=optimizer)
@@ -112,16 +112,19 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
 
         scheduler.step(test_loss)
 
-        # wandb.log({"fold " + str(fold + 1) + " train loss": train_loss, 
-        #            "fold " + str(fold + 1) + " test loss": test_loss, 
-        #           "fold " + str(fold + 1) + " lr" : optimizer.param_groups[0]['lr'],
-        #            "epoch": epoch+1})
+        wandb.log({"fold " + str(fold + 1) + " train loss": train_loss, 
+                   "fold " + str(fold + 1) + " test loss": test_loss, 
+                  "fold " + str(fold + 1) + " lr" : optimizer.param_groups[0]['lr'],
+                   "epoch": epoch+1})
 
         #print("epoch", epoch + 1)
         #print("train loss:", train_loss, "test loss:", test_loss)
 
+        # if epoch == max_epochs-1:
+        #     print("train MSE:", train_loss, "test MSE:", test_loss)
+
     #evaluate percent error
-    activity_score_perc_error.score_model(model, val_idx)
+    #activity_score_perc_error.score_model(model, val_idx)
 
 
 wandb.finish()

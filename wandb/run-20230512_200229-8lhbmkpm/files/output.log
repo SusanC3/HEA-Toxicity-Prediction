@@ -1,0 +1,6 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/neural_network.py(35)forward()
+-> y = self.hidden_layers[i](x)
+Linear(in_features=450, out_features=450, bias=True)

@@ -1,0 +1,42 @@
+loading data
+Begin training
+fold: 1
+train MSE: 0.22367470118991684 test MSE: 0.21048106088401294
+perc mean: 105.39199 perc std: 121.82513
+zero mean: 0.9753125 zero std: 0.0012613012
+fold: 2
+train MSE: 0.22629300110351866 test MSE: 0.18896201146919525
+perc mean: 114.94946 perc std: 128.37454
+zero mean: 0.98428077 zero std: 0.016906979
+fold: 3
+train MSE: 0.22127490772475655 test MSE: 0.23357150147410718
+perc mean: 125.64529 perc std: 130.93051
+zero mean: 0.9733647 zero std: 0.0040130722
+fold: 4
+train MSE: 0.21956242363313472 test MSE: 0.24823787162933583
+perc mean: 117.77972 perc std: 130.60826
+zero mean: 0.96453047 zero std: 0.0022509454
+fold: 5
+train MSE: 0.21893586334914972 test MSE: 0.24796082030268718
+perc mean: 102.04663 perc std: 110.449425
+zero mean: 0.95061857 zero std: 0.0023137534
+fold: 6
+train MSE: 0.22243460630438436 test MSE: 0.22426024960705046
+perc mean: 101.218216 perc std: 108.695526
+zero mean: 0.97464913 zero std: 0.0020411517
+fold: 7
+train MSE: 0.2276529327422002 test MSE: 0.17874106535248996
+perc mean: 116.4497 perc std: 132.34276
+zero mean: 0.9869207 zero std: 0.0016557217
+fold: 8
+train MSE: 0.21942026675585577 test MSE: 0.2545323160893923
+perc mean: 100.23186 perc std: 116.538414
+zero mean: 0.97053313 zero std: 0.0033029397
+fold: 9
+train MSE: 0.22289679237579457 test MSE: 0.2202831771059597
+perc mean: 102.144005 perc std: 112.732605
+zero mean: 0.96760225 zero std: 0.0040299
+fold: 10
+train MSE: 0.22321932271789008 test MSE: 0.21828590359860658
+perc mean: 113.32626 perc std: 127.725945
+zero mean: 0.98057145 zero std: 0.003149627

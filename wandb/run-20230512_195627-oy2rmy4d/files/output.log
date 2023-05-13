@@ -1,0 +1,96 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/neural_network.py(35)forward()
+-> y = self.hidden_layers[i](x)
+*** RuntimeError: mat1 and mat2 shapes cannot be multiplied (64x450 and 801x450)
+tensor([[ 4.3742e-02],
+        [ 2.4928e-01],
+        [ 1.2296e-01],
+        [ 2.7565e-01],
+        [ 3.1459e-01],
+        [-1.1126e-03],
+        [ 2.3154e-01],
+        [-2.2279e-01],
+        [ 3.3819e-02],
+        [ 7.0796e-01],
+        [ 1.3449e-01],
+        [ 9.5018e-02],
+        [ 2.4368e-01],
+        [ 2.4603e-01],
+        [ 5.1539e-02],
+        [ 6.0611e-01],
+        [ 1.4601e-01],
+        [ 1.4209e+00],
+        [ 1.1869e-01],
+        [ 3.5454e-01],
+        [ 2.0817e-01],
+        [ 3.2067e-02],
+        [ 1.2360e-01],
+        [ 1.7446e-01],
+        [ 7.8138e-02],
+        [-2.7397e-02],
+        [ 1.1311e-01],
+        [-1.2342e-01],
+        [ 1.5552e-01],
+        [-4.2795e-02],
+        [ 1.5405e-02],
+        [ 2.7683e-01],
+        [ 2.2301e-01],
+        [ 9.9063e-02],
+        [-5.1376e-02],
+        [ 1.2083e-01],
+        [ 1.1165e+00],
+        [ 1.6758e-02],
+        [ 2.7265e-02],
+        [ 8.7094e-02],
+        [ 3.7607e-01],
+        [ 9.8430e-02],
+        [ 6.0757e-02],
+        [ 5.1227e-02],
+        [ 3.2552e-01],
+        [ 1.6749e-01],
+        [ 1.7171e-01],
+        [ 1.3191e-01],
+        [ 1.0149e-01],
+        [ 2.1330e-01],
+        [ 8.1218e-02],
+        [ 2.3999e-01],
+        [ 3.5212e-01],
+        [ 4.2998e-01],
+        [ 1.7611e-01],
+        [ 3.5039e-01],
+        [ 2.1361e-01],
+        [ 1.5681e-01],
+        [ 2.4503e-02],
+        [ 1.9037e-03],
+        [ 2.3347e-01],
+        [ 3.1017e-01],
+        [ 2.5512e-01],
+        [ 1.6950e-01]], device='cuda:0', grad_fn=<AddmmBackward0>)
+*** RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_addmm)
+--Call--
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1124)_call_impl()
+-> def _call_impl(self, *input, **kwargs):
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1125)_call_impl()
+-> forward_call = (self._slow_forward if torch._C._get_tracing_state() else self.forward)
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1128)_call_impl()
+-> if not (self._backward_hooks or self._forward_hooks or self._forward_pre_hooks or _global_backward_hooks
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1129)_call_impl()
+-> or _global_forward_hooks or _global_forward_pre_hooks):
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1128)_call_impl()
+-> if not (self._backward_hooks or self._forward_hooks or self._forward_pre_hooks or _global_backward_hooks
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1129)_call_impl()
+-> or _global_forward_hooks or _global_forward_pre_hooks):
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1128)_call_impl()
+-> if not (self._backward_hooks or self._forward_hooks or self._forward_pre_hooks or _global_backward_hooks
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1130)_call_impl()
+-> return forward_call(*input, **kwargs)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_addmm)
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1130)_call_impl()
+-> return forward_call(*input, **kwargs)
+--Return--
+> /home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py(1130)_call_impl()->None
+-> return forward_call(*input, **kwargs)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_addmm)
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/neural_network.py(35)forward()

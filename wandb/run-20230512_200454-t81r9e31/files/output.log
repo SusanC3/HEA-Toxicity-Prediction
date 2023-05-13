@@ -1,0 +1,9 @@
+loading data
+Begin training
+fold: 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 102, in <module>
+    model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/neural_network.py", line 12, in __init__
+    use_cuda = torch.cuda.is_available()
+NameError: name 'torch' is not defined

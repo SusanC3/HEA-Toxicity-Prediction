@@ -13,11 +13,15 @@ def score_model(model, val_idx):
         X_test.append(dataset.__getitem__(id)[0])
         y_test.append(dataset.__getitem__(id)[1]) 
 
+    #pdb.set_trace()
+
     X_test = torch.from_numpy(np.array(X_test)).to(device)
     y_test = torch.from_numpy(np.array(y_test)).to(device)
 
     output = dataset.output_normalizer.decode(model(X_test)).cpu().data.numpy()
     real = dataset.output_normalizer.decode(y_test).cpu().data.numpy()
+    # output = model(X_test).cpu().detach().numpy()
+    # real = y_test.cpu().numpy()
     percent_errors = []
     zero_guesses = []
     for i in range(len(output)):

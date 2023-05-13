@@ -1,0 +1,10 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/neural_network.py(35)forward()
+-> x = self.relu(self.hidden_layers[i](x))
+*** TypeError: 'torch.device' object is not callable
+<class 'torch.Tensor'>
+*** NameError: name 'torch' is not defined
+0
+0

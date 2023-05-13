@@ -3,6 +3,7 @@ import pandas as pd
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit import DataStructs
+import pdb
 
 def tanimoto_calc(smi1, smi2):
     mol1 = Chem.MolFromSmiles(smi1)
@@ -22,22 +23,26 @@ def tanimoto_calc(smi1, smi2):
 # cids = read['cid']
 # pubchem.close()
 
-print("reading init files")
+# print("reading init files")
 
-ms_file = open("model_smiles.txt")
-whole_thing = ms_file.read()
-model_smiles = whole_thing.split('\n')
-ms_file.close()
+# ms_file = open("model_smiles.txt")
+# whole_thing = ms_file.read()
+# model_smiles = whole_thing.split('\n')
+# ms_file.close()
 
-assay_names_file = open("assays/lsoutput.txt")
-whole_thing = assay_names_file.read()
-assay_names = whole_thing.split('\n')
-assay_names_file.close()
+# assay_names_file = open("assays/lsoutput.txt")
+# whole_thing = assay_names_file.read()
+# assay_names = whole_thing.split('\n')
+# assay_names_file.close()
 
 count = 0
 i = 0
 
-print(tanimoto_calc("CC(C)(C)NC(=O)C1CC2CCCCC2CN1CC(C(CC3=CC=CC=C3)NC(=O)C(CC(=O)N)NC(=O)C4=NC5=CC=CC=C5C=C4)O", "CC(C)C1=NC(=CS1)CN(C)C(=O)NC(C(C)C)C(=O)NC(CC2=CC=CC=C2)CC(C(CC3=CC=CC=C3)NC(=O)OCC4=CN=CS4)O"))
+print(tanimoto_calc("CC(C)C1=NC(=CS1)CN(C)C(=O)NC(C(C)C)C(=O)NC(CC2=CC=CC=C2)CC(C(CC3=CC=CC=C3)NC(=O)OCC4=CN=CS4)O", 
+                    "CCCC1(CC(=C(C(=O)O1)C(CC)C2=CC(=CC=C2)NS(=O)(=O)C3=NC=C(C=C3)C(F)(F)F)O)CCC4=CC=CC=C4"))
+
+pdb.set_trace()
+
 
 hash = {}
 

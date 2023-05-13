@@ -12,7 +12,7 @@ class Dataset:
         # self.list_IDS = list_IDs
         #self.X, self.y = input_output.get_input_output()
         self.Xraw = np.load(open("input.npy", "rb"), allow_pickle=True)
-       # self.Xraw = np.load(open("PCA/PCA1InputSklearn.npy", "rb"), allow_pickle=True)
+       # self.Xraw = np.load(open("PCA/PCA100Input.npy", "rb"), allow_pickle=True)
         #self.yraw = np.load(open("output.npy", "rb"), allow_pickle=True)
         self.yraw = np.load(open("activity_scores.npy", "rb"), allow_pickle=True)
       #  self.yraw = np.load(open("PCA/PCA1Sklearn.npy", "rb"), allow_pickle=True)
