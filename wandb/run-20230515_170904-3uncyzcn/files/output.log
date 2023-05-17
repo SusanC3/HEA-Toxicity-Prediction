@@ -1,0 +1,13 @@
+loading data
+Begin training
+fold: 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 139, in <module>
+    train_loss = do_epoch_classify(model, device, train_loader, True, optimizer=optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 108, in do_epoch_classify
+    loss.backward()
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/_tensor.py", line 396, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/autograd/__init__.py", line 173, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn

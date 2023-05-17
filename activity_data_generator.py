@@ -20,4 +20,20 @@ for molecule in activities.T:
 
 scores = np.array(scores)
 
-np.save("activity_scores.npy", scores)
+#assemble hash of cid --> index in scores
+cid_to_index = {}
+f = open("input_output/cids_in_order.txt", "r")
+cids_in_order = f.read().split("\n")
+cids = df["PUBCHEM_CID"]
+for i in range(len(cids)):
+    cid_to_index[cids[i]] = i
+
+pdb.set_trace()
+
+scores_in_order = []
+for cid in cids_in_order:
+    scores_in_order.append(scores[cid_to_index[cid]])
+
+pdb.set_trace()
+
+np.save("activity_scores.npy", np.array(scores_in_order))

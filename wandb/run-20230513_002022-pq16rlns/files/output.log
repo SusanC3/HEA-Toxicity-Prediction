@@ -1,0 +1,11 @@
+loading data
+Begin training
+fold: 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 127, in <module>
+    activity_score_perc_error.score_model(model, val_idx)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/activity_score_perc_error.py", line 25, in score_model
+    plt.hist(output, bins=100)
+  File "/home/susan/.local/lib/python3.9/site-packages/matplotlib/_api/__init__.py", line 222, in __getattr__
+    raise AttributeError(
+AttributeError: module 'matplotlib' has no attribute 'hist'

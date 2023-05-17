@@ -67,17 +67,20 @@ def get_input_output():
     cids = np.load(load_file, allow_pickle=True)
     load_file.close()
     counter = 0
+    f = open("cids_in_order.txt", "a")
     for cid in cids:
         cid = str(int(cid))
         if cid_to_toxid[cid] in toxid_to_input:
-            print(cid)
+            #print(cid)
+            f.write(cid + "\n")
             input[counter] = toxid_to_input[cid_to_toxid[cid]]
             counter += 1
         else:
             print("uh oh...")
 
     input = input[:5070] #somehow the last 6 cids got cut off from output, TODO fix this issue (prob to do with splitting into files)
-
+    
+    f.close()
     pdb.set_trace()
 
     #want cid at index 4058
@@ -88,8 +91,8 @@ def get_input_output():
     np.save("input.npy", input)
     np.save("output.npy", output)
 
-    np.save("short-input.npy", input[:20])
-    np.save("short-output.npy", output[:20])
+    # np.save("short-input.npy", input[:20])
+    # np.save("short-output.npy", output[:20])
 
     return input, output
 

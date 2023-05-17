@@ -1,0 +1,1 @@
+{"fold 1 train inaccuracy": 801.0, "fold 1 test inaccuracy": NaN, "fold 1 lr": 1.6777216000000015e-08, "epoch": 75, "_timestamp": 1684196407.3352787, "_runtime": 12.531166791915894, "_step": 74, "_wandb": {"runtime": 11}}

@@ -1,0 +1,17 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(107)do_epoch_classify()
+-> loss = torch.tensor(len(np.where(pred_result.cpu() != output.cpu())[0]) / len(pred_result), requires_grad = True) #should use cross-entropy? oh well i'll just try accuracy for now
+tensor([[3.7250e+00, 1.2509e+01, 2.1250e+00,  ..., 2.1539e+01, 3.0497e+01,
+         2.7190e+00],
+        [4.1330e+00, 1.2809e+01, 2.0000e+00,  ..., 2.2821e+01, 2.7257e+01,
+         3.0780e+00],
+        [3.4240e+00, 1.3008e+01, 2.0000e+00,  ..., 1.8397e+01, 2.1336e+01,
+         2.5660e+00],
+        ...,
+        [8.9852e+06, 1.3054e+01, 2.0910e+00,  ..., 1.1471e+02, 1.2430e+02,
+         4.3910e+00],
+        [2.0670e+00, 1.3340e+01, 1.6670e+00,  ..., 7.7770e+00, 8.4850e+00,
+         1.7000e+00],
+        [3.5420e+00, 1.2787e+01, 2.0000e+00,  ..., 2.7064e+01, 3.7069e+01,

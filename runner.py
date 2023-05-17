@@ -30,14 +30,14 @@ max_epochs = 75
 LEARNING_RATE = 0.001
 dim_input = 801
 dim_output = 1
-len_data = 5070
+len_data = 1724
 max_grad_norm = 1
 
 #wandb stuff
 wandb.login()
 wandb.init(
     project="HEA-Toxicity-Prediction",
-    name=f"activity-score-many-layers-reduced-lr",
+    name=f"new-data",
     config={
         "batch_size": params["batch_size"],
         "epochs": max_epochs,
@@ -49,6 +49,8 @@ wandb.init(
 
 print("loading data")
 dataset = Data.Dataset() 
+
+# pdb.set_trace()
 
 #kfold stuff
 #https://medium.com/dataseries/k-fold-cross-validation-with-pytorch-and-sklearn-d094aa00105f
@@ -87,6 +89,34 @@ def do_epoch(model, device, dataloader, training, optimizer=None):
     return loss
 
 
+def do_epoch_classify(model, device, dataloader, training, optimizer=None):
+    if training:
+        model.train()
+    else:
+        model.eval()
+
+    losses = []
+
+    for input, output in dataloader:
+        input, output = input.to(device), output.to(device)           
+        if training:
+            optimizer.zero_grad()
+
+        pred_result = model(input)
+
+        if training:
+            pdb.set_trace()
+            loss = torch.tensor(len(np.where(pred_result.cpu() != output.cpu())[0]) / len(pred_result), requires_grad = True) #should use cross-entropy? oh well i'll just try accuracy for now
+            losses.append(loss)
+            loss.backward() 
+
+            optimizer.step()
+
+   # print([x.item() for x in losses])
+    loss = np.sum(np.array([x.item() for x in losses])) / len(losses) #avg loss
+    return loss
+
+
 print("Begin training")
 
 for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
@@ -109,7 +139,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
     for epoch in range(max_epochs):
         train_loss = do_epoch(model, device, train_loader, True, optimizer=optimizer)
         test_loss = do_epoch(model, device, test_loader, False)
-
+      
         scheduler.step(test_loss)
 
         wandb.log({"fold " + str(fold + 1) + " train loss": train_loss, 
@@ -124,7 +154,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
         #     print("train MSE:", train_loss, "test MSE:", test_loss)
 
     #evaluate percent error
-    #activity_score_perc_error.score_model(model, val_idx)
+    activity_score_perc_error.score_model(model, val_idx)
 
 
 wandb.finish()

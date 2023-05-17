@@ -2,6 +2,8 @@ import Data
 import torch
 import numpy as np
 import pdb
+import matplotlib.pyplot as plt
+from data_assembly import Normalizer
 
 dataset = Data.Dataset()
 
@@ -16,10 +18,29 @@ def score_model(model, val_idx):
     #pdb.set_trace()
 
     X_test = torch.from_numpy(np.array(X_test)).to(device)
-    y_test = torch.from_numpy(np.array(y_test)).to(device)
+    #y_test = torch.from_numpy(np.array(y_test)).to(device)
 
-    output = dataset.output_normalizer.decode(model(X_test)).cpu().data.numpy()
-    real = dataset.output_normalizer.decode(y_test).cpu().data.numpy()
+    # output = dataset.output_normalizer.decode(model(X_test)).cpu().data.numpy()
+    # real = dataset.output_normalizer.decode(y_test).cpu().data.numpy()
+    output = model(X_test).cpu().data.numpy()
+    real = np.array(y_test)
+
+    plt.title("Activity score predictions of all compounds")
+    plt.hist(output, bins=100)
+    plt.xlabel("Prediction value")
+    plt.ylabel("Occurance")
+    plt.savefig("outputs")
+    plt.clf()
+
+    plt.title("Actual activity score of all compounds")
+    plt.hist(real, bins=100)
+    plt.xlabel("Value")
+    plt.ylabel("Occurance")
+    plt.savefig("real")
+    plt.clf()
+
+    pdb.set_trace()
+
     # output = model(X_test).cpu().detach().numpy()
     # real = y_test.cpu().numpy()
     percent_errors = []
