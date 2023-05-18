@@ -1,0 +1,7 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(111)do_epoch_classify()
+-> result = np.zeros(len(pred_result))
+torch.Size([64, 1])
+torch.Size([64])

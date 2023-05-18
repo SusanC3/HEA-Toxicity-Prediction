@@ -1,0 +1,6 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(115)do_epoch_classify()
+-> loss = loss_calc(pred_result.squeeze(1), output)
+torch.Size([64])

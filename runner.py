@@ -29,7 +29,7 @@ params = {'batch_size': 64,
 max_epochs = 75
 LEARNING_RATE = 0.001
 dim_input = 801
-dim_output = 1
+dim_output = 3
 len_data = 1724
 max_grad_norm = 1
 
@@ -89,7 +89,7 @@ def do_epoch(model, device, dataloader, training, optimizer=None):
     return loss
 
 
-def do_epoch_classify(model, device, dataloader, training, optimizer=None):
+def do_epoch_classify(model, device, dataloader, training, loss_calc, optimizer=None):
     if training:
         model.train()
     else:
@@ -103,12 +103,13 @@ def do_epoch_classify(model, device, dataloader, training, optimizer=None):
             optimizer.zero_grad()
 
         pred_result = model(input)
-        result = np.zeros(len(pred_result))
-        for i in range(len(pred_result)):
-            result[i] = pred_result[i][0]
+        
+        shaped_output = torch.zeros(64, 1).to(device)
+        for i in range(len(output)):
+            shaped_output[i, 0] = output[i]
 
-        loss = len(np.where(result != np.array(output.cpu()))[0]) / len(result)
-        losses.append(loss)
+        loss = loss_calc(pred_result, output)
+        losses.append(loss.item())
         
         if training:
             train_loss = torch.tensor(loss, requires_grad = True) #should use cross-entropy? oh well i'll just try accuracy for now
@@ -116,7 +117,6 @@ def do_epoch_classify(model, device, dataloader, training, optimizer=None):
 
             optimizer.step()
 
-   # print([x.item() for x in losses])
     loss = np.sum(np.array(losses)) / len(losses) #avg loss
     return loss
 
@@ -136,13 +136,13 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
     model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
     model.to(device)
 
-    criterion = nn.MSELoss()
+    loss_calc = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
 
     for epoch in range(max_epochs):
-        train_loss = do_epoch_classify(model, device, train_loader, True, optimizer=optimizer)
-        test_loss = do_epoch_classify(model, device, test_loader, False)
+        train_loss = do_epoch_classify(model, device, train_loader, True, loss_calc, optimizer=optimizer)
+        test_loss = do_epoch_classify(model, device, test_loader, False, loss_calc)
       
         scheduler.step(test_loss)
 

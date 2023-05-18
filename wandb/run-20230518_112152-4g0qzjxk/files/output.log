@@ -1,0 +1,11 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(116)do_epoch_classify()
+-> losses.append(loss)
+tensor(-0., device='cuda:0', grad_fn=<DivBackward1>)
+tensor([0.0695], device='cuda:0', grad_fn=<SelectBackward0>)
+tensor([0.], device='cuda:0')
+tensor([0.0118], device='cuda:0', grad_fn=<SelectBackward0>)
+tensor([0.], device='cuda:0')
+tensor([1.], device='cuda:0')

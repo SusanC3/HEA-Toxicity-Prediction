@@ -1,0 +1,15 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)do_epoch_classify()
+-> output[i] = torch.tensor([output[i]])
+torch.Size([])
+tensor([1])
+0
+*** SyntaxError: unexpected EOF while parsing
+tensor(1, device='cuda:0')
+torch.Size([1])
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(108)do_epoch_classify()
+-> pdb.set_trace()
+1
+*** SyntaxError: unexpected EOF while parsing

@@ -1,0 +1,15 @@
+loading data
+Begin training
+fold: 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 146, in <module>
+    train_loss = do_epoch_classify(model, device, train_loader, True, loss_calc, optimizer=optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 111, in do_epoch_classify
+    loss = loss_calc(result, output)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 1164, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/functional.py", line 3014, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+TypeError: cross_entropy_loss(): argument 'input' (position 1) must be Tensor, not numpy.ndarray

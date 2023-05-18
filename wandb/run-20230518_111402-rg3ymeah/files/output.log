@@ -1,0 +1,6 @@
+loading data
+Begin training
+fold: 1
+getting assigned to shape torch.Size([1])
+output after assignment tensor(0, device='cuda:0')
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(107)do_epoch_classify()

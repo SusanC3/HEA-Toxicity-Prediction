@@ -1,0 +1,8 @@
+loading data
+Begin training
+fold: 1
+getting assigned to shape torch.Size([1])
+output after assignment torch.Size([])
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(107)do_epoch_classify()
+-> for i in range(len(output)):
+*** IndexError: index 64 is out of bounds for dimension 0 with size 64
