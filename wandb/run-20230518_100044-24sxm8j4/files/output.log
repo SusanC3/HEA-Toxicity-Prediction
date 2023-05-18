@@ -1,0 +1,11 @@
+loading data
+Begin training
+fold: 1
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 144, in <module>
+    train_loss = do_epoch_classify(model, device, train_loader, True, optimizer=optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 120, in do_epoch_classify
+    loss = np.sum(np.array([x.item() for x in losses])) / len(losses) #avg loss
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py", line 120, in <listcomp>
+    loss = np.sum(np.array([x.item() for x in losses])) / len(losses) #avg loss
+AttributeError: 'float' object has no attribute 'item'

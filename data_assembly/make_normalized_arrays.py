@@ -14,10 +14,10 @@ for id in data_hash:
     y.append(data_hash[id][1])
 
 input_normalizer = Normalizer.UnitGaussianNormalizer(torch.FloatTensor(X))
-output_normalizer = Normalizer.UnitGaussianNormalizer(torch.FloatTensor(y)) 
+# output_normalizer = Normalizer.UnitGaussianNormalizer(torch.FloatTensor(y)) 
 
 normalizedX = input_normalizer.encode(torch.FloatTensor(X)).data.numpy()
-normalizedy = output_normalizer.encode(torch.FloatTensor(y)).data.numpy()
+# normalizedy = output_normalizer.encode(torch.FloatTensor(y)).data.numpy()
 
 pickle.dump(normalizedX, open("normalizedX.npy", "wb"))
-pickle.dump(normalizedy, open("normalizedy.npy", "wb"))
+pickle.dump(np.array(y), open("categoryY.npy", "wb")) #doesn't make sense to "normalize" categories

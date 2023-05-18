@@ -37,7 +37,7 @@ max_grad_norm = 1
 wandb.login()
 wandb.init(
     project="HEA-Toxicity-Prediction",
-    name=f"new-data",
+    name=f"classify",
     config={
         "batch_size": params["batch_size"],
         "epochs": max_epochs,
@@ -103,17 +103,21 @@ def do_epoch_classify(model, device, dataloader, training, optimizer=None):
             optimizer.zero_grad()
 
         pred_result = model(input)
+        result = np.zeros(len(pred_result))
+        for i in range(len(pred_result)):
+            result[i] = pred_result[i][0]
 
+        loss = len(np.where(result != np.array(output.cpu()))[0]) / len(result)
+        losses.append(loss)
+        
         if training:
-            pdb.set_trace()
-            loss = torch.tensor(len(np.where(pred_result.cpu() != output.cpu())[0]) / len(pred_result), requires_grad = True) #should use cross-entropy? oh well i'll just try accuracy for now
-            losses.append(loss)
-            loss.backward() 
+            train_loss = torch.tensor(loss, requires_grad = True) #should use cross-entropy? oh well i'll just try accuracy for now
+            train_loss.backward() 
 
             optimizer.step()
 
    # print([x.item() for x in losses])
-    loss = np.sum(np.array([x.item() for x in losses])) / len(losses) #avg loss
+    loss = np.sum(np.array(losses)) / len(losses) #avg loss
     return loss
 
 
@@ -137,8 +141,8 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
 
     for epoch in range(max_epochs):
-        train_loss = do_epoch(model, device, train_loader, True, optimizer=optimizer)
-        test_loss = do_epoch(model, device, test_loader, False)
+        train_loss = do_epoch_classify(model, device, train_loader, True, optimizer=optimizer)
+        test_loss = do_epoch_classify(model, device, test_loader, False)
       
         scheduler.step(test_loss)
 
@@ -154,7 +158,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
         #     print("train MSE:", train_loss, "test MSE:", test_loss)
 
     #evaluate percent error
-    activity_score_perc_error.score_model(model, val_idx)
+   # activity_score_perc_error.score_model(model, val_idx)
 
 
 wandb.finish()

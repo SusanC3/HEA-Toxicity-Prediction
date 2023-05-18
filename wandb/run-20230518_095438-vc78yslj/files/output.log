@@ -1,0 +1,6 @@
+loading data
+Begin training
+fold: 1
+/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py:119: RuntimeWarning: invalid value encountered in double_scalars
+  loss = np.sum(np.array([x.item() for x in losses])) / len(losses) #avg loss
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/activity_score_perc_error.py(46)score_model()

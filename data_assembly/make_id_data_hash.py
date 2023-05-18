@@ -16,10 +16,12 @@ for index, row in input_df.iterrows():
 
 #assemble smiles : output hash
 #only doing replicate 1 for now to make it easier
+number = {"Active" : 0, "Inactive" : 1, "Inconclusive" : 2}
+
 smiles_to_output = {}
-output_df = pd.read_csv("assays/AID_1671196_p450-2d6-p1.csv", usecols=["PUBCHEM_EXT_DATASOURCE_SMILES", "Activity_Score-Replicate_1"], skiprows=[1, 2, 3, 4, 5])
+output_df = pd.read_csv("assays/AID_1671196_p450-2d6-p1.csv", usecols=["PUBCHEM_EXT_DATASOURCE_SMILES", "PUBCHEM_ACTIVITY_OUTCOME"], skiprows=[1, 2, 3, 4, 5])
 for index, row in output_df.iterrows():
-    smiles_to_output[row[0]] = row[1]
+    smiles_to_output[row[0]] = number[row[1]]
 
 #combine
 tox21_to_data = {}

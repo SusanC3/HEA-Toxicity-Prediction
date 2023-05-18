@@ -1,0 +1,18 @@
+loading data
+Begin training
+fold: 1
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(109)do_epoch_classify()
+-> loss = torch.tensor(len(np.where(pred_result.cpu() != output.cpu())[0]) / len(pred_result), requires_grad = True) #should use cross-entropy? oh well i'll just try accuracy for now
+*** NameError: name 'loss' is not defined
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/runner.py(110)do_epoch_classify()
+-> losses.append(loss)
+tensor(64., requires_grad=True)
+*** AttributeError: 'Tensor' object has no attribute 'cpy'
+4096
+64
+64
+(array([ 0,  0,  0, ..., 63, 63, 63]), array([ 0,  1,  2, ..., 61, 62, 63]))
+torch.Size([64, 1])
+torch.Size([64])
+64
+tensor(0.0997, device='cuda:0', grad_fn=<SelectBackward0>)
