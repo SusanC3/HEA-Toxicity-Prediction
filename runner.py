@@ -29,7 +29,7 @@ params = {'batch_size': 64,
 max_epochs = 75
 LEARNING_RATE = 0.001
 dim_input = 801
-dim_output = 3
+dim_output = 1
 len_data = 1724
 max_grad_norm = 1
 
@@ -141,8 +141,8 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
 
     for epoch in range(max_epochs):
-        train_loss = do_epoch_classify(model, device, train_loader, True, loss_calc, optimizer=optimizer)
-        test_loss = do_epoch_classify(model, device, test_loader, False, loss_calc)
+        train_loss = do_epoch(model, device, train_loader, True, optimizer=optimizer)
+        test_loss = do_epoch(model, device, test_loader, False)
       
         scheduler.step(test_loss)
 
@@ -158,7 +158,7 @@ for fold, (train_idx, val_idx) in enumerate(splits.split(np.arange(len_data))):
         #     print("train MSE:", train_loss, "test MSE:", test_loss)
 
     #evaluate percent error
-   # activity_score_perc_error.score_model(model, val_idx)
+    activity_score_perc_error.score_model(model, val_idx)
 
 
 wandb.finish()

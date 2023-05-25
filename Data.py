@@ -11,7 +11,7 @@ class Dataset:
     #so ik the websit told me to use a different format but I'm not motivated enough to change my current format yet
     def __init__(self):
         self.X = pickle.load(open("data_assembly/normalizedX.npy", "rb"))
-        self.y = pickle.load(open("data_assembly/categoryY.npy", "rb"))
+        self.y = pickle.load(open("data_assembly/normalizedY.npy", "rb"))
 
     'Returns total numper of samples'
     def __len__(self):
