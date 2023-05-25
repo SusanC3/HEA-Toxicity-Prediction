@@ -1,0 +1,25 @@
+2023-05-25 11:15:36,287 INFO    MainThread:567 [wandb_setup.py:_flush():68] Configure stats pid to 567
+2023-05-25 11:15:36,287 INFO    MainThread:567 [wandb_setup.py:_flush():68] Loading settings from /home/susan/.config/wandb/settings
+2023-05-25 11:15:36,287 INFO    MainThread:567 [wandb_setup.py:_flush():68] Loading settings from /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/settings
+2023-05-25 11:15:36,287 INFO    MainThread:567 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-05-25 11:15:36,287 INFO    MainThread:567 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'jku/jku_runner.py', 'program': '/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py'}
+2023-05-25 11:15:36,288 INFO    MainThread:567 [wandb_init.py:_log_setup():492] Logging user logs to /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230525_111536-i4lpku0q/logs/debug.log
+2023-05-25 11:15:36,288 INFO    MainThread:567 [wandb_init.py:_log_setup():493] Logging internal logs to /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230525_111536-i4lpku0q/logs/debug-internal.log
+2023-05-25 11:15:36,288 INFO    MainThread:567 [wandb_init.py:init():532] calling init triggers
+2023-05-25 11:15:36,288 INFO    MainThread:567 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'batch_size': 64, 'epochs': 75, 'learning_rate': 0.001, 'architecture': 'NN', 'datset': 'Full'}
+2023-05-25 11:15:36,289 INFO    MainThread:567 [wandb_init.py:init():588] starting backend
+2023-05-25 11:15:36,289 INFO    MainThread:567 [wandb_init.py:init():592] setting up manager
+2023-05-25 11:15:36,292 INFO    MainThread:567 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-25 11:15:36,295 INFO    MainThread:567 [wandb_init.py:init():599] backend started and connected
+2023-05-25 11:15:36,297 INFO    MainThread:567 [wandb_init.py:init():687] updated telemetry
+2023-05-25 11:15:36,366 INFO    MainThread:567 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-05-25 11:15:36,737 INFO    MainThread:567 [wandb_run.py:_on_init():2134] communicating current version
+2023-05-25 11:15:36,820 INFO    MainThread:567 [wandb_run.py:_on_init():2143] got version response upgrade_message: "wandb version 0.15.3 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-05-25 11:15:36,821 INFO    MainThread:567 [wandb_init.py:init():775] starting run threads in backend
+2023-05-25 11:15:38,423 INFO    MainThread:567 [wandb_run.py:_console_start():2114] atexit reg
+2023-05-25 11:15:38,424 INFO    MainThread:567 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-05-25 11:15:38,424 INFO    MainThread:567 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-05-25 11:15:38,424 INFO    MainThread:567 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-05-25 11:15:38,425 INFO    MainThread:567 [wandb_init.py:init():817] run started, returning control to user process

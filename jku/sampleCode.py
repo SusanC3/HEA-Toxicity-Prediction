@@ -5,6 +5,7 @@ import pandas as pd
 from scipy import io
 from sklearn.metrics import roc_auc_score
 from sklearn.ensemble import RandomForestClassifier
+import pdb
 
 
 # load data
@@ -27,9 +28,10 @@ x_te = x_te_dense
 
 # Build a random forest model for all twelve assays
 for target in y_tr.columns:
-    rows_tr = np.isfinite(y_tr[target]).values
-    rows_te = np.isfinite(y_te[target]).values
+    rows_tr = np.isfinite(y_tr[target]).values #stores true/false is data NaN
+    rows_te = np.isfinite(y_te[target]).values #stores true/false is data NaN
     rf = RandomForestClassifier(n_estimators=100,  n_jobs=4)
+    pdb.set_trace()
     rf.fit(x_tr[rows_tr], y_tr[target][rows_tr])
     p_te = rf.predict_proba(x_te[rows_te])
     auc_te = roc_auc_score(y_te[target][rows_te], p_te[:, 1])

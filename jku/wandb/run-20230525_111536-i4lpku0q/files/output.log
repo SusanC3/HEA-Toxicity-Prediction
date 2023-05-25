@@ -1,0 +1,9 @@
+loading data
+Begin training
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py(90)<module>()
+-> model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
+(8441, 801)
+(610, 801)
+*** AttributeError: 'tuple' object has no attribute 'shape'
+(8441,)
+*** IndexError: tuple index out of range
