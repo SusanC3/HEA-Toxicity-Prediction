@@ -1,0 +1,14 @@
+loading data
+Begin training
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 94, in <module>
+    train_loss = do_epoch(model, device, torch.from_numpy(x_tr), torch.from_numpy(y_tr), True, optimizer=optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 68, in do_epoch
+    loss = loss_calc(pred_result, y)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 613, in forward
+    return F.binary_cross_entropy(input, target, weight=self.weight, reduction=self.reduction)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/functional.py", line 3074, in binary_cross_entropy
+    raise ValueError(
+ValueError: Using a target size (torch.Size([8441])) that is different to the input size (torch.Size([8441, 1])) is deprecated. Please ensure they have the same size.

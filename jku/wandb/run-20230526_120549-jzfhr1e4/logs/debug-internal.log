@@ -1,0 +1,182 @@
+2023-05-26 12:05:49,574 INFO    StreamThr :1369 [internal.py:wandb_internal():87] W&B internal server running at pid: 1369, started at: 2023-05-26 12:05:49.568803
+2023-05-26 12:05:49,578 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: status
+2023-05-26 12:05:49,590 INFO    WriterThread:1369 [datastore.py:open_for_write():85] open: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/run-jzfhr1e4.wandb
+2023-05-26 12:05:49,598 DEBUG   SenderThread:1369 [sender.py:send():336] send: header
+2023-05-26 12:05:50,035 DEBUG   SenderThread:1369 [sender.py:send():336] send: run
+2023-05-26 12:05:50,404 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: check_version
+2023-05-26 12:05:50,407 INFO    SenderThread:1369 [dir_watcher.py:__init__():216] watching files in: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files
+2023-05-26 12:05:50,408 INFO    SenderThread:1369 [sender.py:_start_run_threads():1067] run started: jzfhr1e4 with start time 1685127949.582844
+2023-05-26 12:05:50,408 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: summary_record
+2023-05-26 12:05:50,416 INFO    SenderThread:1369 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-05-26 12:05:50,421 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: check_version
+2023-05-26 12:05:50,576 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: run_start
+2023-05-26 12:05:50,882 DEBUG   HandlerThread:1369 [system_info.py:__init__():31] System info init
+2023-05-26 12:05:50,884 DEBUG   HandlerThread:1369 [system_info.py:__init__():46] System info init done
+2023-05-26 12:05:50,885 INFO    HandlerThread:1369 [system_monitor.py:start():151] Starting system monitor
+2023-05-26 12:05:50,886 INFO    SystemMonitor:1369 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-05-26 12:05:50,887 INFO    HandlerThread:1369 [system_monitor.py:probe():172] Collecting system info
+2023-05-26 12:05:50,890 INFO    SystemMonitor:1369 [interfaces.py:start():168] Started cpu
+2023-05-26 12:05:50,895 INFO    SystemMonitor:1369 [interfaces.py:start():168] Started disk
+2023-05-26 12:05:50,897 INFO    SystemMonitor:1369 [interfaces.py:start():168] Started gpu
+2023-05-26 12:05:50,899 INFO    SystemMonitor:1369 [interfaces.py:start():168] Started memory
+2023-05-26 12:05:50,903 INFO    SystemMonitor:1369 [interfaces.py:start():168] Started network
+2023-05-26 12:05:50,991 DEBUG   HandlerThread:1369 [system_info.py:probe():195] Probing system
+2023-05-26 12:05:50,996 ERROR   gpu       :1369 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-05-26 12:05:51,220 DEBUG   HandlerThread:1369 [system_info.py:_probe_git():180] Probing git
+2023-05-26 12:05:51,453 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/wandb-summary.json
+2023-05-26 12:05:51,789 DEBUG   HandlerThread:1369 [system_info.py:_probe_git():188] Probing git done
+2023-05-26 12:05:51,791 DEBUG   HandlerThread:1369 [system_info.py:probe():241] Probing system done
+2023-05-26 12:05:51,793 DEBUG   HandlerThread:1369 [system_monitor.py:probe():181] {'os': 'Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.35', 'python': '3.9.12', 'heartbeatAt': '2023-05-26T19:05:50.991966', 'startedAt': '2023-05-26T19:05:49.292014', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py', 'codePath': 'jku/jku_runner.py', 'git': {'remote': 'git@github.com:SusanC3/HEA-Toxicity-Prediction.git', 'commit': 'd281548f63cd6ab9d0c70b38b57ed3a8168a74bc'}, 'email': 'susanclay333@gmail.com', 'root': '/mnt/c/Users/susan/git/HEA-Toxicity-Prediction', 'host': 'MSI', 'username': 'susan', 'executable': '/home/susan/miniconda3/bin/python', 'cpu_count': 10, 'cpu_count_logical': 20, 'cpu_freq': {'current': 2918.3980000000006, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}, {'current': 2918.398, 'min': 0.0, 'max': 0.0}], 'disk': {'total': 250.98248672485352, 'used': 64.15755081176758}, 'gpu': 'NVIDIA GeForce RTX 3070 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3070 Ti Laptop GPU', 'memory_total': 8589934592}], 'memory': {'total': 51.97193145751953}}
+2023-05-26 12:05:51,794 INFO    HandlerThread:1369 [system_monitor.py:probe():182] Finished collecting system info
+2023-05-26 12:05:51,796 INFO    HandlerThread:1369 [system_monitor.py:probe():185] Publishing system info
+2023-05-26 12:05:51,797 DEBUG   HandlerThread:1369 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-26 12:05:51,814 DEBUG   HandlerThread:1369 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-26 12:05:51,815 DEBUG   HandlerThread:1369 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-26 12:05:52,455 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/conda-environment.yaml
+2023-05-26 12:05:52,456 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/requirements.txt
+2023-05-26 12:05:53,005 ERROR   gpu       :1369 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-05-26 12:05:53,265 DEBUG   HandlerThread:1369 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-26 12:05:53,278 INFO    HandlerThread:1369 [system_monitor.py:probe():187] Finished publishing system info
+2023-05-26 12:05:53,284 DEBUG   SenderThread:1369 [sender.py:send():336] send: files
+2023-05-26 12:05:53,285 INFO    SenderThread:1369 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-05-26 12:05:53,300 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-26 12:05:53,308 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: stop_status
+2023-05-26 12:05:53,434 DEBUG   SenderThread:1369 [sender.py:send():336] send: telemetry
+2023-05-26 12:05:53,469 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/conda-environment.yaml
+2023-05-26 12:05:53,472 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/output.log
+2023-05-26 12:05:53,473 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_created():275] file/dir created: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/wandb-metadata.json
+2023-05-26 12:05:53,832 INFO    wandb-upload_0:1369 [upload_job.py:push():138] Uploaded file /tmp/tmp530e9tc9wandb/2ba5xkve-wandb-metadata.json
+2023-05-26 12:05:54,733 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: status_report
+2023-05-26 12:05:55,011 ERROR   gpu       :1369 [interfaces.py:monitor():129] Failed to sample metric: Not Supported
+2023-05-26 12:05:55,496 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/output.log
+2023-05-26 12:05:55,792 DEBUG   SenderThread:1369 [sender.py:send():336] send: exit
+2023-05-26 12:05:55,794 INFO    SenderThread:1369 [sender.py:send_exit():559] handling exit code: 1
+2023-05-26 12:05:55,796 INFO    SenderThread:1369 [sender.py:send_exit():561] handling runtime: 5
+2023-05-26 12:05:55,812 INFO    SenderThread:1369 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-05-26 12:05:55,817 INFO    SenderThread:1369 [sender.py:send_exit():567] send defer
+2023-05-26 12:05:55,818 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:55,819 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-26 12:05:55,820 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:55,821 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-05-26 12:05:55,822 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 1
+2023-05-26 12:05:55,823 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:55,824 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-26 12:05:55,826 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:55,827 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-05-26 12:05:55,827 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 2
+2023-05-26 12:05:55,828 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:55,829 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-26 12:05:55,830 INFO    HandlerThread:1369 [system_monitor.py:finish():161] Stopping system monitor
+2023-05-26 12:05:55,832 DEBUG   SystemMonitor:1369 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-05-26 12:05:55,832 INFO    HandlerThread:1369 [interfaces.py:finish():175] Joined cpu
+2023-05-26 12:05:55,833 INFO    HandlerThread:1369 [interfaces.py:finish():175] Joined disk
+2023-05-26 12:05:55,832 DEBUG   SystemMonitor:1369 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-05-26 12:05:55,835 DEBUG   SystemMonitor:1369 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-05-26 12:05:55,841 INFO    HandlerThread:1369 [interfaces.py:finish():175] Joined gpu
+2023-05-26 12:05:55,843 INFO    HandlerThread:1369 [interfaces.py:finish():175] Joined memory
+2023-05-26 12:05:55,844 INFO    HandlerThread:1369 [interfaces.py:finish():175] Joined network
+2023-05-26 12:05:55,845 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:55,846 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-05-26 12:05:55,847 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 3
+2023-05-26 12:05:55,848 DEBUG   SenderThread:1369 [sender.py:send():336] send: stats
+2023-05-26 12:05:55,848 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:55,850 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-26 12:05:55,851 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:55,852 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-05-26 12:05:55,853 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 4
+2023-05-26 12:05:55,854 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:55,854 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-26 12:05:55,855 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:55,856 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-05-26 12:05:55,857 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 5
+2023-05-26 12:05:55,858 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:55,859 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-26 12:05:55,861 DEBUG   SenderThread:1369 [sender.py:send():336] send: summary
+2023-05-26 12:05:55,871 INFO    SenderThread:1369 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-05-26 12:05:55,876 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:55,877 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-05-26 12:05:55,878 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 6
+2023-05-26 12:05:55,880 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:55,881 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-26 12:05:55,882 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:55,884 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-05-26 12:05:55,891 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: status_report
+2023-05-26 12:05:56,102 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 7
+2023-05-26 12:05:56,105 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:56,107 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-26 12:05:56,109 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:56,111 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-05-26 12:05:56,545 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/config.yaml
+2023-05-26 12:05:56,555 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/wandb-summary.json
+2023-05-26 12:05:56,790 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-26 12:05:57,800 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 8
+2023-05-26 12:05:57,801 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: poll_exit
+2023-05-26 12:05:57,802 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:57,803 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-26 12:05:57,804 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:57,805 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-05-26 12:05:57,936 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 9
+2023-05-26 12:05:57,938 DEBUG   SenderThread:1369 [sender.py:send():336] send: artifact
+2023-05-26 12:05:57,938 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:57,944 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-26 12:05:58,657 INFO    Thread-13 :1369 [dir_watcher.py:_on_file_modified():292] file/dir modified: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/output.log
+2023-05-26 12:05:58,670 INFO    SenderThread:1369 [sender.py:send_artifact():1417] sent artifact job-git_github.com_SusanC3_HEA-Toxicity-Prediction.git_jku_jku_runner.py - {'id': 'QXJ0aWZhY3Q6NDY3MzgzOTEy', 'digest': '615f13b1452a6c53594803ac6a9d5faf', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-git_github.com_SusanC3_HEA-Toxicity-Prediction.git_jku_jku_runner.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-git_github.com_SusanC3_HEA-Toxicity-Prediction.git_jku_jku_runner.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjcyMjQwNTcw', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDY3MzgzOTEy', 'versionIndex': 0}}, 'version': 'v0'}
+2023-05-26 12:05:58,671 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:58,672 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-05-26 12:05:58,674 INFO    SenderThread:1369 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-05-26 12:05:59,783 INFO    SenderThread:1369 [dir_watcher.py:finish():392] scan: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files
+2023-05-26 12:05:59,794 INFO    SenderThread:1369 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/conda-environment.yaml conda-environment.yaml
+2023-05-26 12:05:59,830 INFO    SenderThread:1369 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/config.yaml config.yaml
+2023-05-26 12:05:59,874 INFO    SenderThread:1369 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/output.log output.log
+2023-05-26 12:05:59,904 INFO    SenderThread:1369 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/requirements.txt requirements.txt
+2023-05-26 12:05:59,922 INFO    SenderThread:1369 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/wandb-metadata.json wandb-metadata.json
+2023-05-26 12:05:59,922 INFO    SenderThread:1369 [dir_watcher.py:finish():406] scan save: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/wandb-summary.json wandb-summary.json
+2023-05-26 12:05:59,936 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 10
+2023-05-26 12:05:59,937 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:05:59,938 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 10
+2023-05-26 12:05:59,939 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:05:59,939 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-05-26 12:05:59,940 INFO    SenderThread:1369 [file_pusher.py:finish():162] shutting down file pusher
+2023-05-26 12:06:00,310 INFO    wandb-upload_0:1369 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/conda-environment.yaml
+2023-05-26 12:06:00,342 INFO    wandb-upload_1:1369 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/config.yaml
+2023-05-26 12:06:00,379 INFO    wandb-upload_3:1369 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/requirements.txt
+2023-05-26 12:06:00,393 INFO    wandb-upload_2:1369 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/output.log
+2023-05-26 12:06:00,447 INFO    wandb-upload_4:1369 [upload_job.py:push():138] Uploaded file /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/files/wandb-summary.json
+2023-05-26 12:06:00,649 INFO    Thread-12 :1369 [sender.py:transition_state():587] send defer: 11
+2023-05-26 12:06:00,652 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:06:00,653 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 11
+2023-05-26 12:06:00,657 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:06:00,659 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-05-26 12:06:00,660 INFO    SenderThread:1369 [file_pusher.py:join():167] waiting for file pusher
+2023-05-26 12:06:00,662 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 12
+2023-05-26 12:06:00,665 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:06:00,667 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 12
+2023-05-26 12:06:00,669 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:06:00,670 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-05-26 12:06:00,763 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 13
+2023-05-26 12:06:00,765 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:06:00,767 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 13
+2023-05-26 12:06:00,771 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:06:00,773 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-05-26 12:06:00,776 INFO    SenderThread:1369 [sender.py:transition_state():587] send defer: 14
+2023-05-26 12:06:00,779 DEBUG   SenderThread:1369 [sender.py:send():336] send: final
+2023-05-26 12:06:00,780 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: defer
+2023-05-26 12:06:00,781 DEBUG   SenderThread:1369 [sender.py:send():336] send: footer
+2023-05-26 12:06:00,783 INFO    HandlerThread:1369 [handler.py:handle_request_defer():170] handle defer: 14
+2023-05-26 12:06:00,790 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: defer
+2023-05-26 12:06:00,792 INFO    SenderThread:1369 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-05-26 12:06:00,797 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-26 12:06:00,801 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: server_info
+2023-05-26 12:06:00,803 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: poll_exit
+2023-05-26 12:06:00,803 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: get_summary
+2023-05-26 12:06:00,807 DEBUG   SenderThread:1369 [sender.py:send_request():363] send_request: server_info
+2023-05-26 12:06:00,810 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: sampled_history
+2023-05-26 12:06:00,944 INFO    MainThread:1369 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-05-26 12:06:00,945 INFO    MainThread:1369 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-05-26 12:06:00,948 INFO    MainThread:1369 [wandb_run.py:_footer_sync_info():3398] logging synced files
+2023-05-26 12:06:00,951 DEBUG   HandlerThread:1369 [handler.py:handle_request():144] handle_request: shutdown
+2023-05-26 12:06:00,955 INFO    HandlerThread:1369 [handler.py:finish():841] shutting down handler
+2023-05-26 12:06:01,805 INFO    WriterThread:1369 [datastore.py:close():299] close: /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/wandb/run-20230526_120549-jzfhr1e4/run-jzfhr1e4.wandb
+2023-05-26 12:06:01,943 INFO    SenderThread:1369 [sender.py:finish():1493] shutting down sender
+2023-05-26 12:06:01,946 INFO    SenderThread:1369 [file_pusher.py:finish():162] shutting down file pusher
+2023-05-26 12:06:01,948 INFO    SenderThread:1369 [file_pusher.py:join():167] waiting for file pusher

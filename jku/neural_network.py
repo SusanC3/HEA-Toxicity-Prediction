@@ -27,7 +27,7 @@ class ToxicityRegressor(nn.Module):
         x = self.relu(self.layer_1(input))
       #  x = self.relu(self.layer_2(x))
         x = self.relu(self.layer_3(x))
-        x = self.layer_out(x)
+        x = self.Sigmoid(self.layer_out(x)) #to make it between 0 and 1
 
         return x
 
@@ -36,7 +36,7 @@ class ToxicityRegressor(nn.Module):
         x = self.relu(self.layer_1(test_inputs))
        # x = self.relu(self.layer_2(x))
         x = self.relu(self.layer_3(x))
-        x = self.layer_out(x)
+        x = self.Sigmoid(self.layer_out(x)) #to make it between 0 and 1
 
         return x
     

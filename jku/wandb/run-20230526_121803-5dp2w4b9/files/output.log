@@ -1,0 +1,16 @@
+loading data
+Begin training
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 94, in <module>
+    train_loss = do_epoch(model, device, torch.from_numpy(x_tr), torch.from_numpy(y_tr), True, optimizer=optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 65, in do_epoch
+    pred_result = model(X)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/neural_network.py", line 27, in forward
+    x = self.relu(self.layer_1(input))
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: expected scalar type Float but found Double

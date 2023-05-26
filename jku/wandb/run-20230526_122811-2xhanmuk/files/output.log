@@ -1,0 +1,12 @@
+loading data
+Begin training
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 106, in <module>
+    roc_auc = roc_auc_score(y_te, y_pred.cpu())
+  File "/home/susan/.local/lib/python3.9/site-packages/sklearn/metrics/_ranking.py", line 550, in roc_auc_score
+    y_score = check_array(y_score, ensure_2d=False)
+  File "/home/susan/.local/lib/python3.9/site-packages/sklearn/utils/validation.py", line 865, in check_array
+    array = np.asarray(array, order=order, dtype=dtype)
+  File "/home/susan/.local/lib/python3.9/site-packages/torch/_tensor.py", line 757, in __array__
+    return self.numpy()
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.

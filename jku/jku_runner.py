@@ -9,6 +9,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, SubsetRandomSampler
 
 from sklearn.model_selection import KFold
+from sklearn.metrics import roc_auc_score
 
 import pdb
 import math
@@ -61,9 +62,10 @@ def do_epoch(model, device, X, y, training, optimizer=None):
     if training:
         optimizer.zero_grad()
 
-    pred_result = model(input)
+    pred_result = model(X.float()).squeeze()
 
-    loss = 0 #calculate roc auc
+    loss_calc = nn.BCELoss()
+    loss = loss_calc(pred_result, y.float())
 
     if training:
             loss.backward() 
@@ -71,8 +73,6 @@ def do_epoch(model, device, X, y, training, optimizer=None):
 
     return loss
      
-
-
 
 print("Begin training")
 
@@ -91,15 +91,21 @@ for target in dataset.X_train:
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
 
     for epoch in range(max_epochs):
-        train_loss = do_epoch(model, device, x_tr, y_tr, True, optimizer=optimizer)
-        test_loss = do_epoch(model, device, x_te, y_te, False)
+        train_loss = do_epoch(model, device, torch.from_numpy(x_tr), torch.from_numpy(y_tr), True, optimizer=optimizer)
+        test_loss = do_epoch(model, device, torch.from_numpy(x_te), torch.from_numpy(y_te), False)
       
         scheduler.step(test_loss)
 
-        wandb.log({"train loss": train_loss, 
-                   "test loss": test_loss, 
+        wandb.log({"train BCE": train_loss, 
+                   "test BCE": test_loss, 
                    "lr" : optimizer.param_groups[0]['lr'],
                    "epoch": epoch+1})
+
+
+    y_pred = model(torch.from_numpy(x_te).to(device).float())  
+    roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
+    print(target, ":", roc_auc)
+    #calculate roc auc
 
 
 wandb.finish()

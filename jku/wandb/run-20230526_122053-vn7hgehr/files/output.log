@@ -1,0 +1,12 @@
+loading data
+Begin training
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py(64)do_epoch()
+-> if training:
+torch.Size([8441, 801])
+torch.Size([8441])
+*** Blank or comment
+Breakpoint 1 at /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py:69
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py(69)do_epoch()
+-> loss_calc = nn.BCELoss()
+torch.Size([8441, 1])
+*** SyntaxError: unexpected EOF while parsing

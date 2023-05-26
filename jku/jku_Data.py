@@ -25,10 +25,10 @@ class Dataset:
             rows_tr = np.isfinite(y_tr[target]).values
             rows_te = np.isfinite(y_te[target]).values
 
-            self.X_train[target] = x_tr_dense[rows_tr]
-            self.y_train[target] = y_tr[target][rows_tr]
-            self.X_test[target] = x_te_dense[rows_te]
-            self.y_test[target] = y_te[target][rows_te]
+            self.X_train[target] = np.array(x_tr_dense[rows_tr])
+            self.y_train[target] = np.array(y_tr[target][rows_tr])
+            self.X_test[target] = np.array(x_te_dense[rows_te])
+            self.y_test[target] = np.array(y_te[target][rows_te])
 
 
     # 'Gets sample at ID index. just index in input/output array'

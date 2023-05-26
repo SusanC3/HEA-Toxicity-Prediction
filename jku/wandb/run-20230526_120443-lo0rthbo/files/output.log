@@ -1,0 +1,9 @@
+
+loading data
+Begin training
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 94, in <module>
+    train_loss = do_epoch(model, device, x_tr, y_tr, True, optimizer=optimizer)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 59, in do_epoch
+    X = X.to(device)
+AttributeError: 'numpy.ndarray' object has no attribute 'to'
