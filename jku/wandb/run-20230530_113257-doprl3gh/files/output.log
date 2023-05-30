@@ -1,0 +1,11 @@
+loading data
+Begin training
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 108, in <module>
+    normalizer = Normalizer.UnitGaussianNormalizer(x_tr)
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/Normalizer.py", line 9, in __init__
+    self.mean = torch.mean(x, 0)
+TypeError: mean() received an invalid combination of arguments - got (numpy.ndarray, int), but expected one of:
+ * (Tensor input, *, torch.dtype dtype)
+ * (Tensor input, tuple of ints dim, bool keepdim, *, torch.dtype dtype, Tensor out)
+ * (Tensor input, tuple of names dim, bool keepdim, *, torch.dtype dtype, Tensor out)

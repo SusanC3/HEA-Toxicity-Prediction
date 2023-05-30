@@ -1,5 +1,6 @@
 import jku_Data
 import neural_network
+import Normalizer
 
 import numpy as np
 
@@ -10,11 +11,11 @@ from torch.utils.data import DataLoader, SubsetRandomSampler
 
 from sklearn.model_selection import KFold
 from sklearn.metrics import roc_auc_score
+from sklearn.linear_model import LogisticRegression
 
 import pdb
 import math
 import wandb
-
 
 
 #tell pytorch to use GPU if available
@@ -32,18 +33,18 @@ dim_input = 801
 dim_output = 1
 
 #wandb stuff
-wandb.login()
-wandb.init(
-    project="HEA-Toxicity-Prediction",
-    name=f"jku-data",
-    config={
-        "batch_size": params["batch_size"],
-        "epochs": max_epochs,
-        "learning_rate": LEARNING_RATE,
-        "architecture": "NN",
-        "datset": "Full"
-    }
-)
+# wandb.login()
+# wandb.init(
+#     project="HEA-Toxicity-Prediction",
+#     name=f"jku-data",
+#     config={
+#         "batch_size": params["batch_size"],
+#         "epochs": max_epochs,
+#         "learning_rate": LEARNING_RATE,
+#         "architecture": "NN",
+#         "datset": "Full"
+#     }
+# )
 
 print("loading data")
 dataset = jku_Data.Dataset() 
@@ -84,28 +85,42 @@ for target in dataset.X_train:
     y_te = dataset.y_test[target]
 
     #make new model for each fold
-    model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
-    model.to(device)
+    # model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
+    # model.to(device)
 
-    optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
+    # optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
+    # scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
 
-    for epoch in range(max_epochs):
-        train_loss = do_epoch(model, device, torch.from_numpy(x_tr), torch.from_numpy(y_tr), True, optimizer=optimizer)
-        test_loss = do_epoch(model, device, torch.from_numpy(x_te), torch.from_numpy(y_te), False)
+    # for epoch in range(max_epochs):
+        
+
+    #     train_loss = do_epoch(model, device, torch.from_numpy(x_tr), torch.from_numpy(y_tr), True, optimizer=optimizer)
+    #     test_loss = do_epoch(model, device, torch.from_numpy(x_te), torch.from_numpy(y_te), False)
       
-        scheduler.step(test_loss)
+    #     scheduler.step(test_loss)
 
-        wandb.log({"train BCE": train_loss, 
-                   "test BCE": test_loss, 
-                   "lr" : optimizer.param_groups[0]['lr'],
-                   "epoch": epoch+1})
+    #     wandb.log({"train BCE": train_loss, 
+    #                "test BCE": test_loss, 
+    #                "lr" : optimizer.param_groups[0]['lr'],
+    #                "epoch": epoch+1})
+
+    
+    normalizer = Normalizer.UnitGaussianNormalizer(torch.from_numpy(x_tr))
+    x_tr_norm = normalizer.encode(torch.from_numpy(x_tr))
+    x_te_norm = normalizer.encode(torch.from_numpy(x_te))
+    
+    clf = LogisticRegression(random_state=0, max_iter=1000).fit(x_tr_norm, y_tr)
+    train_pred = clf.predict(x_tr_norm)
+    test_pred = clf.predict(x_te_norm)
+    print("train score:", clf.score(x_tr_norm, y_tr))
+    print("test score:", clf.score(x_te_norm, y_te))
 
 
-    y_pred = model(torch.from_numpy(x_te).to(device).float())  
-    roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
-    print(target, ":", roc_auc)
+  #  y_pred = model(torch.from_numpy(x_te).to(device).float())  
+  #  roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
+    print(target, ":", roc_auc_score(y_te, test_pred))
     #calculate roc auc
+    print()
 
 
 wandb.finish()
