@@ -13,6 +13,7 @@ from sklearn.model_selection import KFold
 from sklearn.metrics import roc_auc_score
 from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 
 import pdb
 import math
@@ -87,7 +88,7 @@ for target in dataset.X_train:
     x_te = dataset.X_test[target]
     y_te = dataset.y_test[target]
 
-    if model == neural_network:
+    if model == "Neural Network":
         #make new model for each fold
         model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
         model.to(device)
@@ -111,6 +112,7 @@ for target in dataset.X_train:
         y_pred = model(torch.from_numpy(x_te).to(device).float())  
         roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
         print(target, ":", roc_auc_score(y_te, test_pred))
+   
     elif model == "Linear Regressor":
         normalizer = Normalizer.UnitGaussianNormalizer(torch.from_numpy(x_tr))
         x_tr_norm = normalizer.encode(torch.from_numpy(x_tr))
@@ -125,13 +127,22 @@ for target in dataset.X_train:
         y_pred_proba = clf.predict_proba(x_te_norm)[::,1]
         fpr, tpr, _ = metrics.roc_curve(y_te, y_pred_proba)
 
-        plt.plot(fpr, tpr)
-        plt.ylabel('True Positive Rate')
-        plt.xlabel('False Positive Rate')
-        plt.title(target)
-        plt.savefig(str(target) + ".png")
-        plt.clf()
+        roc_auc = roc_auc_score(y_te, y_pred_proba)
+        print(target, roc_auc)
 
+        # plt.plot(fpr, tpr)
+        # plt.ylabel('True Positive Rate')
+        # plt.xlabel('False Positive Rate')
+        # plt.title(target)
+        # plt.savefig(str(target) + ".png")
+        # plt.clf()
+
+    elif model == "Random Forest":
+        rf = RandomForestClassifier(n_estimators=100,  n_jobs=4)
+        rf.fit(x_tr, y_tr)
+        pred_proba_te = rf.predict_proba(x_te)
+        auc_proba = roc_auc_score(y_te, pred_proba_te[:, 1])
+        print(target, auc_proba)
   
 
 
