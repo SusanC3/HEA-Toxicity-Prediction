@@ -33,6 +33,7 @@ max_epochs = 75
 LEARNING_RATE = 0.001
 dim_input = 801
 dim_output = 1
+model = "Linear Regressor"
 
 #wandb stuff
 # wandb.login()
@@ -86,52 +87,52 @@ for target in dataset.X_train:
     x_te = dataset.X_test[target]
     y_te = dataset.y_test[target]
 
-    #make new model for each fold
-    # model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
-    # model.to(device)
+    if model == neural_network:
+        #make new model for each fold
+        model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
+        model.to(device)
 
-    # optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
-    # scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
+        optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
+        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
 
-    # for epoch in range(max_epochs):
+        for epoch in range(max_epochs):
+            
+
+            train_loss = do_epoch(model, device, torch.from_numpy(x_tr), torch.from_numpy(y_tr), True, optimizer=optimizer)
+            test_loss = do_epoch(model, device, torch.from_numpy(x_te), torch.from_numpy(y_te), False)
         
+            scheduler.step(test_loss)
 
-    #     train_loss = do_epoch(model, device, torch.from_numpy(x_tr), torch.from_numpy(y_tr), True, optimizer=optimizer)
-    #     test_loss = do_epoch(model, device, torch.from_numpy(x_te), torch.from_numpy(y_te), False)
-      
-    #     scheduler.step(test_loss)
+            wandb.log({"train BCE": train_loss, 
+                       "test BCE": test_loss, 
+                       "lr" : optimizer.param_groups[0]['lr'],
+                       "epoch": epoch+1})
 
-    #     wandb.log({"train BCE": train_loss, 
-    #                "test BCE": test_loss, 
-    #                "lr" : optimizer.param_groups[0]['lr'],
-    #                "epoch": epoch+1})
+        y_pred = model(torch.from_numpy(x_te).to(device).float())  
+        roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
+        print(target, ":", roc_auc_score(y_te, test_pred))
+    elif model == "Linear Regressor":
+        normalizer = Normalizer.UnitGaussianNormalizer(torch.from_numpy(x_tr))
+        x_tr_norm = normalizer.encode(torch.from_numpy(x_tr))
+        x_te_norm = normalizer.encode(torch.from_numpy(x_te))
+        
+        clf = LogisticRegression(random_state=0, max_iter=1000).fit(x_tr_norm, y_tr)
+        train_pred = clf.predict(x_tr_norm)
+        test_pred = clf.predict(x_te_norm)
+        # print("train score:", clf.score(x_tr_norm, y_tr))
+        # print("test score:", clf.score(x_te_norm, y_te))
 
-    
-    normalizer = Normalizer.UnitGaussianNormalizer(torch.from_numpy(x_tr))
-    x_tr_norm = normalizer.encode(torch.from_numpy(x_tr))
-    x_te_norm = normalizer.encode(torch.from_numpy(x_te))
-    
-    clf = LogisticRegression(random_state=0, max_iter=1000).fit(x_tr_norm, y_tr)
-    train_pred = clf.predict(x_tr_norm)
-    test_pred = clf.predict(x_te_norm)
-    # print("train score:", clf.score(x_tr_norm, y_tr))
-    # print("test score:", clf.score(x_te_norm, y_te))
+        y_pred_proba = clf.predict_proba(x_te_norm)[::,1]
+        fpr, tpr, _ = metrics.roc_curve(y_te, y_pred_proba)
 
-    y_pred_proba = clf.predict_proba(x_te_norm)[::,1]
-    fpr, tpr, _ = metrics.roc_curve(y_te, y_pred_proba)
+        plt.plot(fpr, tpr)
+        plt.ylabel('True Positive Rate')
+        plt.xlabel('False Positive Rate')
+        plt.title(target)
+        plt.savefig(str(target) + ".png")
+        plt.clf()
 
-    plt.plot(fpr, tpr)
-    plt.ylabel('True Positive Rate')
-    plt.xlabel('False Positive Rate')
-    plt.title(target)
-    plt.savefig(str(target) + ".png")
-    plt.clf()
-
-  #  y_pred = model(torch.from_numpy(x_te).to(device).float())  
-  #  roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
-  #  print(target, ":", roc_auc_score(y_te, test_pred))
-    #calculate roc auc
-   # print()
+  
 
 
 wandb.finish()
