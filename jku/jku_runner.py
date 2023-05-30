@@ -11,11 +11,13 @@ from torch.utils.data import DataLoader, SubsetRandomSampler
 
 from sklearn.model_selection import KFold
 from sklearn.metrics import roc_auc_score
+from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 
 import pdb
 import math
 import wandb
+import matplotlib.pyplot as plt
 
 
 #tell pytorch to use GPU if available
@@ -112,15 +114,24 @@ for target in dataset.X_train:
     clf = LogisticRegression(random_state=0, max_iter=1000).fit(x_tr_norm, y_tr)
     train_pred = clf.predict(x_tr_norm)
     test_pred = clf.predict(x_te_norm)
-    print("train score:", clf.score(x_tr_norm, y_tr))
-    print("test score:", clf.score(x_te_norm, y_te))
+    # print("train score:", clf.score(x_tr_norm, y_tr))
+    # print("test score:", clf.score(x_te_norm, y_te))
 
+    y_pred_proba = clf.predict_proba(x_te_norm)[::,1]
+    fpr, tpr, _ = metrics.roc_curve(y_te, y_pred_proba)
+
+    plt.plot(fpr, tpr)
+    plt.ylabel('True Positive Rate')
+    plt.xlabel('False Positive Rate')
+    plt.title(target)
+    plt.savefig(str(target) + ".png")
+    plt.clf()
 
   #  y_pred = model(torch.from_numpy(x_te).to(device).float())  
   #  roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
-    print(target, ":", roc_auc_score(y_te, test_pred))
+  #  print(target, ":", roc_auc_score(y_te, test_pred))
     #calculate roc auc
-    print()
+   # print()
 
 
 wandb.finish()
