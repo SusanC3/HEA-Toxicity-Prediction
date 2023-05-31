@@ -34,7 +34,7 @@ max_epochs = 75
 LEARNING_RATE = 0.001
 dim_input = 801
 dim_output = 1
-model = "Linear Regressor"
+model = "Random Forest"
 
 #wandb stuff
 # wandb.login()
@@ -138,7 +138,7 @@ for target in dataset.X_train:
         # plt.clf()
 
     elif model == "Random Forest":
-        rf = RandomForestClassifier(n_estimators=100,  n_jobs=4)
+        rf = RandomForestClassifier(n_estimators=100,  n_jobs=4, random_state=0)
         rf.fit(x_tr, y_tr)
         pred_proba_te = rf.predict_proba(x_te)
         auc_proba = roc_auc_score(y_te, pred_proba_te[:, 1])
