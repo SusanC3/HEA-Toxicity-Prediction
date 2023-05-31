@@ -1,0 +1,6 @@
+loading data
+Begin training
+Traceback (most recent call last):
+  File "/mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py", line 115, in <module>
+    print(target, ":", roc_auc_score(y_te, test_pred))
+NameError: name 'test_pred' is not defined

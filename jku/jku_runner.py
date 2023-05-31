@@ -34,13 +34,13 @@ max_epochs = 75
 LEARNING_RATE = 0.001
 dim_input = 801
 dim_output = 1
-model = "Random Forest"
+model_type = "Neural Network"
 
 #wandb stuff
 # wandb.login()
 # wandb.init(
 #     project="HEA-Toxicity-Prediction",
-#     name=f"jku-data",
+#     name=f"jku-data-no-lr-reduct",
 #     config={
 #         "batch_size": params["batch_size"],
 #         "epochs": max_epochs,
@@ -84,36 +84,51 @@ print("Begin training")
 for target in dataset.X_train:
 
     x_tr = dataset.X_train[target]
-    y_tr = dataset.y_train[target]
+    y_tr = np.array(dataset.y_train[target])
     x_te = dataset.X_test[target]
-    y_te = dataset.y_test[target]
+    y_te = np.array(dataset.y_test[target])
 
-    if model == "Neural Network":
+    if model_type == "Neural Network":
         #make new model for each fold
         model = neural_network.ToxicityRegressor(dim_input, dim_output) #dim input, dim output
         model.to(device)
 
         optimizer = optim.Adam(model.parameters(), lr=LEARNING_RATE)
-        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
+      #  scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, factor=0.4, patience=5)
 
-        for epoch in range(max_epochs):
-            
+        for epoch in range(max_epochs):  
 
             train_loss = do_epoch(model, device, torch.from_numpy(x_tr), torch.from_numpy(y_tr), True, optimizer=optimizer)
             test_loss = do_epoch(model, device, torch.from_numpy(x_te), torch.from_numpy(y_te), False)
         
-            scheduler.step(test_loss)
+         #   scheduler.step(test_loss)
 
-            wandb.log({"train BCE": train_loss, 
-                       "test BCE": test_loss, 
-                       "lr" : optimizer.param_groups[0]['lr'],
-                       "epoch": epoch+1})
+            # wandb.log({"train BCE": train_loss, 
+            #            "test BCE": test_loss, 
+            #            "lr" : optimizer.param_groups[0]['lr'],
+            #            "epoch": epoch+1})
 
-        y_pred = model(torch.from_numpy(x_te).to(device).float())  
-        roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
-        print(target, ":", roc_auc_score(y_te, test_pred))
+        #how to get roc auc? how to get class probabilities?
+
+        preds = model(torch.from_numpy(x_te).to(device).float())
+        class_preds = np.zeros(len(y_te))
+        for i in range(len(y_te)):
+            if preds[i] >= 0.5:
+                class_preds[i] = 1
+            else:
+                class_preds[i] = 0
+
+        real = y_te
+        accuracy = len(np.where(class_preds == real)[0]) / len(real)
+        print(target, accuracy)
+        print("Does it ever predict 1:", len(np.where(class_preds == 1)[0]) > 0)
+        print()
+        
+        # y_pred = model(torch.from_numpy(x_te).to(device).float())  
+        # roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
+        # print(target, ":", roc_auc_score(y_te, test_pred))
    
-    elif model == "Linear Regressor":
+    elif model_type == "Linear Regressor":
         normalizer = Normalizer.UnitGaussianNormalizer(torch.from_numpy(x_tr))
         x_tr_norm = normalizer.encode(torch.from_numpy(x_tr))
         x_te_norm = normalizer.encode(torch.from_numpy(x_te))
@@ -137,7 +152,7 @@ for target in dataset.X_train:
         # plt.savefig(str(target) + ".png")
         # plt.clf()
 
-    elif model == "Random Forest":
+    elif model_type == "Random Forest":
         rf = RandomForestClassifier(n_estimators=100,  n_jobs=4, random_state=0)
         rf.fit(x_tr, y_tr)
         pred_proba_te = rf.predict_proba(x_te)
@@ -147,5 +162,3 @@ for target in dataset.X_train:
 
 
 wandb.finish()
-
-

@@ -1,0 +1,5 @@
+loading data
+Begin training
+> /mnt/c/Users/susan/git/HEA-Toxicity-Prediction/jku/jku_runner.py(93)<module>()
+-> if model == "Neural Network":
+<class 'numpy.ndarray'>
