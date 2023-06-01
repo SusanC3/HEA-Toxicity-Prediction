@@ -37,18 +37,18 @@ dim_output = 1
 model_type = "Neural Network"
 
 #wandb stuff
-# wandb.login()
-# wandb.init(
-#     project="HEA-Toxicity-Prediction",
-#     name=f"jku-data-no-lr-reduct",
-#     config={
-#         "batch_size": params["batch_size"],
-#         "epochs": max_epochs,
-#         "learning_rate": LEARNING_RATE,
-#         "architecture": "NN",
-#         "datset": "Full"
-#     }
-# )
+wandb.login()
+wandb.init(
+    project="HEA-Toxicity-Prediction",
+    name=f"jku-data-with-comparison",
+    config={
+        "batch_size": params["batch_size"],
+        "epochs": max_epochs,
+        "learning_rate": LEARNING_RATE,
+        "architecture": "NN",
+        "datset": "Full"
+    }
+)
 
 print("loading data")
 dataset = jku_Data.Dataset() 
@@ -103,26 +103,32 @@ for target in dataset.X_train:
         
          #   scheduler.step(test_loss)
 
-            # wandb.log({"train BCE": train_loss, 
-            #            "test BCE": test_loss, 
-            #            "lr" : optimizer.param_groups[0]['lr'],
-            #            "epoch": epoch+1})
+            wandb.log({target + " train BCE": train_loss, 
+                       target + " test BCE": test_loss, 
+
+                       target + " train RF BCE": dataset.rf_bces_train[target],
+                       target + " test RF BCE": dataset.rf_bces_test[target],
+                       target + " train LR BCE": dataset.lr_bces_train[target],
+                       target + " test LR BCE": dataset.lr_bces_test[target],
+
+                    #    str(target) + " lr" : optimizer.param_groups[0]['lr'],
+                       "epoch": epoch+1})
 
         #how to get roc auc? how to get class probabilities?
 
-        preds = model(torch.from_numpy(x_te).to(device).float())
-        class_preds = np.zeros(len(y_te))
-        for i in range(len(y_te)):
-            if preds[i] >= 0.5:
-                class_preds[i] = 1
-            else:
-                class_preds[i] = 0
+        # preds = model(torch.from_numpy(x_te).to(device).float())
+        # class_preds = np.zeros(len(y_te))
+        # for i in range(len(y_te)):
+        #     if preds[i] >= 0.5:
+        #         class_preds[i] = 1
+        #     else:
+        #         class_preds[i] = 0
 
-        real = y_te
-        accuracy = len(np.where(class_preds == real)[0]) / len(real)
-        print(target, accuracy)
-        print("Does it ever predict 1:", len(np.where(class_preds == 1)[0]) > 0)
-        print()
+        # real = y_te
+        # accuracy = len(np.where(class_preds == real)[0]) / len(real)
+        # print(target, accuracy)
+        # print("Does it ever predict 1:", len(np.where(class_preds == 1)[0]) > 0)
+        # print()
         
         # y_pred = model(torch.from_numpy(x_te).to(device).float())  
         # roc_auc = roc_auc_score(y_te, y_pred.cpu().detach())
@@ -139,11 +145,15 @@ for target in dataset.X_train:
         # print("train score:", clf.score(x_tr_norm, y_tr))
         # print("test score:", clf.score(x_te_norm, y_te))
 
-        y_pred_proba = clf.predict_proba(x_te_norm)[::,1]
-        fpr, tpr, _ = metrics.roc_curve(y_te, y_pred_proba)
+        loss_calc = nn.BCELoss()
+        loss = loss_calc(torch.from_numpy(test_pred), torch.from_numpy(y_te))
+        print("self.lr_bces_test[\"" + target + "\"] = " + str(loss.item()))
 
-        roc_auc = roc_auc_score(y_te, y_pred_proba)
-        print(target, roc_auc)
+        # y_pred_proba = clf.predict_proba(x_te_norm)[::,1]
+        # fpr, tpr, _ = metrics.roc_curve(y_te, y_pred_proba)
+
+        # roc_auc = roc_auc_score(y_te, y_pred_proba)
+        # print(target, roc_auc)
 
         # plt.plot(fpr, tpr)
         # plt.ylabel('True Positive Rate')
@@ -155,10 +165,24 @@ for target in dataset.X_train:
     elif model_type == "Random Forest":
         rf = RandomForestClassifier(n_estimators=100,  n_jobs=4, random_state=0)
         rf.fit(x_tr, y_tr)
-        pred_proba_te = rf.predict_proba(x_te)
-        auc_proba = roc_auc_score(y_te, pred_proba_te[:, 1])
-        print(target, auc_proba)
-  
+
+        class_preds = rf.predict(x_tr)
+
+        #get binary cross entropy for each target
+        loss_calc = nn.BCELoss()
+        loss = loss_calc(torch.from_numpy(class_preds), torch.from_numpy(y_tr))
+        print("self.rf_bces_train[\"" + target + "\"] = " + str(loss.item()))
+
+        # real = y_te
+        # accuracy = len(np.where(class_preds == real)[0]) / len(real)
+        # print(target, accuracy)
+        # print("Does it ever predict 1:", len(np.where(class_preds == 1)[0]) > 0)
+
+        # pred_proba_te = rf.predict_proba(x_te)
+        # auc_proba = roc_auc_score(y_te, pred_proba_te[:, 1])
+        # print("auroc:", target, auc_proba)
+        
+        # print()
 
 
 wandb.finish()

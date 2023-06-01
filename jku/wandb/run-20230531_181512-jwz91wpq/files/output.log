@@ -1,0 +1,9 @@
+loading data
+Begin training
+NR.AhR 0.8803278688524591
+Does it ever predict 1: False
+NR.AR 0.9795221843003413
+Does it ever predict 1: False
+NR.AR.LBD 0.9862542955326461
+Does it ever predict 1: False
+NR.Aromatase 0.9261363636363636
